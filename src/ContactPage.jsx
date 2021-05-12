@@ -1,7 +1,14 @@
+import Navigationbar from "./Navigationbar";
+import Footer from "./Footer";
+
 const ContactPage = () => {
     return(
       <div>
-          basic kontaktinformasjon
+          <Navigationbar />
+          <div>
+              basic kontaktinformasjon
+          </div>
+          <Footer />
       </div>
     );
 }

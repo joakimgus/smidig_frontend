@@ -15,7 +15,7 @@ const App = () => {
   return (
       <BrowserRouter>
           <Switch>
-              <Route path="/">
+              <Route path="/" exact>
                   <FrontPage />
               </Route>
               <Route path="/museum">
@@ -24,7 +24,7 @@ const App = () => {
               <Route path="/utstillinger">
                   <ExhibitionPage />
               </Route>
-              <Route path="/omoss">
+              <Route path="/om">
                   <AboutUsPage />
               </Route>
               <Route path="/kontakt">

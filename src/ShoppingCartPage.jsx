@@ -1,7 +1,14 @@
+import Navigationbar from "./Navigationbar";
+import Footer from "./Footer";
+
 const ShoppingCartPage = () => {
     return(
         <div>
-            shopping cart items here
+            <Navigationbar />
+            <div>
+                shopping cart items here
+            </div>
+            <Footer />
         </div>
     );
 }

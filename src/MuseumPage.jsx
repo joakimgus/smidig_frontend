@@ -1,7 +1,14 @@
+import Navigationbar from "./Navigationbar";
+import Footer from "./Footer";
+
 const MuseumPage = () => {
     return(
         <div>
-            this is the museum page
+            <Navigationbar />
+            <div>
+                this is the museum page
+            </div>
+            <Footer />
         </div>
     )
 }
