@@ -1,6 +1,7 @@
 import React from "react";
-import './Navigationbar.css'
-import Logo from './images/Logo.svg'
+import {Link} from "react-router-dom";
+import './Navigationbar.css';
+import Logo from './images/Logo.svg';
 
 const Navigationbar = () => {
     return(
@@ -9,14 +10,26 @@ const Navigationbar = () => {
                 <img id={'logo-img'} src={Logo}/>
             </button>
             <div className={'container1'}>
-                <button className={'nav-btn'} id={'museum-btn'}>Museum</button>
-                <button className={'nav-btn'} id={'utvalg-btn'}>Utvalg</button>
-                <button className={'nav-btn'} id={'om-oss-btn'}>Om oss</button>
-                <button className={'nav-btn'} id={'kontakt-oss-btn'}>Kontakt oss</button>
+                <Link to="/museum">
+                    <button className={'nav-btn'} id={'museum-btn'}>Museum</button>
+                </Link>
+                <Link to="/utstillinger">
+                    <button className={'nav-btn'} id={'utvalg-btn'}>Utvalg</button>
+                </Link>
+                <Link to="/om">
+                    <button className={'nav-btn'} id={'om-oss-btn'}>Om oss</button>
+                </Link>
+                <Link to="/kontakt">
+                    <button className={'nav-btn'} id={'kontakt-oss-btn'}>Kontakt oss</button>
+                </Link>
             </div>
             <div className={'container2'}>
-                <button className={'nav-btn'} id={'cart-btn'}>INSERT handlekurv</button>
-                <button className={'nav-btn'} id={'login-btn'}>INSERT Login</button>
+                <Link to="/handlekurv">
+                    <button className={'nav-btn'} id={'cart-btn'}>INSERT handlekurv</button>
+                </Link>
+                <Link to="/logginn">
+                    <button className={'nav-btn'} id={'login-btn'}>INSERT Login</button>
+                </Link>
             </div>
         </div>
     )

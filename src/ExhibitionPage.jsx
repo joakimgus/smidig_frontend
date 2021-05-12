@@ -1,7 +1,7 @@
 const ExhibitionPage = () => {
     return(
         <div>
-            U T S T I L L I N G E R
+            her kommer det utstillinger
         </div>
     );
 }
