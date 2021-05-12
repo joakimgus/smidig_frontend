@@ -1,7 +1,14 @@
+import Footer from "./Footer";
+import Navigationbar from "./Navigationbar"
+
 const FrontPage = () => {
     return(
         <div>
-            this is the frontpage
+            <Navigationbar />
+            <div>
+                Insert bilde-thingy her
+            </div>
+            <Footer />
         </div>
     )
 }
