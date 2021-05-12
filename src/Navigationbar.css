@@ -3,7 +3,7 @@
     height: 3em;
     background-color: black;
     display: grid;
-    grid-template-columns: 55% 30% 15%;
+    grid-template-columns: 50% repeat(6, auto);
 }
 
 .nav-btn {
@@ -24,21 +24,10 @@
     grid-column: 1;
 }
 
-#cart-btn {
-    display: grid;
-    grid-template-rows: auto 1fr;
-}
-
 #cart-btn>img{
-    grid-area: a;
     width: 20%;
 }
 
-#cart-btn>p{
-    grid-area: b;
-}
-
 #login-btn>img{
-    grid-area: c;
     width: 20%;
 }
