@@ -2,8 +2,8 @@
     width: 100%;
     height: 3em;
     background-color: black;
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: 55% 30% 15%;
 }
 
 .nav-btn {
@@ -13,6 +13,7 @@
     width: 100px;
     text-align: center;
     height: 100%;
+    grid-column: 2;
 }
 
 #logo-img{
@@ -20,33 +21,24 @@
 }
 
 #home-btn{
-    margin-right: 50%;
+    grid-column: 1;
 }
 
-.container1 {
-    background-color: red;
+#cart-btn {
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
-#museum-btn{
-
+#cart-btn>img{
+    grid-area: a;
+    width: 20%;
 }
 
-#utvalg-btn{
-
+#cart-btn>p{
+    grid-area: b;
 }
 
-#om-oss-btn{
-
-}
-
-#kontakt-oss-btn{
-
-}
-
-#cart-btn{
-
-}
-
-#login-btn{
-
+#login-btn>img{
+    grid-area: c;
+    width: 20%;
 }
