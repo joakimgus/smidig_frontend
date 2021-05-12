@@ -6,6 +6,10 @@
     grid-template-columns: 1fr repeat(6, auto);
 }
 
+#home-link {
+    width: 100px;
+}
+
 .nav-btn {
     background-color: black;
     color: white;
