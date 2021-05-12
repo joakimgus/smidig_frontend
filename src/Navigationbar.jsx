@@ -5,7 +5,6 @@ import CartIcon from './images/shopping-cart-sign.png'
 import UserIcon from './images/user-icon.png'
 import {Link} from "react-router-dom";
 import './Navigationbar.css';
-import Logo from './images/Logo.svg';
 
 const Navigationbar = () => {
     return(
