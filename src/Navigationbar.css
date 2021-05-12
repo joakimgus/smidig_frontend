@@ -43,7 +43,8 @@
   font-size: xx-small;
 }
 
-#login-btn, #cart-btn{
+#login-btn,
+#cart-btn {
   margin-right: 0;
   margin-left: 0;
 }
