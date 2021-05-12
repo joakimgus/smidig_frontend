@@ -15,7 +15,7 @@ const Navigationbar = () => {
                 <button className={'nav-btn'} id={'kontakt-oss-btn'}>Kontakt oss</button>
             </div>
             <div className={'container2'}>
-                <button className={'nav-btn'} id={'cart-btn'}>INSERT handlekurv</button>
+                <button className={'nav-btn'} id={'cart-btn'}>INSERT Handlekurv</button>
                 <button className={'nav-btn'} id={'login-btn'}>INSERT Login</button>
             </div>
         </div>
