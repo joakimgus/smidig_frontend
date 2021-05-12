@@ -12,6 +12,7 @@
     border: none;
     width: 100px;
     text-align: center;
+    height: 100%;
 }
 
 #logo-img{
@@ -19,7 +20,11 @@
 }
 
 #home-btn{
+    margin-right: 50%;
+}
 
+.container1 {
+    background-color: red;
 }
 
 #museum-btn{
