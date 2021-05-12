@@ -1,10 +1,19 @@
+import * as React from "react";
+import { useEffect, useState } from "react";
+import { BrowserRouter, Link } from "react-router-dom";
+import { Route, Switch } from "react-router";
 import './App.css';
+import FrontPage from "./FrontPage";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1> Hello world! </h1>
-    </div>
+      <BrowserRouter>
+          <Switch>
+              <Route path="/">
+                  <FrontPage />
+              </Route>
+          </Switch>
+      </BrowserRouter>
   );
 }
 
