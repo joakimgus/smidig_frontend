@@ -28,19 +28,17 @@ const Navigationbar = () => {
                 </Link>
             </div>
             <div className={'container2'}>
-                <button className={'nav-btn'} id={'cart-btn'}>
-                    <img src={CartIcon} alt={'Handlekurv ikon'}/>
-                    <p>Handlekurv</p>
-                </button>
-                <button className={'nav-btn'} id={'login-btn'}>
-                    <img src={UserIcon} alt={'Bruker ikon'}/>
-                    <p>Logg inn</p>
-                </button>
                 <Link to="/handlekurv">
-                    <button className={'nav-btn'} id={'cart-btn'}>INSERT Handlekurv</button>
+                    <button className={'nav-btn'} id={'cart-btn'}>
+                        <img src={CartIcon} alt={'Handlekurv ikon'}/>
+                        <p>Handlekurv</p>
+                    </button>
                 </Link>
                 <Link to="/logginn">
-                    <button className={'nav-btn'} id={'login-btn'}>INSERT Login</button>
+                    <button className={'nav-btn'} id={'login-btn'}>
+                        <img src={UserIcon} alt={'Bruker ikon'}/>
+                        <p>Logg inn</p>
+                    </button>
                 </Link>
             </div>
         </div>
