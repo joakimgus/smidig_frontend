@@ -25,7 +25,7 @@ const Navigationbar = () => {
             </div>
             <div className={'container2'}>
                 <Link to="/handlekurv">
-                    <button className={'nav-btn'} id={'cart-btn'}>INSERT handlekurv</button>
+                    <button className={'nav-btn'} id={'cart-btn'}>INSERT Handlekurv</button>
                 </Link>
                 <Link to="/logginn">
                     <button className={'nav-btn'} id={'login-btn'}>INSERT Login</button>

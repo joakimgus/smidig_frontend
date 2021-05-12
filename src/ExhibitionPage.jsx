@@ -1,7 +1,14 @@
+import Navigationbar from "./Navigationbar";
+import Footer from "./Footer";
+
 const ExhibitionPage = () => {
     return(
         <div>
-            her kommer det utstillinger
+            <Navigationbar />
+            <div>
+                her kommer det utstillinger
+            </div>
+            <Footer />
         </div>
     );
 }

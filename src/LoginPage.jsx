@@ -1,7 +1,14 @@
+import Navigationbar from "./Navigationbar";
+import Footer from "./Footer";
+
 const LoginPage = () => {
     return(
         <div>
-            her kan du logge inn
+            <Navigationbar />
+            <div>
+                her kan du logge inn
+            </div>
+            <Footer />
         </div>
     );
 }
