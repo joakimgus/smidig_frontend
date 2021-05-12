@@ -4,6 +4,12 @@ import { BrowserRouter, Link } from "react-router-dom";
 import { Route, Switch } from "react-router";
 import './App.css';
 import FrontPage from "./FrontPage";
+import MuseumPage from "./MuseumPage";
+import ExhibitionPage from "./ExhibitionPage";
+import AboutUsPage from "./AboutUsPage";
+import ContactPage from "./ContactPage";
+import ShoppingCartPage from "./ShoppingCartPage";
+import LoginPage from "./LoginPage";
 
 const App = () => {
   return (
@@ -11,6 +17,24 @@ const App = () => {
           <Switch>
               <Route path="/">
                   <FrontPage />
+              </Route>
+              <Route path="/museum">
+                  <MuseumPage />
+              </Route>
+              <Route path="/utstillinger">
+                  <ExhibitionPage />
+              </Route>
+              <Route path="/omoss">
+                  <AboutUsPage />
+              </Route>
+              <Route path="/kontakt">
+                  <ContactPage />
+              </Route>
+              <Route path="/handlekurv">
+                  <ShoppingCartPage />
+              </Route>
+              <Route path="/logginn">
+                  <LoginPage />
               </Route>
           </Switch>
       </BrowserRouter>
