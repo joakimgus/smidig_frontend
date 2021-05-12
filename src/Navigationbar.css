@@ -18,6 +18,7 @@
     height: 100%;
     text-align: center;
     grid-column: 2;
+    cursor: pointer;
 }
 
 #logo-img{
