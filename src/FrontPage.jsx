@@ -11,13 +11,13 @@ import 'react-slideshow-image/dist/styles.css'
 import React, {useState} from "react";
 
 const FrontPage = () => {
-    const slideImages = [
-        Abstract,
-        ItemImg,
-        TargetAudience,
-        Process1,
-        Process2
-    ];
+    // const slideImages = [
+    //     Abstract,
+    //     ItemImg,
+    //     TargetAudience,
+    //     Process1,
+    //     Process2
+    // ];
 
     const [autoplay, setAutoplay] = useState(true);
 
