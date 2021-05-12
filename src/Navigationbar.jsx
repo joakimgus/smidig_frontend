@@ -18,7 +18,7 @@ const Navigationbar = () => {
                 <Link to="/museum">
                     <button className={'nav-btn'} id={'museum-btn'}>Museum</button>
                 </Link>
-                <Link to="/utstillinger">
+                <Link to="/utvalg">
                     <button className={'nav-btn'} id={'utvalg-btn'}>Utvalg</button>
                 </Link>
                 <Link to="/om">

@@ -21,7 +21,7 @@ const App = () => {
               <Route path="/museum">
                   <MuseumPage />
               </Route>
-              <Route path="/utstillinger">
+              <Route path="/utvalg">
                   <ExhibitionPage />
               </Route>
               <Route path="/om">
