@@ -16,6 +16,8 @@
   border: none;
   width: 100px;
   height: 100%;
+  margin-right: 30px;
+  margin-left: 30px;
   text-align: center;
   grid-column: 2;
   cursor: pointer;
@@ -27,6 +29,8 @@
 
 #home-btn {
   grid-column: 1;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 #cart-btn > img,
@@ -39,7 +43,26 @@
   font-size: xx-small;
 }
 
-@media screen and (max-width: 812px) {
+#login-btn, #cart-btn{
+  margin-right: 0;
+  margin-left: 0;
+}
+
+@media screen and (max-width: 920px) {
+  .nav-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    grid-column: 2;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 768px) {
   #logo-img {
     width: 60%;
   }
