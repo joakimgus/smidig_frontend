@@ -27,11 +27,12 @@ const FrontPage = () => {
         <div>
             <div>
                 <Slide autoplay={autoplay}>
-                    <img className={'slide'} src={Abstract} />
+                    {/*<img className={'slide'} src={Abstract} />
                     <img className={'slide'} src={ItemImg} />
                     <img className={'slide'} src={TargetAudience} />
                     <img className={'slide'} src={Process1} />
                     <img className={'slide'} src={Process2} />
+                    <Navigationbar />*/}
                 </Slide>
             </div>
 
