@@ -9,9 +9,11 @@ import './Navigationbar.css';
 const Navigationbar = () => {
     return(
         <div className={"navbar-container"}>
-            <button className={'nav-btn'} id={'home-btn'}>
-                <img id={'logo-img'} src={Logo}/>
-            </button>
+            <Link to="/">
+                <button className={'nav-btn'} id={'home-btn'}>
+                    <img id={'logo-img'} src={Logo}/>
+                </button>
+            </Link>
             <div className={'container1'}>
                 <Link to="/museum">
                     <button className={'nav-btn'} id={'museum-btn'}>Museum</button>
