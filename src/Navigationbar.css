@@ -3,7 +3,7 @@
     height: 3em;
     background-color: black;
     display: grid;
-    grid-template-columns: 50% repeat(6, auto);
+    grid-template-columns: 1fr repeat(6, auto);
 }
 
 .nav-btn {
@@ -11,8 +11,8 @@
     color: white;
     border: none;
     width: 100px;
-    text-align: center;
     height: 100%;
+    text-align: center;
     grid-column: 2;
 }
 
@@ -24,10 +24,39 @@
     grid-column: 1;
 }
 
-#cart-btn>img{
+#cart-btn>img,
+#login-btn>img{
     width: 20%;
 }
 
-#login-btn>img{
-    width: 20%;
+#cart-btn>p,
+#login-btn>p{
+    font-size: xx-small;
+}
+
+@media screen and (max-width : 812px) {
+    #logo-img{
+        width: 60%
+    }
+    .nav-btn {
+        background-color: black;
+        color: white;
+        border: none;
+        width: auto;
+        margin-right: 15px;
+        height: 100%;
+        text-align: center;
+        font-size: xx-small;
+        grid-column: 2;
+    }
+    #cart-btn>p,
+    #login-btn>p{
+        display: none;
+    }
+
+    #cart-btn>img,
+    #login-btn>img{
+        width: 60%;
+    }
+
 }
