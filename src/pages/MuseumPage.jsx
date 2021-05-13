@@ -1,24 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navigationbar from "../components/Navigationbar";
 import Footer from "../components/Footer";
 import MuseumCard from "../components/MuseumCard";
-import { museums } from "../database";
 import "./MuseumPage.css";
+import { fetchData } from "../api/apiHandler";
 
 const MuseumPage = () => {
+  const [museums, setMuseums] = useState();
+
+  useEffect(() => {
+    fetchMuseums();
+  }, []);
+
+  const fetchMuseums = async () => {
+    const res = await fetchData("/museums");
+    setMuseums(res);
+  }
+
+  if(!museums) {
+    return "loading..";
+  }
+
   return (
     <div>
       <Navigationbar />
       <div className={"main-container"}>
-        {museums.map((museum) => {
-          return (
+        {museums.map((m) =>
             <MuseumCard
-              name={museum.name}
-              description={museum.description}
-              picture={museum.picture}
+              key={m.id}
+              name={m.name}
+              description={m.description}
+              picture={m.picture}
             />
-          );
-        })}
+        )}
       </div>
       <Footer />
     </div>
