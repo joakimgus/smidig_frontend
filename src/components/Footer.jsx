@@ -3,9 +3,9 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className={"footer-container"}>
-      <div className={"nav-links"}>
+      <div className={"nav-links-container"}>
         <div className={"nav-links-item"}>
-          <div className={"nav-links-item-text"}>Museums</div>
+          <div className={"nav-links-item-text"}>Museum</div>
         </div>
         <div className={"nav-links-item"}>
           <div className={"nav-links-item-text"}>Utstillinger</div>
@@ -35,7 +35,20 @@ const Footer = () => {
               Mobiltminimuseum.no distribuerer materiell fra museum og lignende kulturorganisasjoner til barnehager, eldrehjem og lignende institusjoner i Norge. Tjenesten er gratis å benytte for lærere og helsepersonell ved godkjente institusjoner.
           </div>
       </div>
-      <div className={"four"}>four</div>
+      <div className={"social-links-container"}>
+          <div className={"top-link"}>
+              <a href="#top">&#8593; Til toppen</a>
+          </div>
+          <div className={"social-media-image"}>
+              <img src={require("../images/facebook.png").default} />
+          </div>
+          <div className={"social-media-image"}>
+              <img src={require("../images/instagram.png").default} />
+          </div>
+          <div className={"social-media-image"}>
+              <img src={require("../images/linkedin.png").default} />
+          </div>
+      </div>
     </div>
   );
 };

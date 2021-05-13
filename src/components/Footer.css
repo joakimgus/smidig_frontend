@@ -7,7 +7,7 @@
   grid-template-columns: 40% 20% 28% 12%;
 }
 
-.nav-links {
+.nav-links-container {
   height: 60%;
   width: 80%;
   margin-top: 3em;
@@ -28,7 +28,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  overflow: hidden;
 }
 
 .contact-information-container {
@@ -49,9 +48,10 @@
 .about-us-container {
   height: 60%;
   width: 80%;
-  margin-top: 3em;
+  margin-top: 40px;
   margin-left: 2em;
   display: grid;
+  grid-row-gap: 10px;
   justify-content: start;
 }
 
@@ -63,6 +63,29 @@
   font-size: small;
 }
 
-.four {
-  background-color: yellow;
+.social-links-container {
+  height: 100%;
+  width: 80%;
+  display: grid;
+  align-content: space-evenly;
 }
+
+.top-link {
+  justify-self: center;
+}
+
+a, a.clicked{
+  color: white
+}
+
+.social-media-image {
+  justify-self: center;
+}
+
+.social-media-image > img {
+  position: relative;
+  left: 20%;
+  max-width: 75%;
+  height: auto;
+}
+

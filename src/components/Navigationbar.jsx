@@ -9,7 +9,7 @@ import "./Navigationbar.css";
 const Navigationbar = () => {
   return (
     <div className={"navbar-container"}>
-      <Link id="home-link" to="/">
+      <Link name="top" id="home-link" to="/">
         <button className={"nav-btn"} id={"home-btn"}>
           <img id={"logo-img"} src={Logo} />
         </button>
