@@ -5,12 +5,17 @@ import MuseumCard from "../components/MuseumCard";
 import { museums } from "../database";
 
 const MuseumPage = () => {
+
   return (
     <div>
       <Navigationbar />
       <div>
         {museums.map((museum) => {
-          return <MuseumCard />;
+            return <MuseumCard
+              name={museum.name}
+              description={museum.description}
+              picture={museum.picture}
+          />;
         })}
       </div>
       <Footer />
