@@ -30,12 +30,21 @@
     transform: translate(-50%,-50%);
 }
 
-.two {
-    background-color: blue;
+.contact-information-container {
+    height: 60%;
+    width: 80%;
+    margin-top: 3em;
+    margin-left: 2em;
+    display: grid;
+    grid-template-rows: 2fr repeat(5, auto);
+    grid-row-gap: 5px;
+    justify-content: stretch;
+}
+
+.contact-information-item {
 }
 
 .three {
-    background-color: green;
 }
 
 .four {
