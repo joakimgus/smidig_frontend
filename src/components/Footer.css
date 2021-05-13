@@ -28,23 +28,39 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 
 .contact-information-container {
+  height: 60%;
+  width: 90%;
+  margin-top: 3em;
+  margin-left: 2em;
+  display: grid;
+  grid-template-rows: 2fr repeat(5, 1fr);
+  grid-row-gap: 5px;
+  justify-content: stretch;
+}
+
+.contact-info {
+  font-size: small;
+}
+
+.about-us-container {
   height: 60%;
   width: 80%;
   margin-top: 3em;
   margin-left: 2em;
   display: grid;
-  grid-template-rows: 2fr repeat(5, auto);
-  grid-row-gap: 5px;
-  justify-content: stretch;
+  justify-content: start;
 }
 
-.contact-information-item {
+.about-us-title {
+  font-size: x-large;
 }
 
-.three {
+.about-us-information {
+  font-size: small;
 }
 
 .four {
