@@ -7,7 +7,7 @@
   grid-template-columns: 40% 20% 28% 12%;
 }
 
-.nav-links {
+.nav-links-container {
   height: 60%;
   width: 80%;
   margin-top: 3em;
@@ -32,21 +32,59 @@
 
 .contact-information-container {
   height: 60%;
-  width: 80%;
+  width: 90%;
   margin-top: 3em;
   margin-left: 2em;
   display: grid;
-  grid-template-rows: 2fr repeat(5, auto);
+  grid-template-rows: 2fr repeat(5, 1fr);
   grid-row-gap: 5px;
   justify-content: stretch;
 }
 
-.contact-information-item {
+.contact-info {
+  font-size: small;
 }
 
-.three {
+.about-us-container {
+  height: 60%;
+  width: 80%;
+  margin-top: 40px;
+  margin-left: 2em;
+  display: grid;
+  justify-content: start;
 }
 
-.four {
-  background-color: yellow;
+.about-us-title {
+  font-size: x-large;
 }
+
+.about-us-information {
+  font-size: small;
+}
+
+.social-links-container {
+  height: 100%;
+  width: 80%;
+  display: grid;
+  align-content: space-evenly;
+}
+
+.top-link {
+  justify-self: center;
+}
+
+a, a.clicked{
+  color: white
+}
+
+.social-media-image {
+  justify-self: center;
+}
+
+.social-media-image > img {
+  position: relative;
+  left: 20%;
+  max-width: 75%;
+  height: auto;
+}
+
