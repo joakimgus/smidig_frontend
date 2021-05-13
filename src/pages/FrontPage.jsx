@@ -7,8 +7,6 @@ import TargetAudience from "../images/Group 155.png";
 import ItemImg from "../images/Image 2.png";
 import Process1 from "../images/kjøpsprosess.png";
 import Process2 from "../images/kjøpsprosess2.png";
-import { Slide } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
 import React, { useState } from "react";
 import SlideTwo from "../components/SlideTwo";
 
@@ -21,22 +19,12 @@ const FrontPage = () => {
   //     Process2
   // ];
 
-  const [autoplay, setAutoplay] = useState(true);
-
   return (
-    <div className={'page-container'}>
+    <div className={"page-container"}>
       <Navigationbar />
-      <div className={'content-container'}>
-          <SlideOne />
-          <SlideTwo />
-          {/*<Slide autoplay={autoplay}>
-            <img className={'slide'} src={Abstract} />
-                    <img className={'slide'} src={ItemImg} />
-                    <img className={'slide'} src={TargetAudience} />
-                    <img className={'slide'} src={Process1} />
-                    <img className={'slide'} src={Process2} />
-                    <Navigationbar />
-          </Slide>*/}
+      <div className={"content-container"}>
+        <SlideOne />
+        <SlideTwo />
       </div>
       <Footer />
     </div>
