@@ -1,11 +1,11 @@
-import Footer from "./Footer";
-import Navigationbar from "./Navigationbar";
+import Footer from "../components/Footer";
+import Navigationbar from "../components/Navigationbar";
 import './FrontPage.css';
-import Abstract from "./images/Abstract font blub.png";
-import TargetAudience from "./images/Group 155.png";
-import ItemImg from "./images/Image 2.png";
-import Process1 from "./images/kjøpsprosess.png";
-import Process2 from "./images/kjøpsprosess2.png";
+import Abstract from "../images/Abstract font blub.png";
+import TargetAudience from "../images/Group 155.png";
+import ItemImg from "../images/Image 2.png";
+import Process1 from "../images/kjøpsprosess.png";
+import Process2 from "../images/kjøpsprosess2.png";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import React, {useState} from "react";

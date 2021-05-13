@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import { Route, Switch } from "react-router";
 import "./App.css";
-import FrontPage from "./FrontPage";
-import MuseumPage from "./MuseumPage";
-import ExhibitionPage from "./ExhibitionPage";
-import AboutUsPage from "./AboutUsPage";
-import ContactPage from "./ContactPage";
-import ShoppingCartPage from "./ShoppingCartPage";
-import LoginPage from "./LoginPage";
+import FrontPage from "./pages/FrontPage";
+import MuseumPage from "./pages/MuseumPage";
+import ExhibitionPage from "./pages/ExhibitionPage";
+import AboutUsPage from "./pages/AboutUsPage";
+import ContactPage from "./pages/ContactPage";
+import ShoppingCartPage from "./pages/ShoppingCartPage";
+import LoginPage from "./pages/LoginPage";
 
 const App = () => {
   return (

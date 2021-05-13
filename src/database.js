@@ -1,4 +1,4 @@
-const museums = [
+export const museums = [
     {
         id: 1,
         name: "Tidvis",
