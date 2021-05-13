@@ -1,0 +1,17 @@
+import React from 'react';
+import './SlideOne.css';
+import Abstract from "../images/Abstract font blub.png";
+
+const SlideOne = () => {
+    return(
+        <div className={'slide-container'}>
+            <img src={Abstract} alt={'info blobb'}/>
+            <div className={'text-container'}>
+                <h2 className={"slide-title"}>Mobilt minimuseum</h2>
+                <p className={'slide-info'}><span>&#8212;</span> Vi tar museet til deg!</p>
+            </div>
+        </div>
+    )
+}
+
+export default SlideOne;
