@@ -10,6 +10,7 @@ import Process2 from "../images/kjøpsprosess2.png";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import React, { useState } from "react";
+import SlideTwo from "../components/SlideTwo";
 
 const FrontPage = () => {
   // const slideImages = [
@@ -27,6 +28,7 @@ const FrontPage = () => {
       <Navigationbar />
       <div className={'content-container'}>
           <SlideOne />
+          <SlideTwo />
           {/*<Slide autoplay={autoplay}>
             <img className={'slide'} src={Abstract} />
                     <img className={'slide'} src={ItemImg} />
