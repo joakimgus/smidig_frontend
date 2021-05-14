@@ -24,20 +24,20 @@ const LoginPage = () => {
   };
 
   const doSignUp = async () => {
-    try {
-      const res = await postData("/auth/signup" + formData);
+    /*try {
+      const res = await postData("/auth/signup", formData);
       if (res) {
         // Redirect user back to home page
         history.push("/");
       }
     } catch (e) {
       console.log(e);
-    }
+    }*/
   };
 
   const doLogin = async () => {
     try {
-      const res = await postData("/auth/login" + formData);
+      const res = await postData("/auth/login", formData);
       if (res) {
         // Redirect user back to home page
         history.push("/");
