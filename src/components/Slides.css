@@ -61,10 +61,17 @@
   background-color: #979F7E;
 }
 
+#slide-four{
+  background-color: #B27979;
+}
+
+#slide-five{
+  background-color: #517B9A;
+}
+
 #text-container-green{
   margin-left: 2em;
   padding-right: 0;
-  padding-bottom: 2em;
   justify-content: normal;
 }
 
