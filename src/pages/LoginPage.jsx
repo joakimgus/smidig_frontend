@@ -67,7 +67,7 @@ const LoginPage = () => {
     <div style={{ textAlign: "center", padding: "5rem 0rem" }}>
       <div>
         <form onSubmit={handleSubmit}>
-          <Input name="username" label="Username" handleChange={handleChange} />
+          <Input name="username" label="Email" handleChange={handleChange} />
           <Input
             name="password"
             label="Password"
