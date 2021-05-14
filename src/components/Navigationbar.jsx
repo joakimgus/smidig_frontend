@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Navigationbar.css";
 import Logo from "../images/Logo.svg";
 import CartIcon from "../images/shopping-cart-sign.png";
 import UserIcon from "../images/user-icon.png";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Navigationbar.css";
+import { UserContext } from "../context/context";
+import { fetchData } from "../api/apiHandler";
 
 const Navigationbar = () => {
+  const { user, setUser } = useContext(UserContext);
+  const history = useHistory();
+
+  const logout = async () => {
+    const res = await fetchData("/auth/logout");
+    if (res === "done") {
+      setUser(undefined);
+      history.push("/");
+    }
+  };
+
   return (
     <div className={"navbar-container"}>
       <Link name="top" id="home-link" to="/">
@@ -40,12 +53,21 @@ const Navigationbar = () => {
           <p>Handlekurv</p>
         </button>
       </Link>
-      <Link to="/logginn">
-        <button className={"nav-btn"} id={"login-btn"}>
-          <img src={UserIcon} alt={"Bruker ikon"} />
-          <p>Logg inn</p>
-        </button>
-      </Link>
+      {!user ? (
+        <Link to="/login">
+          <button className={"nav-btn"} id={"login-btn"}>
+            <img src={UserIcon} alt={"Bruker ikon"} />
+            <p>Logg inn</p>
+          </button>
+        </Link>
+      ) : (
+        <Link onClick={logout}>
+          <button className={"nav-btn"} id={"login-btn"}>
+            <img src={UserIcon} alt={"Bruker ikon"} />
+            <p>Logg ut</p>
+          </button>
+        </Link>
+      )}
     </div>
   );
 };
