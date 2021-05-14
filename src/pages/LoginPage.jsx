@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Input } from "../components/Input";
 import { useHistory } from "react-router";
 import { postData } from "../api/apiHandler";
+import { UserContext } from "../context/context";
 
 const LoginPage = () => {
   const [isSignup, setIsSignup] = useState(false);
@@ -9,6 +10,7 @@ const LoginPage = () => {
     username: "",
     password: "",
   });
+  const { user, setUser } = useContext(UserContext);
 
   const history = useHistory();
 
@@ -39,6 +41,8 @@ const LoginPage = () => {
     try {
       const res = await postData("/auth/login", formData);
       if (res) {
+        setUser(res);
+        console.log(res);
         // Redirect user back to home page
         history.push("/");
       }
