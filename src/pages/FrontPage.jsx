@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import "./FrontPage.css";
 import SlideOne from "../components/SlideOne";
-import Abstract from "../images/Abstract font blub.png";
-import TargetAudience from "../images/Group 155.png";
-import ItemImg from "../images/Image 2.png";
-import Process1 from "../images/kjøpsprosess.png";
-import Process2 from "../images/kjøpsprosess2.png";
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SlideTwo from "../components/SlideTwo";
@@ -14,6 +9,8 @@ import SlideThree from "../components/SlideThree";
 // Import Swiper styles
 import "swiper/swiper.scss";
 import "swiper/swiper-bundle.css";
+import SlideFour from "../components/SlideFour";
+import SlideFive from "../components/SlideFive";
 
 const FrontPage = () => {
   // Install modules
@@ -31,9 +28,7 @@ const FrontPage = () => {
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        navigation
         pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
       >
@@ -46,7 +41,10 @@ const FrontPage = () => {
         <SwiperSlide>
           <SlideThree />
         </SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>
+          <SlideFour />
+        </SwiperSlide>
+        <SwiperSlide><SlideFive /></SwiperSlide>
       </Swiper>
     </div>
   );
