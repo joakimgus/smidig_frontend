@@ -62,7 +62,8 @@
 }
 
 a, a.clicked{
-  color: white
+  color: white;
+  text-decoration: none;
 }
 
 .social-media-image {

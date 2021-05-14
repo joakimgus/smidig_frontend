@@ -1,20 +1,29 @@
 import "./Footer.css";
+import {Link} from "react-router-dom";
 
 const Footer = () => {
   return (
     <div className={"footer-container"}>
       <div className={"nav-links-container"}>
         <div className={"nav-links-item"}>
-          <h3 className={"nav-links-item-text"}>Museum</h3>
+            <Link to={"/museum"}>
+                <h3 className={"nav-links-item-text"}>Museum</h3>
+            </Link>
         </div>
         <div className={"nav-links-item"}>
-          <h3 className={"nav-links-item-text"}>Utstillinger</h3>
+            <Link to={"/utvalg"}>
+                <h3 className={"nav-links-item-text"}>Utstillinger</h3>
+            </Link>
         </div>
         <div className={"nav-links-item"}>
-          <h3 className={"nav-links-item-text"}>Om oss</h3>
+            <Link to={"/om"}>
+                <h3 className={"nav-links-item-text"}>Om oss</h3>
+            </Link>
         </div>
         <div className={"nav-links-item"}>
-          <h3 className={"nav-links-item-text"}>Kontakt oss</h3>
+            <Link to={"/kontakt"}>
+                <h3 className={"nav-links-item-text"}>Kontakt oss</h3>
+            </Link>
         </div>
       </div>
       <div className={"contact-information-container"}>
