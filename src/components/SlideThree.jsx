@@ -6,7 +6,6 @@ const SlideThree = () => {
   return (
     <div id={"slide-three"}>
       <div className={"slide-container"}>
-        <img src={TargetAudience} alt={""} />
         <div className={"text-container"}>
           <h2 className={"slide-title"}>Mobilt minimuseum</h2>
           <p className={"slide-info"}>
@@ -14,6 +13,7 @@ const SlideThree = () => {
             arbeidsplass
           </p>
         </div>
+        <img src={TargetAudience} alt={""} />
       </div>
     </div>
   );

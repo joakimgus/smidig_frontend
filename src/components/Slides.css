@@ -1,5 +1,5 @@
 .slide-container {
-  height: 35rem;
+  height: 95vh;
   width: 100%;
   max-width: 1080px;
   margin: 0 auto;
@@ -25,8 +25,7 @@
 }
 
 .text-container {
-  margin-top: 10%;
-  margin-left: 5%;
+  margin-right: 5%;
   justify-content: center;
 }
 

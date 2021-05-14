@@ -13,6 +13,7 @@ import SlideThree from "../components/SlideThree";
 
 // Import Swiper styles
 import "swiper/swiper.scss";
+import "swiper/swiper-bundle.css";
 
 const FrontPage = () => {
   // Install modules
