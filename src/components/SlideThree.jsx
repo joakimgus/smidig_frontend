@@ -6,7 +6,7 @@ const SlideThree = () => {
   return (
     <div id={"slide-three"}>
       <div className={"slide-container"}>
-        <div className={"text-container"}>
+        <div className={"text-container"} id={'text-container-green'}>
           <h2 className={"slide-title"}>Mobilt minimuseum</h2>
           <p className={"slide-info"}>
             <span>&#8212;</span> Skreddersydd av eksperter, rettet mot din
