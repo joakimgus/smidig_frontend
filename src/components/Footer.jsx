@@ -5,35 +5,35 @@ const Footer = () => {
     <div className={"footer-container"}>
       <div className={"nav-links-container"}>
         <div className={"nav-links-item"}>
-          <div className={"nav-links-item-text"}>Museum</div>
+          <h3 className={"nav-links-item-text"}>Museum</h3>
         </div>
         <div className={"nav-links-item"}>
-          <div className={"nav-links-item-text"}>Utstillinger</div>
+          <h3 className={"nav-links-item-text"}>Utstillinger</h3>
         </div>
         <div className={"nav-links-item"}>
-          <div className={"nav-links-item-text"}>Om oss</div>
+          <h3 className={"nav-links-item-text"}>Om oss</h3>
         </div>
         <div className={"nav-links-item"}>
-          <div className={"nav-links-item-text"}>Kontakt oss</div>
+          <h3 className={"nav-links-item-text"}>Kontakt oss</h3>
         </div>
       </div>
       <div className={"contact-information-container"}>
-        <div className={"contact-information-item"}>KONTAKT OSS</div>
-        <div className={"contact-information-item contact-info"}>mobiltminimuseum.no</div>
-        <div className={"contact-information-item contact-info"}>Adresse</div>
-        <div className={"contact-information-item contact-info"}>0123 Fire</div>
-        <div className={"contact-information-item contact-info"}>Tlf 11 22 33 44</div>
-        <div className={"contact-information-item contact-info"}>
+        <h3 className={"contact-information-item"}>KONTAKT OSS</h3>
+        <p>mobiltminimuseum.no</p>
+        <p>Adresse</p>
+        <p>0123 Fire</p>
+        <p>Tlf 11 22 33 44</p>
+        <p>
           info@mobiltminimuseum.no
-        </div>
+        </p>
       </div>
       <div className={"about-us-container"}>
-          <div className={"about-us-title"}>
+          <h2>
               mobiltminumuseum.no
-          </div>
-          <div className={"about-us-information"}>
+          </h2>
+          <p>
               Mobiltminimuseum.no distribuerer materiell fra museum og lignende kulturorganisasjoner til barnehager, eldrehjem og lignende institusjoner i Norge. Tjenesten er gratis å benytte for lærere og helsepersonell ved godkjente institusjoner.
-          </div>
+          </p>
       </div>
       <div className={"social-links-container"}>
           <div className={"top-link"}>

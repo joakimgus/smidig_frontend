@@ -20,7 +20,6 @@
 .nav-links-item {
   height: 100%;
   border-bottom: 1px solid white;
-  font-size: large;
 }
 
 .nav-links-item-text {
@@ -41,25 +40,14 @@
   justify-content: stretch;
 }
 
-.contact-info {
-  font-size: small;
-}
-
 .about-us-container {
   height: 60%;
   width: 80%;
   margin-top: 40px;
   margin-left: 2em;
   display: grid;
+  grid-row-gap: 5px;
   justify-content: start;
-}
-
-.about-us-title {
-  font-size: x-large;
-}
-
-.about-us-information {
-  font-size: small;
 }
 
 .social-links-container {
