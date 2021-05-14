@@ -23,7 +23,6 @@ const MuseumPage = () => {
 
   return (
     <div>
-      <Navigationbar />
       <div className={"main-container"}>
         {museums.map((m) =>
             <MuseumCard
@@ -34,7 +33,6 @@ const MuseumPage = () => {
             />
         )}
       </div>
-      <Footer />
     </div>
   );
 };
