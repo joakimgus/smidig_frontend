@@ -36,7 +36,7 @@ const App = () => {
         <Route path="/handlekurv">
           <ShoppingCartPage />
         </Route>
-        <Route path="/logginn">
+        <Route path="/login">
           <LoginPage />
         </Route>
       </Switch>

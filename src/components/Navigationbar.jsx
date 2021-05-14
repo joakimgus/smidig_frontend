@@ -40,7 +40,7 @@ const Navigationbar = () => {
           <p>Handlekurv</p>
         </button>
       </Link>
-      <Link to="/logginn">
+      <Link to="/login">
         <button className={"nav-btn"} id={"login-btn"}>
           <img src={UserIcon} alt={"Bruker ikon"} />
           <p>Logg inn</p>
