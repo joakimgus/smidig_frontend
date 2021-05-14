@@ -16,6 +16,7 @@
 .slide-container > img {
   width: 50%;
   margin-bottom: 2em;
+  padding-right: 5em;
 }
 
 .slide-title,
@@ -25,8 +26,8 @@
 }
 
 .text-container {
-  margin-left: 1em;
-  padding-right: 6em;
+  margin-left: 4em;
+  margin-right: 5em;
   padding-bottom: 5em;
   justify-content: center;
 }
@@ -70,12 +71,11 @@
 }
 
 #text-container-green{
-  margin-left: 2em;
-  padding-right: 0;
+  margin-left: 5em;
   justify-content: normal;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
   .slide-container {
     flex-direction: column;
     justify-content: center;
