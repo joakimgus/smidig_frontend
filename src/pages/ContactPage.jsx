@@ -1,12 +1,9 @@
-import Navigationbar from "../components/Navigationbar";
-import Footer from "../components/Footer";
+import React from "react";
 
 const ContactPage = () => {
   return (
     <div>
-      <Navigationbar />
       <div>basic kontaktinformasjon</div>
-      <Footer />
     </div>
   );
 };

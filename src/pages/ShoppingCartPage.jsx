@@ -1,12 +1,9 @@
-import Navigationbar from "../components/Navigationbar";
-import Footer from "../components/Footer";
+import React from "react";
 
 const ShoppingCartPage = () => {
   return (
     <div>
-      <Navigationbar />
       <div>shopping cart items here</div>
-      <Footer />
     </div>
   );
 };

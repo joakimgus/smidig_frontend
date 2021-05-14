@@ -1,12 +1,9 @@
-import Navigationbar from "../components/Navigationbar";
-import Footer from "../components/Footer";
+import React from "react";
 
 const LoginPage = () => {
   return (
     <div>
-      <Navigationbar />
       <div>her kan du logge inn</div>
-      <Footer />
     </div>
   );
 };

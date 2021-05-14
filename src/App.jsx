@@ -10,10 +10,13 @@ import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
 import ShoppingCartPage from "./pages/ShoppingCartPage";
 import LoginPage from "./pages/LoginPage";
+import Navigationbar from "./components/Navigationbar";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <Navigationbar />
       <Switch>
         <Route path="/" exact>
           <FrontPage />
@@ -37,6 +40,7 @@ const App = () => {
           <LoginPage />
         </Route>
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 };
