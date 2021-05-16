@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={"contact-information-container"}>
-        <h3 className={"contact-information-item"}>KONTAKT OSS</h3>
+        <h2 className={"contact-information-item"}>KONTAKT OSS</h2>
         <p>mobiltminimuseum.no</p>
         <p>Adresse</p>
         <p>0123 Fire</p>
@@ -37,7 +37,7 @@ const Footer = () => {
         </p>
       </div>
       <div className={"about-us-container"}>
-          <h2>
+          <h2 id={'about-us-title'}>
               mobiltminumuseum.no
           </h2>
           <p>

@@ -3,6 +3,7 @@ import { Input } from "../components/Input";
 import { useHistory } from "react-router";
 import { postData } from "../api/apiHandler";
 import { UserContext } from "../context/context";
+import './LoginPage.css'
 
 const LoginPage = () => {
   const [isSignup, setIsSignup] = useState(false);
@@ -65,12 +66,13 @@ const LoginPage = () => {
 
   return (
     <div style={{ textAlign: "center", padding: "5rem 0rem" }}>
+      {isSignup ? <h3>Opprett bruker</h3> : <h3>Logg inn</h3>  }
       <div>
         <form onSubmit={handleSubmit}>
-          <Input name="username" label="Email" handleChange={handleChange} />
+          <Input name="username" label="E-post" handleChange={handleChange} />
           <Input
             name="password"
-            label="Password"
+            label="Passord"
             handleChange={handleChange}
             type="password"
           />
@@ -88,7 +90,7 @@ const LoginPage = () => {
               />
               <Input
                 name="email"
-                label="Email"
+                label="E-post"
                 handleChange={handleChange}
                 type="email"
               />
