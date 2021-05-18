@@ -1,16 +1,14 @@
-label{
-    font-variant-caps: all-small-caps;
+label {
+  font-variant-caps: all-small-caps;
 }
 
-h3{
-    font-variant-caps: all-small-caps;
-    font-size: 25px;
-    font-weight: 400;
-    margin-bottom: 0.5em;
+h3 {
+  font-variant-caps: all-small-caps;
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 0.5em;
 }
 
 input {
-    margin: 5px;
+  margin: 5px;
 }
-
-

@@ -44,7 +44,9 @@ const FrontPage = () => {
         <SwiperSlide>
           <SlideFour />
         </SwiperSlide>
-        <SwiperSlide><SlideFive /></SwiperSlide>
+        <SwiperSlide>
+          <SlideFive />
+        </SwiperSlide>
       </Swiper>
     </div>
   );
