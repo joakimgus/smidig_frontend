@@ -4,17 +4,28 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     color: white;
+}
+
+.museum-card:nth-child(odd) {
     background-color: rgb(82, 82, 82);
+}
+
+.museum-card:nth-child(even) {
+    background-color: rgb(49, 49, 49);
 }
 
 .museum-card-img-container {
     width: 100%;
     justify-self: center;
+    grid-column: 1;
+}
+
+.museum-card:nth-child(even) > .museum-card-img-container{
+    grid-column: 2;
 }
 
 #museum-card-img{
     margin-top: 4em;
-    margin-left: 3em;
     min-height: 75%;
     min-width: 75%;
     max-width: 75%;
@@ -22,15 +33,36 @@
     background-color: red;
 }
 
+.museum-card:nth-child(odd) > .museum-card-img-container > #museum-card-img{
+    margin-left: 3em;
+}
+
+.museum-card:nth-child(even) > .museum-card-img-container > #museum-card-img{
+    margin-left: 6em;
+}
+
 .museum-card-text-container {
     width: 100%;
     justify-self: center;
+}
+
+.museum-card:nth-child(even) > .museum-card-text-container {
+    grid-row: 1;
+    grid-column: 1;
 }
 
 .museum-card-title{
     width: 88%;
     margin-top: 2em;
     border-bottom: 1px solid white;
+}
+
+.museum-card:nth-child(even) > .museum-card-text-container > .museum-card-title {
+    margin-left: 1.5em;
+}
+
+.museum-card:nth-child(even) > .museum-card-text-container > .museum-card-description {
+    margin-left: 3.7em;
 }
 
 .museum-card-exhibitions-container{
@@ -44,4 +76,20 @@
     margin-top: 2em;
     margin-left: 1.5em;
     border-bottom: 1px solid white;
+}
+
+.museum-card-exhibitions {
+    margin-left: 1em;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.museum-card-exhibitions > div > img{
+    min-height: 75%;
+    min-width: 75%;
+    max-width: 75%;
+    height: auto;
 }
