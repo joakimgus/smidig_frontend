@@ -1,29 +1,29 @@
 import "./Footer.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div className={"footer-container"}>
       <div className={"nav-links-container"}>
         <div className={"nav-links-item"}>
-            <Link to={"/museum"}>
-                <p className={"nav-links-item-text"}>Museum</p>
-            </Link>
+          <Link to={"/museum"}>
+            <p className={"nav-links-item-text"}>Museum</p>
+          </Link>
         </div>
         <div className={"nav-links-item"}>
-            <Link to={"/utvalg"}>
-                <p className={"nav-links-item-text"}>Utstillinger</p>
-            </Link>
+          <Link to={"/utvalg"}>
+            <p className={"nav-links-item-text"}>Utstillinger</p>
+          </Link>
         </div>
         <div className={"nav-links-item"}>
-            <Link to={"/om"}>
-                <p className={"nav-links-item-text"}>Om oss</p>
-            </Link>
+          <Link to={"/om"}>
+            <p className={"nav-links-item-text"}>Om oss</p>
+          </Link>
         </div>
         <div className={"nav-links-item"}>
-            <Link to={"/kontakt"}>
-                <p className={"nav-links-item-text"}>Kontakt oss</p>
-            </Link>
+          <Link to={"/kontakt"}>
+            <p className={"nav-links-item-text"}>Kontakt oss</p>
+          </Link>
         </div>
       </div>
       <div className={"contact-information-container"}>
@@ -32,31 +32,30 @@ const Footer = () => {
         <p>Adresse</p>
         <p>0123 Fire</p>
         <p>Tlf 11 22 33 44</p>
-        <p>
-          info@mobiltminimuseum.no
-        </p>
+        <p>info@mobiltminimuseum.no</p>
       </div>
       <div className={"about-us-container"}>
-          <h2 id={'about-us-title'}>
-              mobiltminumuseum.no
-          </h2>
-          <p>
-              Mobiltminimuseum.no distribuerer materiell fra museum og lignende kulturorganisasjoner til barnehager, eldrehjem og lignende institusjoner i Norge. Tjenesten er gratis å benytte for lærere og helsepersonell ved godkjente institusjoner.
-          </p>
+        <h2 id={"about-us-title"}>mobiltminumuseum.no</h2>
+        <p>
+          Mobiltminimuseum.no distribuerer materiell fra museum og lignende
+          kulturorganisasjoner til barnehager, eldrehjem og lignende
+          institusjoner i Norge. Tjenesten er gratis å benytte for lærere og
+          helsepersonell ved godkjente institusjoner.
+        </p>
       </div>
       <div className={"social-links-container"}>
-          <div className={"top-link"}>
-              <a href="#top">&#8593; Til toppen</a>
-          </div>
-          <div className={"social-media-image"}>
-              <img src={require("../images/facebook.png").default} />
-          </div>
-          <div className={"social-media-image"}>
-              <img src={require("../images/instagram.png").default} />
-          </div>
-          <div className={"social-media-image"}>
-              <img src={require("../images/linkedin.png").default} />
-          </div>
+        <div className={"top-link"}>
+          <a href="#top">&#8593; Til toppen</a>
+        </div>
+        <div className={"social-media-image"}>
+          <img src={require("../images/facebook.png").default} />
+        </div>
+        <div className={"social-media-image"}>
+          <img src={require("../images/instagram.png").default} />
+        </div>
+        <div className={"social-media-image"}>
+          <img src={require("../images/linkedin.png").default} />
+        </div>
       </div>
     </div>
   );

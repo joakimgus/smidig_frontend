@@ -3,7 +3,7 @@ import { Input } from "../components/Input";
 import { useHistory } from "react-router";
 import { postData } from "../api/apiHandler";
 import { UserContext } from "../context/context";
-import './LoginPage.css'
+import "./LoginPage.css";
 
 const LoginPage = () => {
   const [isSignup, setIsSignup] = useState(false);
@@ -37,7 +37,6 @@ const LoginPage = () => {
     } catch (e) {
       console.log(e);
     }
-
   };
 
   const doLogin = async () => {
@@ -69,7 +68,7 @@ const LoginPage = () => {
 
   return (
     <div style={{ textAlign: "center", padding: "5rem 0rem" }}>
-      {isSignup ? <h3>Opprett bruker</h3> : <h3>Logg inn</h3>  }
+      {isSignup ? <h3>Opprett bruker</h3> : <h3>Logg inn</h3>}
       <div>
         <form onSubmit={handleSubmit}>
           <Input name="email" label="E-post" handleChange={handleChange} />

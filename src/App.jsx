@@ -5,7 +5,7 @@ import { Route, Switch } from "react-router";
 import "./App.css";
 import FrontPage from "./pages/FrontPage";
 import MuseumPage from "./pages/MuseumPage";
-import ExhibitionPage from "./pages/ExhibitionPage";
+import ProductSelectionPage from "./pages/ProductSelectionPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
 import ShoppingCartPage from "./pages/ShoppingCartPage";
@@ -35,7 +35,7 @@ const App = () => {
             <MuseumPage />
           </Route>
           <Route path="/utvalg">
-            <ExhibitionPage />
+            <ProductSelectionPage />
           </Route>
           <Route path="/om">
             <AboutUsPage />

@@ -1,18 +1,18 @@
 import React from "react";
-import './Header.css';
+import "./Header.css";
 
-const Header = ({title, description}) => {
-    const imgPath = require('../images/header-img.png').default;
+const Header = ({ title, description }) => {
+  const imgPath = require("../images/header-img.png").default;
 
-    return(
-        <div className={'header-container'}>
-            <div className={'text-container'}>
-                <h1 className={'h1-header'}>{title}</h1>
-                <p className={'p-header'}>{description}</p>
-            </div>
-            <img className={'img-header'} src={imgPath}  alt={''}/>
-        </div>
-    )
-}
+  return (
+    <div className={"header-container"}>
+      <div className={"text-container"}>
+        <h1 className={"h1-header"}>{title}</h1>
+        <p className={"p-header"}>{description}</p>
+      </div>
+      <img className={"img-header"} src={imgPath} alt={""} />
+    </div>
+  );
+};
 
 export default Header;

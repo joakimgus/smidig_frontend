@@ -7,17 +7,17 @@
   grid-template-columns: 40% 20% 28% 12%;
 }
 
-h2{
+h2 {
   font-size: small;
   font-weight: 400;
 }
 
-#about-us-title{
+#about-us-title {
   font-weight: bold;
   font-size: large;
 }
 
-p{
+p {
   font-size: small;
 }
 
@@ -78,7 +78,8 @@ p{
   padding-right: 0.2em;
 }
 
-a, a.clicked{
+a,
+a.clicked {
   color: white;
   text-decoration: none;
 }
@@ -99,7 +100,7 @@ a, a.clicked{
     grid-template-columns: 30% 25% 35% 10%;
   }
 
-  .social-links-container{
+  .social-links-container {
     width: 100%;
   }
 }
@@ -109,11 +110,11 @@ a, a.clicked{
     grid-template-columns: 50% 35% 15%;
   }
 
-  .about-us-container{
+  .about-us-container {
     display: none;
   }
 
-  .social-links-container{
+  .social-links-container {
     width: 100%;
   }
 }
@@ -123,7 +124,7 @@ a, a.clicked{
     grid-template-columns: 40% 40% 20%;
   }
 
-  .social-links-container{
+  .social-links-container {
     width: 100%;
   }
 }
@@ -133,11 +134,11 @@ a, a.clicked{
     grid-template-columns: 30% 45% 25%;
   }
 
-  .nav-links-container{
+  .nav-links-container {
     margin-left: 2em;
   }
 
-  .social-links-container{
+  .social-links-container {
     width: 100%;
   }
 }
@@ -149,17 +150,17 @@ a, a.clicked{
     font-size: small;
   }
 
-  .nav-links-container{
+  .nav-links-container {
     margin-left: 2em;
   }
 
-  .social-links-container{
+  .social-links-container {
     height: 100%;
     width: 100%;
   }
 
   .social-media-image > img {
-    max-width:60%;
+    max-width: 60%;
   }
 }
 
@@ -169,17 +170,17 @@ a, a.clicked{
     font-size: small;
   }
 
-  .nav-links-container{
+  .nav-links-container {
     margin-left: 1em;
   }
 
-  .social-links-container{
+  .social-links-container {
     height: 100%;
     width: 100%;
   }
 
   .social-media-image > img {
-    max-width:60%;
+    max-width: 60%;
   }
 }
 
@@ -190,17 +191,16 @@ a, a.clicked{
     font-size: x-small;
   }
 
-  .nav-links-container{
+  .nav-links-container {
     margin-left: 1em;
   }
 
-  .social-links-container{
+  .social-links-container {
     height: 100%;
     width: 100%;
   }
 
   .social-media-image > img {
-    max-width:50%;
+    max-width: 50%;
   }
 }
-

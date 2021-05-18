@@ -50,7 +50,7 @@
   margin-right: 2%;
 }
 
-.swiper-pagination{
+.swiper-pagination {
   padding-bottom: 2em;
 }
 
@@ -58,19 +58,19 @@
   background-color: #cc8d65;
 }
 
-#slide-three{
-  background-color: #979F7E;
+#slide-three {
+  background-color: #979f7e;
 }
 
-#slide-four{
-  background-color: #B27979;
+#slide-four {
+  background-color: #b27979;
 }
 
-#slide-five{
-  background-color: #517B9A;
+#slide-five {
+  background-color: #517b9a;
 }
 
-#text-container-green{
+#text-container-green {
   margin-left: 5em;
   justify-content: normal;
 }
@@ -85,8 +85,8 @@
     width: 80%;
     margin-right: 0;
   }
-  #text-container-green{
-    margin-left:0;
+  #text-container-green {
+    margin-left: 0;
     text-align: center;
     justify-content: normal;
   }
