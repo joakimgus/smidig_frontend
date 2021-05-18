@@ -79,7 +79,17 @@
 }
 
 .museum-card-exhibitions {
+    margin-left: 1em;
+    margin-top: 2em;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.museum-card-exhibitions > div > img{
+    min-height: 75%;
+    min-width: 75%;
+    max-width: 75%;
+    height: auto;
 }
