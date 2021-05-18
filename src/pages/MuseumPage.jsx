@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import MuseumCard from "../components/MuseumCard";
 import "./MuseumPage.css";
 import { fetchData } from "../api/apiHandler";
+import Header from "../components/Header";
 
 const MuseumPage = () => {
   const [museums, setMuseums] = useState();
@@ -23,6 +24,7 @@ const MuseumPage = () => {
 
   return (
     <>
+      <Header />
       <div className={"museum-card-container"}>
         {museums.map((m, i) =>
             <MuseumCard
