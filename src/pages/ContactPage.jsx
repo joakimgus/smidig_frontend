@@ -47,7 +47,7 @@ const ContactPage = () => {
                       name="message"
                       type="text"
                   />
-                  <button type={"submit"} />
+                  <button type={'sumbit'} >Send</button>
               </form>
           </div>
       </div>
