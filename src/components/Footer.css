@@ -1,7 +1,6 @@
 .footer-container {
-  width: 100%;
+  width: 100vw;
   height: 12em;
-  padding: 0.5em;
   background-color: rgb(29, 29, 29);
   color: white;
   display: grid;
@@ -76,7 +75,7 @@ p{
 .top-link {
   font-variant-caps: all-small-caps;
   justify-self: center;
-  margin-right: 0.2em;
+  padding-right: 0.2em;
 }
 
 a, a.clicked{
