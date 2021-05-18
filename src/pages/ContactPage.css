@@ -16,6 +16,10 @@
     height: 64vh;
 }
 
+.some-container{
+    color: black;
+}
+
 @media screen and (max-width: 812px) {
     .contact-page-container{
         height: 65vh;
