@@ -8,7 +8,7 @@ import './LoginPage.css'
 const LoginPage = () => {
   const [isSignup, setIsSignup] = useState(false);
   const [formData, setFormData] = useState({
-    username: "",
+    email: "",
     password: "",
   });
   const { user, setUser } = useContext(UserContext);
@@ -27,18 +27,21 @@ const LoginPage = () => {
   };
 
   const doSignUp = async () => {
-    /*try {
-      const res = await postData("/auth/signup", formData);
+    try {
+      const res = await postData("/auth/register", formData);
       if (res) {
         // Redirect user back to home page
+        setUser(res);
         history.push("/");
       }
     } catch (e) {
       console.log(e);
-    }*/
+    }
+
   };
 
   const doLogin = async () => {
+    console.log(formData);
     try {
       const res = await postData("/auth/login", formData);
       if (res) {
@@ -69,7 +72,7 @@ const LoginPage = () => {
       {isSignup ? <h3>Opprett bruker</h3> : <h3>Logg inn</h3>  }
       <div>
         <form onSubmit={handleSubmit}>
-          <Input name="username" label="E-post" handleChange={handleChange} />
+          <Input name="email" label="E-post" handleChange={handleChange} />
           <Input
             name="password"
             label="Passord"
@@ -79,20 +82,9 @@ const LoginPage = () => {
           {isSignup && (
             <>
               <Input
-                name="firstName"
-                label="First Name"
+                name="orgNr"
+                label="Organisasjonsnummer"
                 handleChange={handleChange}
-              />
-              <Input
-                name="lastName"
-                label="Last Name"
-                handleChange={handleChange}
-              />
-              <Input
-                name="email"
-                label="E-post"
-                handleChange={handleChange}
-                type="email"
               />
             </>
           )}
