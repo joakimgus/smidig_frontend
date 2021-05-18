@@ -54,7 +54,6 @@
 .museum-card-title{
     width: 88%;
     margin-top: 2em;
-    border-bottom: 1px solid white;
 }
 
 .museum-card:nth-child(even) > .museum-card-text-container > .museum-card-title {
@@ -71,11 +70,14 @@
     justify-self: center;
 }
 
-.museum-card-exhibitions-container > h1{
+.museum-card-description{
+    width: 88%;
+    border-top: 1px solid white;
+}
+
+.museum-card-exhibitions-container > p{
     width: 90%;
-    margin-top: 2em;
-    margin-left: 1.5em;
-    border-bottom: 1px solid white;
+    margin-left: 20em;
 }
 
 .museum-card-exhibitions {

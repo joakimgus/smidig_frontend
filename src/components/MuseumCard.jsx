@@ -5,7 +5,7 @@ const MuseumCard = ({ name, description, picture, exhibitions }) => {
   return (
     <div className={"museum-card"}>
       <div className={"museum-card-img-container"}>
-        <img id={"museum-card-img"} src={picture.default} alt={description} />
+        <img id={"museum-card-img"} src={picture.default} alt={name} />
       </div>
       <div className={"museum-card-text-container"}>
         <h1 className={"museum-card-title"}>{name}</h1>
