@@ -22,8 +22,8 @@ const MuseumPage = () => {
   }
 
   return (
-    <div>
-      <div className={"main-container"}>
+    <>
+      <div className={"museum-card-container"}>
         {museums.map((m) =>
             <MuseumCard
               key={m.id}
@@ -33,7 +33,7 @@ const MuseumPage = () => {
             />
         )}
       </div>
-    </div>
+    </>
   );
 };
 
