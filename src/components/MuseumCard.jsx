@@ -9,7 +9,7 @@ const MuseumCard = ({ name, description, picture, exhibitions }) => {
         </div>
         <div className={"museum-card-text-container"}>
             <h1 className={"museum-card-title"}>{name}</h1>
-            <p>{description}</p>
+            <p className={"museum-card-description"}>{description}</p>
         </div>
         <div className={"museum-card-exhibitions-container"}>
             <h1>UTSTILLINGER</h1>
