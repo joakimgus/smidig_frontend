@@ -7,27 +7,27 @@ const Footer = () => {
       <div className={"nav-links-container"}>
         <div className={"nav-links-item"}>
             <Link to={"/museum"}>
-                <h3 className={"nav-links-item-text"}>Museum</h3>
+                <p className={"nav-links-item-text"}>Museum</p>
             </Link>
         </div>
         <div className={"nav-links-item"}>
             <Link to={"/utvalg"}>
-                <h3 className={"nav-links-item-text"}>Utstillinger</h3>
+                <p className={"nav-links-item-text"}>Utstillinger</p>
             </Link>
         </div>
         <div className={"nav-links-item"}>
             <Link to={"/om"}>
-                <h3 className={"nav-links-item-text"}>Om oss</h3>
+                <p className={"nav-links-item-text"}>Om oss</p>
             </Link>
         </div>
         <div className={"nav-links-item"}>
             <Link to={"/kontakt"}>
-                <h3 className={"nav-links-item-text"}>Kontakt oss</h3>
+                <p className={"nav-links-item-text"}>Kontakt oss</p>
             </Link>
         </div>
       </div>
       <div className={"contact-information-container"}>
-        <h3 className={"contact-information-item"}>KONTAKT OSS</h3>
+        <h2 className={"contact-information-item"}>KONTAKT OSS</h2>
         <p>mobiltminimuseum.no</p>
         <p>Adresse</p>
         <p>0123 Fire</p>
@@ -37,7 +37,7 @@ const Footer = () => {
         </p>
       </div>
       <div className={"about-us-container"}>
-          <h2>
+          <h2 id={'about-us-title'}>
               mobiltminumuseum.no
           </h2>
           <p>
