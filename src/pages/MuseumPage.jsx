@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Navigationbar from "../components/Navigationbar";
-import Footer from "../components/Footer";
 import MuseumCard from "../components/MuseumCard";
 import "./MuseumPage.css";
 import { fetchData } from "../api/apiHandler";
 
 const MuseumPage = () => {
   const [museums, setMuseums] = useState();
+
+  const exhibitions = [require("../images/fotogrammeri.png").default, require("../images/Gokstad.png").default, require("../images/Tune.png").default, require("../images/Osberg.png").default]
 
   useEffect(() => {
     fetchMuseums();
@@ -24,12 +24,13 @@ const MuseumPage = () => {
   return (
     <>
       <div className={"museum-card-container"}>
-        {museums.map((m) =>
+        {museums.map((m, i) =>
             <MuseumCard
               key={m.id}
               name={m.name}
               description={m.description}
               picture={m.picture}
+              exhibitions={exhibitions}
             />
         )}
       </div>
