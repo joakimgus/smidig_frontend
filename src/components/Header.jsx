@@ -1,16 +1,16 @@
 import React from "react";
 import './Header.css';
 
-const Header = () => {
+const Header = ({title, description}) => {
     const imgPath = require('../images/header-img.png').default;
 
     return(
         <div className={'header-container'}>
             <div className={'text-container'}>
-                <h1 className={'h1-header'}>Museum</h1>
-                <p className={'p-header'}>Her finner du en oversikt over alle museenne som er med på prosjektet, og alle utstillingene de tilbyr skreddersydde pakkeløsninger fra.</p>
+                <h1 className={'h1-header'}>{title}</h1>
+                <p className={'p-header'}>{description}</p>
             </div>
-            <img src={imgPath}  alt={''}/>
+            <img className={'img-header'} src={imgPath}  alt={''}/>
         </div>
     )
 }
