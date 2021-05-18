@@ -9,6 +9,11 @@ import Header from "../components/Header";
 const MuseumPage = () => {
   const [museums, setMuseums] = useState();
 
+  const headerText = {
+    title: "Museum",
+    description: "Her finner du en oversikt over alle museenne som er med på prosjektet, og alle utstillingene de tilbyr skreddersydde pakkeløsninger fra."
+  }
+
   useEffect(() => {
     fetchMuseums();
   }, []);
@@ -24,7 +29,10 @@ const MuseumPage = () => {
 
   return (
     <>
-      <Header />
+      <Header
+          title={headerText.title}
+          description={headerText.description}
+      />
       <div className={"museum-card-container"}>
         {museums.map((m) =>
             <MuseumCard
