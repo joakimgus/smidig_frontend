@@ -3,7 +3,8 @@ import { Input } from "../components/Input";
 import { useHistory } from "react-router";
 import { postData } from "../api/apiHandler";
 import { UserContext } from "../context/context";
-import './LoginPage.css'
+import axios from "axios";
+import "./LoginPage.css";
 
 const LoginPage = () => {
   const [isSignup, setIsSignup] = useState(false);
@@ -11,9 +12,28 @@ const LoginPage = () => {
     email: "",
     password: "",
   });
+  const [query, setQuery] = useState("");
+  const [result, setResult] = useState();
+  const [org, setOrg] = useState();
+
   const { user, setUser } = useContext(UserContext);
 
   const history = useHistory();
+
+  const search = async () => {
+    const res = await axios.get(
+      `https://data.brreg.no/enhetsregisteret/api/enheter?navn=${query}`
+    );
+    setResult(res.data);
+  };
+
+  const handleSearchChange = (e) => {
+    e.preventDefault();
+    setQuery(e.target.value);
+    if (query.length > 0) {
+      search();
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,7 +57,6 @@ const LoginPage = () => {
     } catch (e) {
       console.log(e);
     }
-
   };
 
   const doLogin = async () => {
@@ -67,9 +86,17 @@ const LoginPage = () => {
     // Find a way to clear input fields
   };
 
+  // Extract org results
+  let orgs = [];
+  if (result) {
+    const { _embedded } = result;
+    orgs = _embedded.enheter;
+    console.log(orgs);
+  }
+
   return (
     <div style={{ textAlign: "center", padding: "5rem 0rem" }}>
-      {isSignup ? <h3>Opprett bruker</h3> : <h3>Logg inn</h3>  }
+      {isSignup ? <h3>Opprett bruker</h3> : <h3>Logg inn</h3>}
       <div>
         <form onSubmit={handleSubmit}>
           <Input name="email" label="E-post" handleChange={handleChange} />
@@ -84,7 +111,7 @@ const LoginPage = () => {
               <Input
                 name="orgNr"
                 label="Organisasjonsnummer"
-                handleChange={handleChange}
+                handleChange={handleSearchChange}
               />
             </>
           )}
