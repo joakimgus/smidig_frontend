@@ -1,0 +1,23 @@
+/* Styling for page header */
+.header-container {
+    height: 30vh;
+}
+
+.img-header {
+    display: none;
+}
+
+.text-container {
+    margin-top: 5%;
+}
+
+/* Styling for page */
+.contact-page-container{
+    height: 64vh;
+}
+
+@media screen and (max-width: 812px) {
+    .contact-page-container{
+        height: 65vh;
+    }
+}

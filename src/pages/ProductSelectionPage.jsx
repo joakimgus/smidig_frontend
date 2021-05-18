@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import './ProductSelectionPage.css';
 
 const ProductSelectionPage = () => {
 
@@ -16,7 +17,7 @@ const ProductSelectionPage = () => {
               title={headerText.title}
               description={headerText.description}
           />
-          <div>
+          <div className={'utvalg-page-container'}>
               <div>her kommer det produkter</div>
           </div>
       </>
