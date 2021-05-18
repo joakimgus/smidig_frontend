@@ -79,17 +79,59 @@
 }
 
 .museum-card-exhibitions {
-    margin-left: 1em;
+    margin-left: 3em;
     margin-top: 2em;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    text-align: center;
 }
 
 .museum-card-exhibitions > div > img{
-    min-height: 75%;
-    min-width: 75%;
     max-width: 75%;
     height: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .museum-card:nth-child(even) > .museum-card-text-container > .museum-card-title {
+        margin-left: 1em;
+    }
+
+    .museum-card:nth-child(even) > .museum-card-text-container > .museum-card-description {
+        margin-left: 2.4em;
+    }
+
+    .museum-card:nth-child(odd) > .museum-card-img-container > #museum-card-img {
+        margin-left: 2em;
+    }
+
+    .museum-card:nth-child(even) > .museum-card-img-container > #museum-card-img {
+        margin-left: 3em;
+    }
+
+    .museum-card-exhibitions-container > h1 {
+        margin-left: 1em;
+    }
+
+    .museum-card-exhibitions {
+        margin-left: 2em;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .museum-card-text-container{
+        width: 100vw;
+        grid-column: 1 / span 2;
+    }
+
+    .museum-card-img-container{
+        display: none;
+    }
+
+    .museum-card:nth-child(odd) > .museum-card-text-container > .museum-card-title {
+        margin-left: 1em;
+    }
+
+    .museum-card:nth-child(odd) > .museum-card-text-container > .museum-card-description {
+        margin-left: 2.4em;
+    }
 }
