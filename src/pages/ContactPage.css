@@ -14,14 +14,101 @@
 /* Styling for page */
 .contact-page-container{
     height: 64vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.contact-text-container{
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+}
+
+.contact-text-container>h1{
+    font-variant: all-small-caps;
+    font-size: large;
+    border-bottom: 1px solid black;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    font-weight: 400;
+}
+
+.contact-text-container>p{
+    padding: 2px;
 }
 
 .some-container{
-    color: black;
+    margin-top: 0.5em;
+    padding-left: 18%;
+    border-top: 1px solid black;
+    padding-top: 0.5em;
+}
+
+#insta-logo{
+    padding-bottom: 3px;
+}
+
+.form-container{
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+}
+
+.p-label{
+    padding-left: 5px;
+}
+
+.form-container>form>input,
+.form-container>form>textarea{
+    height: 1rem;
+    width: 17rem;
+    padding: 3px;
+    margin: 5px;
+    border: 0;
+    outline:none;
+    box-shadow: -5px 5px 0 -4px #000, 5px 5px 0 -4px #000;
+}
+
+#contact-input-message{
+    height: 10rem;
+    border: 1px solid black;
+    box-shadow: none;
+}
+
+.form-container>form>button{
+    display: block;
+    margin-left: 5px;
+    width: 17.5rem;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    border: none;
+    font-variant-caps: all-small-caps;
+    padding: 0.5em;
 }
 
 @media screen and (max-width: 812px) {
     .contact-page-container{
         height: 65vh;
+        grid-template-columns: 1em 1fr 1em;
+        grid-template-rows: 1em repeat(2, 1fr) 1em;
+        grid-row-gap: 2em;
+        overflow: scroll;
+        margin-bottom: 3em;
+    }
+
+    .contact-text-container{
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .form-container{
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .some-container>img{
+        display: none;
     }
 }
