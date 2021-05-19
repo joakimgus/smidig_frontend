@@ -1,10 +1,6 @@
-/* TODO
-fikse så social-icons ikke stikker utenfor footer og pusher den opp fra bunnen av siden.
- */
-
 .footer-container {
   width: 100vw;
-  height: 12em;
+  height: 25vh;
   background-color: rgb(29, 29, 29);
   color: white;
   display: grid;
@@ -70,7 +66,7 @@ p {
 }
 
 .social-links-container {
-  height: 100%;
+  height: 25vh;
   width: 80%;
   display: grid;
   align-content: space-evenly;

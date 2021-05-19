@@ -10,7 +10,7 @@ const Header = ({ title, description }) => {
         <h1 className={"h1-header"}>{title}</h1>
         <p className={"p-header"}>{description}</p>
       </div>
-      <img className={"img-header"} src={imgPath} alt={""} />
+        {((title === "Museum") || (title === "Utvalg")) && <img className={"img-header"} src={imgPath} alt={""} />  }
     </div>
   );
 };
