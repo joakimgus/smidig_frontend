@@ -1,5 +1,7 @@
 /* Styling for page header */
 .header-container {
+
+    /* TODO denne gjør at headern er for kort */
     height: 25vh;
 }
 
