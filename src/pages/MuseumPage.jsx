@@ -13,13 +13,6 @@ const MuseumPage = () => {
       "Her finner du en oversikt over alle museenne som er med på prosjektet, og alle utstillingene de tilbyr skreddersydde pakkeløsninger fra.",
   };
 
-  const exhibitions = [
-    require("../images/fotogrammeri.png").default,
-    require("../images/Gokstad.png").default,
-    require("../images/Tune.png").default,
-    require("../images/Osberg.png").default,
-  ];
-
   useEffect(() => {
     fetchMuseums();
   }, []);
@@ -43,7 +36,7 @@ const MuseumPage = () => {
             name={m.name}
             description={m.description}
             picture={m.picture}
-            exhibitions={exhibitions}
+            exhibitions={m.exhibitions}
           />
         ))}
       </div>
