@@ -1,5 +1,5 @@
 .header-container {
-  height: 25vh;
+  height: 30vh;
   background-color: #313131;
   display: grid;
   grid-template-columns: 1em repeat(2, auto) 1em;
@@ -39,7 +39,6 @@
 
     /* TODO Endre height */
     height: 40vh;
-
     background-color: #313131;
     display: grid;
     grid-template-rows: 1em auto 1fr 1em;
@@ -50,12 +49,13 @@
   .header-text-container {
     grid-row: 2;
     grid-column: 2;
+    align-self: center;
+    text-align: center;
   }
 
   .img-header {
     grid-row: 3;
     grid-column: 2;
-    width: 70%;
-    margin-bottom: 1em;
+    width: 60%;
   }
 }
