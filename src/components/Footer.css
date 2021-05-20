@@ -24,8 +24,8 @@ p {
 .nav-links-container {
   height: 60%;
   width: 80%;
-  margin-top: 2em;
-  margin-left: 2em;
+  justify-self: center;
+  align-self: center;
   display: grid;
   justify-content: stretch;
   border-top: 1px solid white;
@@ -44,22 +44,20 @@ p {
 }
 
 .contact-information-container {
-  height: 60%;
+  height: fit-content;
   width: 90%;
-  margin-top: 2em;
-  margin-left: 2em;
   display: grid;
-  grid-template-rows: 2fr repeat(5, 1fr);
-  grid-row-gap: 5px;
-  justify-content: stretch;
+  justify-self: center;
+  align-self: center;
+  grid-template-rows: repeat(6, 1fr);
+  grid-row-gap: 3px;
 }
 
 .about-us-container {
-  height: 50%;
+  height: fit-content;
   width: 80%;
-  margin-top: 2.4em;
-  margin-bottom: 3em;
-  margin-left: 2em;
+  align-self: center;
+  justify-self: center;
   display: grid;
   grid-row-gap: 5px;
   justify-content: start;
