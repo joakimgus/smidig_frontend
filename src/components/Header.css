@@ -2,7 +2,7 @@
   height: 25vh;
   background-color: #313131;
   display: grid;
-  grid-template-columns: 1em 1fr 1fr 1em;
+  grid-template-columns: 1em repeat(2, auto) 1em;
   color: white;
 }
 
@@ -13,7 +13,7 @@
   align-self: center;
 }
 
-.text-container {
+.header-text-container {
   grid-column: 2;
   align-self: center;
   margin-top: 5%;
@@ -38,7 +38,7 @@
   .header-container {
 
     /* TODO Endre height */
-    height: 62vh;
+    height: 40vh;
 
     background-color: #313131;
     display: grid;
@@ -47,7 +47,7 @@
     color: white;
   }
 
-  .text-container {
+  .header-text-container {
     grid-row: 2;
     grid-column: 2;
   }

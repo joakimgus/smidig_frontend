@@ -6,7 +6,7 @@ const Header = ({ title, description }) => {
 
   return (
     <div className={"header-container"}>
-      <div className={"text-container"}>
+      <div className={"header-text-container"}>
         <h1 className={"h1-header"}>{title}</h1>
         <p className={"p-header"}>{description}</p>
       </div>
