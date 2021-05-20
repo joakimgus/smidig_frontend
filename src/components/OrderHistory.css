@@ -1,9 +1,43 @@
 .order-history-container {
     grid-row: 3;
     grid-column: 2;
+    display: grid;
+    grid-template-rows: 20% 20% 60%;
 }
 
-#order-history-table {
+#order-history-text-container{
+    width: 50%;
+}
+
+#order-history-text-container > h1{
+    padding-bottom: 0.1em;
+    border-bottom: 1px solid black;
+}
+
+#order-history-text-container > p{
+    padding-top: 0.5em;
+}
+
+table{
+    table-layout:fixed;
     width: 100%;
     text-align: left;
+    border-collapse: collapse;
+}
+
+th.table-head {
+    width: 20%;
+}
+
+tr#header-row > th {
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid black;
+}
+
+tr.order-row > td{
+    padding-top: 1em;
+    padding-left: 0.5em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid rgb(112, 112, 112);
 }
