@@ -7,6 +7,7 @@ import { Link, useHistory } from "react-router-dom";
 import "./Navigationbar.css";
 import { UserContext } from "../context/context";
 import { fetchData } from "../api/apiHandler";
+import ProfilePage from "../pages/ProfilePage";
 
 const Navigationbar = () => {
   const { user, setUser } = useContext(UserContext);
@@ -61,12 +62,22 @@ const Navigationbar = () => {
           </button>
         </Link>
       ) : (
+          <Link to={"/minside"}>
+              <button className={"nav-btn"} id={"login-btn"}>
+                  <img src={UserIcon} alt={"Bruker ikon"} />
+                  <p>Min side</p>
+              </button>
+          </Link>
+
+
+          /*
         <Link onClick={logout}>
           <button className={"nav-btn"} id={"login-btn"}>
             <img src={UserIcon} alt={"Bruker ikon"} />
             <p>Logg ut</p>
           </button>
         </Link>
+           */
       )}
     </div>
   );

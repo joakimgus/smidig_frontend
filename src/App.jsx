@@ -14,6 +14,7 @@ import Navigationbar from "./components/Navigationbar";
 import Footer from "./components/Footer";
 import { fetchData } from "./api/apiHandler";
 import { UserContext } from "./context/context";
+import ProfilePage from "./pages/ProfilePage";
 
 const App = () => {
   // User context
@@ -48,6 +49,9 @@ const App = () => {
           </Route>
           <Route path="/login">
             <LoginPage />
+          </Route>
+          <Route path="/minside">
+            <ProfilePage />
           </Route>
         </Switch>
         <Footer />

@@ -1,0 +1,7 @@
+.profile-page-container {
+    min-height: 80vh;
+    min-width: 100%;
+    display: grid;
+    grid-template-rows: 1em repeat(2, auto) 1em;
+    grid-template-columns: 1em auto 1em;
+}

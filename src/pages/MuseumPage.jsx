@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, {useContext, useEffect, useState} from "react";
 import MuseumCard from "../components/MuseumCard";
 import "./MuseumPage.css";
 import { fetchData } from "../api/apiHandler";
 import Header from "../components/Header";
+import {UserContext} from "../context/context";
 
 const MuseumPage = () => {
   const [museums, setMuseums] = useState();
