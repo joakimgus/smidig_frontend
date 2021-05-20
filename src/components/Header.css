@@ -1,8 +1,5 @@
 .header-container {
-
-  /* TODO Endre height */
-  height: 20em;
-
+  height: 25vh;
   background-color: #313131;
   display: grid;
   grid-template-columns: 1em 1fr 1fr 1em;
@@ -19,6 +16,7 @@
 .text-container {
   grid-column: 2;
   align-self: center;
+  margin-top: 5%;
 }
 
 .h1-header {
@@ -40,7 +38,7 @@
   .header-container {
 
     /* TODO Endre height */
-    height: 30em;
+    height: 62vh;
 
     background-color: #313131;
     display: grid;
