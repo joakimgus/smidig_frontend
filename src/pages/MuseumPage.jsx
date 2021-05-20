@@ -1,9 +1,9 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, { useContext, useEffect, useState } from "react";
 import MuseumCard from "../components/MuseumCard";
 import "./MuseumPage.css";
 import { fetchData } from "../api/apiHandler";
 import Header from "../components/Header";
-import {UserContext} from "../context/context";
+import Loading from "../components/Loading";
 
 const MuseumPage = () => {
   const [museums, setMuseums] = useState();
@@ -24,7 +24,7 @@ const MuseumPage = () => {
   };
 
   if (!museums) {
-    return "loading..";
+    return <Loading />;
   }
 
   return (
