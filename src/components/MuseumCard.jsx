@@ -5,7 +5,7 @@ const MuseumCard = ({ name, description, picture, exhibitions }) => {
   return (
     <div className={"museum-card"}>
       <div className={"museum-card-img-container"}>
-        <img id={"museum-card-img"} src={picture.default} alt={name} />
+        <img id={"museum-card-img"} src={picture} alt={name} />
       </div>
       <div className={"museum-card-text-container"}>
         <h1 className={"museum-card-title"}>{name}</h1>
@@ -13,24 +13,20 @@ const MuseumCard = ({ name, description, picture, exhibitions }) => {
       </div>
       <div className={"museum-card-exhibitions-container"}>
         <h1>UTSTILLINGER</h1>
-        <div className={"museum-card-exhibitions"}>
-          <div>
-            <img src={exhibitions[0]} alt={"img"} />
-            <h3 className={"exhibition-name"}>Navn en (1)</h3>
+        {exhibitions.length > 0 ? (
+          <div className={"museum-card-exhibitions"}>
+            {exhibitions.map((e) => (
+              <div>
+                <img src={e.picture} alt={"img"} />
+                <h3 className={"exhibition-name"}>{e.name}</h3>
+              </div>
+            ))}
           </div>
-          <div>
-            <img src={exhibitions[1]} alt={"img"} />
-            <h3 className={"exhibition-name"}>Navn 2 (2)</h3>
+        ) : (
+          <div className={"museum-card-exhibitions"}>
+            {name} har ingen utstillinger for øyeblikket.
           </div>
-          <div>
-            <img src={exhibitions[2]} alt={"img"} />
-            <h3 className={"exhibition-name"}>Navn 3 (3)</h3>
-          </div>
-          <div id={"exhibition-item-four"}>
-            <img src={exhibitions[3]} alt={"img"} />
-            <h3 className={"exhibition-name"}>Navn 4 (4)</h3>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

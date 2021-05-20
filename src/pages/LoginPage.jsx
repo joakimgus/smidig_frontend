@@ -71,7 +71,12 @@ const LoginPage = () => {
       {isSignup ? <h3>Opprett bruker</h3> : <h3>Logg inn</h3>}
       <div>
         <form onSubmit={handleSubmit}>
-          <Input name="email" label="E-post" handleChange={handleChange} />
+          <Input
+            name="email"
+            label="E-post"
+            type="email"
+            handleChange={handleChange}
+          />
           <Input
             name="password"
             label="Passord"
