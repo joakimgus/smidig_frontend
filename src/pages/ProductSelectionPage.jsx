@@ -38,6 +38,9 @@ const ProductSelectionPage = () => {
           <div>
             <hr />
             <p>{e.name}</p>
+            {e.tags.map((t) => (
+              <p style={{ display: "inline-block" }}>{t}, </p>
+            ))}
             <p>{e.description}</p>
             {e.media.map((m) => (
               <img src={m} alt="img" />
