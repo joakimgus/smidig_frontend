@@ -13,7 +13,7 @@ const MuseumCard = ({ name, description, picture, exhibitions }) => {
       </div>
       <div className={"museum-card-exhibitions-container"}>
         <h1>UTSTILLINGER</h1>
-        {exhibitions && (
+        {exhibitions.length > 0 ? (
           <div className={"museum-card-exhibitions"}>
             {exhibitions.map((e) => (
               <div>
@@ -21,22 +21,10 @@ const MuseumCard = ({ name, description, picture, exhibitions }) => {
                 <h3 className={"exhibition-name"}>{e.name}</h3>
               </div>
             ))}
-            {/*<div>
-            <img src={exhibitions[0]} alt={"img"} />
-            <h3 className={"exhibition-name"}>{}</h3>
           </div>
-          <div>
-            <img src={exhibitions[1]} alt={"img"} />
-            <h3 className={"exhibition-name"}>Navn 2 (2)</h3>
-          </div>
-          <div>
-            <img src={exhibitions[2]} alt={"img"} />
-            <h3 className={"exhibition-name"}>Navn 3 (3)</h3>
-          </div>
-          <div id={"exhibition-item-four"}>
-            <img src={exhibitions[3]} alt={"img"} />
-            <h3 className={"exhibition-name"}>Navn 4 (4)</h3>
-          </div>*/}
+        ) : (
+          <div className={"museum-card-exhibitions"}>
+            {name} har ingen utstillinger for øyeblikket.
           </div>
         )}
       </div>
