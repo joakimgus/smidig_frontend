@@ -8,7 +8,7 @@ import MuseumPage from "./pages/MuseumPage";
 import ProductSelectionPage from "./pages/ProductSelectionPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
-import ShoppingCartPage from "./pages/ShoppingCartPage";
+import Cart from "./pages/Cart";
 import LoginPage from "./pages/LoginPage";
 import Navigationbar from "./components/Navigationbar";
 import Footer from "./components/Footer";
@@ -49,7 +49,7 @@ const App = () => {
             <ContactPage />
           </Route>
           <Route path="/handlekurv">
-            <ShoppingCartPage />
+            <Cart />
           </Route>
           <Route path="/login">
             <LoginPage />
