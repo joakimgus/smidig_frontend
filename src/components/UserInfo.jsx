@@ -12,6 +12,7 @@ const UserInfo = () => {
 
     const logout = async () => {
         const res = await fetchData("/auth/logout");
+        console.log(res);
         if (res === "done") {
             setUser(undefined);
             history.push("/");
@@ -46,6 +47,9 @@ const UserInfo = () => {
                         <p>Logg ut</p>
                     </button>
                 </Link>
+                <div id={"tidvis-logo"}>
+                    <img src={require("../images/tidvis-rund.png").default} />
+                </div>
             </div>
         </>
     );

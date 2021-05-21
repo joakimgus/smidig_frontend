@@ -53,3 +53,10 @@ tr.user-row > td.edit-btn-column {
     background-color: white;
     border: none;
 }
+
+#tidvis-logo{
+    align-self: center;
+    justify-self: center;
+    grid-column: 2;
+    grid-row: 2;
+}
