@@ -31,7 +31,27 @@ const Cart = () => {
                     <p><span>-</span> 1 <span>+</span></p>
                 </div>
                 <div className={'item-price-container'}>
-                    <p>NOK 0.00</p>
+                    <p><span>NOK </span>0.00</p>
+                </div>
+                <div className={'item-remove-container'}>
+                    <button>x</button>
+                </div>
+            </div>
+            <div className={'cart-item-container'}>
+                <div className={'cart-img-text-container'}>
+                    <img src={imgPaaaath} alt={'item image'} />
+                    <div className={'cart-item-text-container'}>
+                        <h3>Produktnavn</h3>
+                        <p className={'cart-product-description'}>Produktbeskrivelse</p>
+                        <p>Artikkelnr. 098765</p>
+                    </div>
+                </div>
+                <div className={'item-amount-container'}>
+                    {/*TODO fix counter*/}
+                    <p><span>-</span> 1 <span>+</span></p>
+                </div>
+                <div className={'item-price-container'}>
+                    <p><span>NOK </span>0.00</p>
                 </div>
                 <div className={'item-remove-container'}>
                     <button>x</button>
