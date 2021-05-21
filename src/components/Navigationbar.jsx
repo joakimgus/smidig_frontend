@@ -13,6 +13,7 @@ const Navigationbar = () => {
   const { user, setUser } = useContext(UserContext);
   const history = useHistory();
 
+  /*
   const logout = async () => {
     const res = await fetchData("/auth/logout");
     if (res === "done") {
@@ -20,6 +21,8 @@ const Navigationbar = () => {
       history.push("/");
     }
   };
+
+   */
 
   return (
     <div className={"navbar-container"}>

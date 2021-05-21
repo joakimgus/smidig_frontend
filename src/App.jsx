@@ -15,6 +15,7 @@ import Footer from "./components/Footer";
 import { fetchData } from "./api/apiHandler";
 import { UserContext } from "./context/context";
 import ProfilePage from "./pages/ProfilePage";
+import ProductPage from "./pages/ProductPage";
 
 const App = () => {
   // User context
@@ -35,8 +36,11 @@ const App = () => {
           <Route path="/museum">
             <MuseumPage />
           </Route>
-          <Route path="/utvalg">
+          <Route path="/utvalg" exact>
             <ProductSelectionPage />
+          </Route>
+          <Route path="/utvalg/pakke">
+            <ProductPage />
           </Route>
           <Route path="/om">
             <AboutUsPage />
