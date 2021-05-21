@@ -12,3 +12,9 @@
         grid-template-columns: 2em repeat(2, auto) 2em;
     }
 }
+
+@media screen and (max-width: 520px) {
+    .profile-page-container {
+        grid-template-rows: 1em 38% 58% 1em;
+    }
+}

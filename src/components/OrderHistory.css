@@ -62,6 +62,18 @@ tr.order-row > td {
 }
 
 @media screen and (max-width: 520px) {
+    .order-history-container {
+        min-height: 0vh;
+    }
+
+    #order-history-text-container > h1 {
+        font-size: medium;
+    }
+
+    #order-history-text-container > p {
+        font-size: 12px;
+    }
+
     table#order-history-table > * {
         font-size: 12px;
     }
