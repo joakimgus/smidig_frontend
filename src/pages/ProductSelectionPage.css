@@ -1,0 +1,38 @@
+/*Styling for page content*/
+.utvalg-page-container{
+    display: grid;
+    grid-template-columns: auto 2em 1fr 2em;
+}
+
+.utvalg-products-container{
+    grid-column: 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/*Styling for 1 product*/
+.utvalg-product-container{
+    width: 20vw;
+    height: 20em;
+    border: 1px solid black;
+}
+
+.utvalg-product-img{
+    width: 15em;
+    height: 10em;
+    object-fit: cover;
+}
+
+.utvalg-product-container>h3{
+    font-size: large;
+}
+
+.utvalg-tags{
+    font-size: 10px;
+    font-style: italic;
+}
+
+.utvalg-description{
+    font-style: italic;
+    font-weight: 300;
+}

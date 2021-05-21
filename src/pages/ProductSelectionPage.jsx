@@ -4,6 +4,7 @@ import "./ProductSelectionPage.css";
 import { fetchData } from "../api/apiHandler";
 import Loading from "../components/Loading";
 import { useHistory } from "react-router";
+import FilterSidebar from "../components/FilterSidebar";
 
 const ProductSelectionPage = () => {
   const [exhibitions, setExhibitions] = useState();
@@ -34,17 +35,18 @@ const ProductSelectionPage = () => {
     <>
       <Header title={headerText.title} description={headerText.description} />
       <div className={"utvalg-page-container"}>
-        {exhibitions.map((e) => (
-          <div>
-            <hr />
-            <p>{e.name}</p>
-            {e.tags.map((t) => (
-              <p style={{ display: "inline-block" }}>{t}, </p>
-            ))}
-            <p>{e.description}</p>
+        <FilterSidebar />
+        <div className={'utvalg-products-container'}>
+        {exhibitions.reverse().map((e) => (
+          <div className={'utvalg-product-container'}>
             {e.media.map((m) => (
-              <img src={m} alt="img" />
+                <img className={'utvalg-product-img'} src={m} alt="img" />
             ))}
+            <h3>{e.name}</h3>
+            {e.tags.map((t) => (
+              <p className={'utvalg-tags'} style={{ display: "inline-block" }}>{t}, </p>
+            ))}
+            <p className={'utvalg-description'}>{e.description}</p>
             <button
               onClick={() => history.push("/utvalg/pakke", { params: e })}
             >
@@ -52,6 +54,7 @@ const ProductSelectionPage = () => {
             </button>
           </div>
         ))}
+        </div>
       </div>
     </>
   );
