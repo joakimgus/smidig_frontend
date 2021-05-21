@@ -22,13 +22,16 @@
 #user-info-table {
     grid-row: 2;
     table-layout:fixed;
-    width: 60%;
     text-align: left;
     border-collapse: collapse;
 }
 
 tr.user-row > td {
     padding-bottom: 0.7em;
+}
+
+td.user-info-text {
+    width: 40%;
 }
 
 tr.user-row > td.edit-btn-column {
@@ -59,4 +62,10 @@ tr.user-row > td.edit-btn-column {
     justify-self: center;
     grid-column: 2;
     grid-row: 2;
+}
+
+@media screen and (max-width: 960px) {
+    td.user-info-text {
+        width: 10em;
+    }
 }

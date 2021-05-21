@@ -26,10 +26,6 @@
     border-collapse: collapse;
 }
 
-th.table-head {
-    width: 20%;
-}
-
 tr#header-row > th {
     padding-left: 0.5em;
     padding-bottom: 0.5em;
@@ -41,4 +37,62 @@ tr.order-row > td {
     padding-left: 0.5em;
     padding-bottom: 1em;
     border-bottom: 1px solid rgb(112, 112, 112);
+}
+
+@media screen and (max-width: 812px) {
+    th.museum-column, td.museum-column {
+        display: none;
+    }
+
+    th.price-column, td.price-column {
+        width: 4em;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    th.date-column, td.date-column{
+        width: 8em;
+    }
+}
+
+@media screen and (max-width: 610px){
+    th.date-column, td.date-column{
+        width: 6em;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    table#order-history-table > * {
+        font-size: 12px;
+    }
+
+    th.date-column, td.date-column{
+        width: 3em;
+    }
+
+    th.ordernr-column, td.ordernr-column {
+        width: 4em;
+    }
+
+    th.package-column, td.package-column{
+        width: 4em;
+    }
+
+    th.price-column, td.price-column {
+        width: 2em;
+    }
+}
+
+@media screen and (max-width: 450px){
+    th.date-column, td.date-column{
+        width: 3em;
+    }
+
+    th.package-column, td.package-column{
+        width: 3em;
+    }
+
+    th.price-column, td.price-column {
+        width: 1em;
+    }
 }
