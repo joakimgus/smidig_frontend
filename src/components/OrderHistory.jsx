@@ -14,26 +14,26 @@ const OrderHistory = () => {
                 </div>
                 <table id={"order-history-table"}>
                     <tr id={"header-row"}>
-                        <th className={"table-header"}>Dato</th>
-                        <th className={"table-header"}>Ordrenummer</th>
-                        <th className={"table-header"}>Museum</th>
-                        <th className={"table-header"}>Pakke</th>
-                        <th className={"table-header"}>Pris</th>
+                        <th className={"table-header date-column"}>Dato</th>
+                        <th className={"table-header ordernr-column"}>Ordrenummer</th>
+                        <th className={"table-header museum-column"}>Museum</th>
+                        <th className={"table-header package-column"}>Pakke</th>
+                        <th className={"table-header price-column"}>Pris</th>
                     </tr>
                     {/* TODO insert map for orders */}
                     <tr className={"order-row"}>
-                        <td>01.05.2021</td>
-                        <td>120398120</td>
-                        <td>Tidvis</td>
-                        <td>Oslo 1324</td>
-                        <td>0.-</td>
+                        <td className={"date-column"}>01.05.2021</td>
+                        <td className={"ordernr-column"}>120398120</td>
+                        <td className={"museum-column"}>Tidvis</td>
+                        <td className={"package-column"}>Oslo 1324</td>
+                        <td className={"price-column"}>0.-</td>
                     </tr>
                     <tr className={"order-row"}>
-                        <td>20.03.2021</td>
-                        <td>461947294</td>
-                        <td>Vikingskiphuset</td>
-                        <td>Tunberg</td>
-                        <td>0.-</td>
+                        <td className={"date-column"}>20.03.2021</td>
+                        <td className={"ordernr-column"}>461947294</td>
+                        <td className={"museum-column"}>Vikingskiphuset</td>
+                        <td className={"package-column"}>Tunberg</td>
+                        <td className={"price-column"}>0.-</td>
                     </tr>
                 </table>
             </div>
