@@ -18,14 +18,16 @@ const Cart = () => {
                 <hr />
             </div>
             <div className={'cart-item-container'}>
-                <img src={imgPaaaath} alt={'item image'} />
-                <div className={'cart-item-text-container'}>
-                    <h3>Produktnavn</h3>
-                    <p>Produktbeskrivelse</p>
-                    <p>Artikkelnr: 098765</p>
+                <div className={'cart-img-text-container'}>
+                    <img src={imgPaaaath} alt={'item image'} />
+                    <div className={'cart-item-text-container'}>
+                        <h3>Produktnavn</h3>
+                        <p className={'cart-product-description'}>Produktbeskrivelse</p>
+                        <p>Artikkelnr. 098765</p>
+                    </div>
                 </div>
                 <div className={'item-amount-container'}>
-                    {/*TODO Komponent her? //Counter*/}
+                    {/*TODO fix counter*/}
                     <p><span>-</span> 1 <span>+</span></p>
                 </div>
                 <div className={'item-price-container'}>
