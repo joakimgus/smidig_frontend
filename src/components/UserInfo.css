@@ -69,3 +69,53 @@ tr.user-row > td.edit-btn-column {
         width: 10em;
     }
 }
+
+@media screen and (max-width: 520px) {
+    .user-info-container {
+        grid-template-rows: repeat(3, auto) 1em;
+        align-items: start;
+        align-content: space-evenly;
+        min-height: 0;
+    }
+
+    #user-info-text-container {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: center;
+    }
+
+    #user-info-text-container > h1 {
+        font-size: medium;
+    }
+
+    #user-info-text-container > p {
+        padding-top: 0.5em;
+        font-size: 12px;
+    }
+
+    table#user-info-table > * {
+        font-size: 12px;
+    }
+
+    .edit-btn > img{
+        width: 50%;
+    }
+
+    #user-info-table {
+        align-self: start;
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #log-out-btn {
+        align-self: end;
+        grid-row: 3;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #tidvis-logo {
+        display: none;
+        padding-top: 1em;
+    }
+}
