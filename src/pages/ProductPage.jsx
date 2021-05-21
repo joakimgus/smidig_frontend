@@ -6,10 +6,15 @@ const ProductPage = () => {
   const data = location.state.params;
 
   const addToCart = () => {
-    console.log("Legg til ");
-    let cart = JSON.parse(localStorage.getItem("handlekurv")) || [];
-    cart.push(data);
-    localStorage.setItem("handlekurv", JSON.stringify(cart));
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const productInCart = cart.findIndex((x) => x._id === data._id);
+    if (productInCart >= 0) {
+      cart[productInCart].counter++;
+    } else {
+      data.counter = 1;
+      cart.push(data);
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
   };
 
   return (
