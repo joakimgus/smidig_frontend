@@ -71,6 +71,8 @@ const LoginPage = () => {
       {isSignup ? <h3>Opprett bruker</h3> : <h3>Logg inn</h3>}
       <div>
         <form onSubmit={handleSubmit}>
+
+          {/*TODO fiks label over som i prototype?*/}
           <Input
             name="email"
             label="E-post"
@@ -97,6 +99,7 @@ const LoginPage = () => {
           </button>
         </form>
         <button id="switch" onClick={switchMode}>
+          {/*TODO endre til norsk?*/}
           {isSignup
             ? "Already have an account? Sign In"
             : "Dont have an account yet? Sign Up"}
