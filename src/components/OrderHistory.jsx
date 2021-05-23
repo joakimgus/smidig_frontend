@@ -46,7 +46,7 @@ const OrderHistory = () => {
                 {moment(o.orderDate).format("YYYY-MM-DD HH:mm")}
               </td>
               <td className={"ordernr-column"}>{o._id}</td>
-              <td className={"museum-column"}>Museumnavn</td>
+              <td className={"museum-column"}>{o.museums}</td>
               <td className={"package-column"}>Pakkenavn</td>
               {/* <td className={"price-column"}>0.-</td>*/}
             </tr>
