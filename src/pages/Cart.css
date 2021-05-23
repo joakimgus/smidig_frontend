@@ -1,9 +1,6 @@
 .cart-page-container{
     height: 100vh;
-    display: grid;
-    grid-template-rows: min-content 30px min-content;
     margin: 5px 0 5px 0;
-    grid-row-gap: 5px;
 }
 
 .cart-top-text-container{
