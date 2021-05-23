@@ -2,6 +2,7 @@ import "./OrderHistory.css";
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../api/apiHandler";
 import Loading from "./Loading";
+import moment from "moment";
 
 const OrderHistory = () => {
   const [orders, setOrders] = useState();
@@ -41,7 +42,9 @@ const OrderHistory = () => {
           {/* TODO insert map for orders */}
           {orders.map((o) => (
             <tr className={"order-row"}>
-              <td className={"date-column"}>{o.orderDate.toLocaleString()}</td>
+              <td className={"date-column"}>
+                {moment(o.orderDate).format("YYYY-MM-DD HH:mm")}
+              </td>
               <td className={"ordernr-column"}>{o._id}</td>
               <td className={"museum-column"}>Museumnavn</td>
               <td className={"package-column"}>Pakkenavn</td>
