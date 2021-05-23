@@ -27,7 +27,7 @@ const UserInfo = () => {
         <div className={"user-info-container"}>
           <div id={"user-info-text-container"}>
             <h1 id={"user-info-title"}>Min side</h1>
-            <p>Du er logget inn som bruker: </p>
+            <p>Du er logget inn som bruker: {user.email} </p>
           </div>
           <table id={"user-info-table"}>
             <tr className={"user-row"}>
