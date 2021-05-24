@@ -32,10 +32,11 @@ const FrontPage = () => {
   return (
     <div className={"page-container"}>
       <Swiper
-        /*autoplay={{
+        speed={1500}
+        autoplay={{
           delay: 3000,
           disableOnInteraction: false,
-        }}*/
+        }}
         spaceBetween={0}
         slidesPerView={1}
         pagination={{ clickable: true }}
