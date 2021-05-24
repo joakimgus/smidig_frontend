@@ -1,110 +1,121 @@
 .order-history-container {
-    grid-row: 3;
-    grid-column: 2;
-    display: grid;
-    grid-template-rows: 20% 20% 60%;
-    min-height: 50vh;
+  grid-row: 3;
+  grid-column: 2;
+  display: grid;
+  grid-template-rows: 20% 20% 60%;
+  min-height: 50vh;
 }
 
 #order-history-text-container {
-    width: 50%;
+  width: 50%;
 }
 
 #order-history-text-container > h1 {
-    padding-bottom: 0.1em;
-    border-bottom: 1px solid black;
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid black;
 }
 
 #order-history-text-container > p {
-    padding-top: 0.5em;
+  padding-top: 0.5em;
 }
 
 #order-history-table {
-    table-layout:fixed;
-    width: 100%;
-    text-align: left;
-    border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
 }
 
 tr#header-row > th {
-    padding-left: 0.5em;
-    padding-bottom: 0.5em;
-    border-bottom: 2px solid black;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid black;
 }
 
 tr.order-row > td {
-    padding-top: 1em;
-    padding-left: 0.5em;
-    padding-bottom: 1em;
-    border-bottom: 1px solid rgb(112, 112, 112);
+  padding-top: 1em;
+  padding-left: 0.5em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgb(112, 112, 112);
 }
 
 @media screen and (max-width: 812px) {
-    th.museum-column, td.museum-column {
-        display: none;
-    }
+  th.museum-column,
+  td.museum-column {
+    display: none;
+  }
 
-    th.price-column, td.price-column {
-        width: 4em;
-    }
+  th.price-column,
+  td.price-column {
+    width: 4em;
+  }
 }
 
 @media screen and (max-width: 720px) {
-    th.date-column, td.date-column{
-        width: 8em;
-    }
+  th.date-column,
+  td.date-column {
+    width: 8em;
+  }
 }
 
-@media screen and (max-width: 610px){
-    th.date-column, td.date-column{
-        width: 6em;
-    }
+@media screen and (max-width: 610px) {
+  th.date-column,
+  td.date-column {
+    width: 6em;
+  }
 }
 
 @media screen and (max-width: 520px) {
-    .order-history-container {
-        min-height: 0vh;
-    }
+  .order-history-container {
+    min-height: 0vh;
+  }
 
-    #order-history-text-container > h1 {
-        font-size: medium;
-    }
+  #order-history-text-container > h1 {
+    font-size: medium;
+  }
 
-    #order-history-text-container > p {
-        font-size: 12px;
-    }
+  #order-history-text-container > p {
+    font-size: 12px;
+  }
 
-    table#order-history-table > * {
-        font-size: 12px;
-    }
+  table#order-history-table > * {
+    font-size: 12px;
+  }
 
-    th.date-column, td.date-column{
-        width: 3em;
-    }
+  th.date-column,
+  td.date-column {
+    width: 3em;
+  }
 
-    th.ordernr-column, td.ordernr-column {
-        width: 4em;
-    }
+  th.ordernr-column,
+  td.ordernr-column {
+    width: 4em;
+  }
 
-    th.package-column, td.package-column{
-        width: 4em;
-    }
+  th.package-column,
+  td.package-column {
+    width: 4em;
+  }
 
-    th.price-column, td.price-column {
-        width: 2em;
-    }
+  th.price-column,
+  td.price-column {
+    width: 2em;
+  }
 }
 
-@media screen and (max-width: 450px){
-    th.date-column, td.date-column{
-        width: 3em;
-    }
+@media screen and (max-width: 450px) {
+  th.date-column,
+  td.date-column {
+    width: 3em;
+  }
 
-    th.package-column, td.package-column{
-        width: 3em;
-    }
+  th.package-column,
+  td.package-column {
+    width: 3em;
+  }
 
-    th.price-column, td.price-column {
-        width: 1em;
-    }
+  th.price-column,
+  td.price-column {
+    width: 1em;
+  }
 }

@@ -1,121 +1,121 @@
 .user-info-container {
-    grid-row: 2;
-    grid-column: 2;
-    min-height: 40vh;
-    display: grid;
-    grid-template-rows: 27% 47% 17% 2em;
-    grid-template-columns: 50% 50%;
-    align-items: center;
-    align-content: space-evenly;
+  grid-row: 2;
+  grid-column: 2;
+  min-height: 40vh;
+  display: grid;
+  grid-template-rows: 27% 47% 17% 2em;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  align-content: space-evenly;
 }
 
 #user-info-text-container > h1 {
-    padding-bottom: 0.1em;
-    border-bottom: 1px solid black;
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid black;
 }
 
 #user-info-text-container > p {
-    padding-top: 0.5em;
-    font-size: medium;
+  padding-top: 0.5em;
+  font-size: medium;
 }
 
 #user-info-table {
-    grid-row: 2;
-    table-layout:fixed;
-    text-align: left;
-    border-collapse: collapse;
+  grid-row: 2;
+  table-layout: fixed;
+  text-align: left;
+  border-collapse: collapse;
 }
 
 tr.user-row > td {
-    padding-bottom: 0.7em;
+  padding-bottom: 0.7em;
 }
 
 td.user-info-text {
-    width: 40%;
+  width: 40%;
 }
 
 tr.user-row > td.edit-btn-column {
-    align-self: start;
+  align-self: start;
 }
 
-#log-out-btn{
-    grid-column: 1;
-    grid-row: 3;
-    align-self: start;
+#log-out-btn {
+  grid-column: 1;
+  grid-row: 3;
+  align-self: start;
 }
 
 #log-out-btn > button {
-    height: 3em;
-    width: 6em;
-    background-color: black;
-    color: white;
-    border-radius: 2px;
+  height: 3em;
+  width: 6em;
+  background-color: black;
+  color: white;
+  border-radius: 2px;
 }
 
 .edit-btn {
-    background-color: white;
-    border: none;
+  background-color: white;
+  border: none;
 }
 
-#tidvis-logo{
-    align-self: center;
-    justify-self: center;
-    grid-column: 2;
-    grid-row: 2;
+#tidvis-logo {
+  align-self: center;
+  justify-self: center;
+  grid-column: 2;
+  grid-row: 2;
 }
 
 @media screen and (max-width: 960px) {
-    td.user-info-text {
-        width: 10em;
-    }
+  td.user-info-text {
+    width: 10em;
+  }
 }
 
 @media screen and (max-width: 520px) {
-    .user-info-container {
-        grid-template-rows: repeat(3, auto) 1em;
-        align-items: start;
-        align-content: space-evenly;
-        min-height: 0;
-    }
+  .user-info-container {
+    grid-template-rows: repeat(3, auto) 1em;
+    align-items: start;
+    align-content: space-evenly;
+    min-height: 0;
+  }
 
-    #user-info-text-container {
-        grid-column: 1;
-        grid-row: 1;
-        align-self: center;
-    }
+  #user-info-text-container {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+  }
 
-    #user-info-text-container > h1 {
-        font-size: medium;
-    }
+  #user-info-text-container > h1 {
+    font-size: medium;
+  }
 
-    #user-info-text-container > p {
-        padding-top: 0.5em;
-        font-size: 12px;
-    }
+  #user-info-text-container > p {
+    padding-top: 0.5em;
+    font-size: 12px;
+  }
 
-    table#user-info-table > * {
-        font-size: 12px;
-    }
+  table#user-info-table > * {
+    font-size: 12px;
+  }
 
-    .edit-btn > img{
-        width: 50%;
-    }
+  .edit-btn > img {
+    width: 50%;
+  }
 
-    #user-info-table {
-        align-self: start;
-        grid-column: 1;
-        grid-row: 2;
-    }
+  #user-info-table {
+    align-self: start;
+    grid-column: 1;
+    grid-row: 2;
+  }
 
-    #log-out-btn {
-        align-self: end;
-        grid-row: 3;
-    }
+  #log-out-btn {
+    align-self: end;
+    grid-row: 3;
+  }
 }
 
 @media screen and (max-width: 450px) {
-    #tidvis-logo {
-        display: none;
-        padding-top: 1em;
-    }
+  #tidvis-logo {
+    display: none;
+    padding-top: 1em;
+  }
 }

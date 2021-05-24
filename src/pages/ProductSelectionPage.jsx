@@ -36,28 +36,36 @@ const ProductSelectionPage = () => {
       <Header title={headerText.title} description={headerText.description} />
       <div className={"utvalg-page-container"}>
         <FilterSidebar />
-        <div className={'utvalg-products-container'}>
-        {exhibitions.reverse().map((e) => (
-          <div className={'utvalg-product-container'}>
-            {e.media.map((m) => (
-                <img className={'utvalg-product-img'} src={m} alt="img" />
-            ))}
-            <h3>{e.name}</h3>
-            {e.tags.map((t) => (
-              <p className={'utvalg-tags'} style={{ display: "inline-block" }}>{t}, </p>
-            ))}
-            <p className={'utvalg-description'}>
-              {e.description.length > 150 ?
-                  `${e.description.substring(0, 150)}...` : e.description
-              }
-            </p>
-            <button
-              onClick={() => history.push("/utvalg/pakke", { params: e })}
-            >
-              Les mer
-            </button>
-          </div>
-        ))}
+        <div className={"utvalg-products-container"}>
+          {exhibitions.reverse().map((e) => (
+            <div className={"utvalg-product-container"}>
+              {e.media.map((m) => (
+                <img className={"utvalg-product-img"} src={m} alt="img" />
+              ))}
+              <h3>{e.name}</h3>
+              <div className={"utvalg-tags-container"}>
+                {e.tags.map((t) => (
+                  <p
+                    className={"utvalg-tags"}
+                    style={{ display: "inline-block" }}
+                  >
+                    {t},{" "}
+                  </p>
+                ))}
+              </div>
+              <p className={"utvalg-description"}>
+                {e.description.length > 150
+                  ? `${e.description.substring(0, 150)}...`
+                  : e.description}
+              </p>
+              <button
+                className={"utvalg-add-cart-btn"}
+                onClick={() => history.push("/utvalg/pakke", { params: e })}
+              >
+                Les mer
+              </button>
+            </div>
+          ))}
         </div>
       </div>
     </>

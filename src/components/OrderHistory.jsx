@@ -46,8 +46,16 @@ const OrderHistory = () => {
                 {moment(o.orderDate).format("YYYY-MM-DD HH:mm")}
               </td>
               <td className={"ordernr-column"}>{o._id}</td>
-              <td className={"museum-column"}>{o.museums}</td>
-              <td className={"package-column"}>Pakkenavn</td>
+              <td className={"museum-column"}>
+                {o.museums.map((m) => (
+                  <div>{m.name}</div>
+                ))}
+              </td>
+              <td className={"package-column"}>
+                {o.exhibitions.map((e) => (
+                  <div>{e.name}</div>
+                ))}
+              </td>
               {/* <td className={"price-column"}>0.-</td>*/}
             </tr>
           ))}
