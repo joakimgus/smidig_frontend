@@ -18,7 +18,7 @@ import ProfilePage from "./pages/ProfilePage";
 import ProductPage from "./pages/ProductPage";
 import CustomerInformation from "./pages/CustomerInformation";
 import DeliveryInformation from "./pages/DeliveryInformation";
-import PaymentInformation from "./pages/PaymentInformation";
+import PaymentOptions from "./pages/PaymentOptions";
 import InvoiceInformation from "./pages/InvoiceInformation";
 
 const App = () => {
@@ -62,7 +62,7 @@ const App = () => {
             <DeliveryInformation />
           </Route>
           <Route path="/betaling">
-            <PaymentInformation />
+            <PaymentOptions />
           </Route>
           <Route path="/faktura">
             <InvoiceInformation />
