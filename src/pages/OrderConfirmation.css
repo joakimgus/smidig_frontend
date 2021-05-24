@@ -44,8 +44,40 @@
     align-self: start;
     grid-column: 2;
     grid-row: 4;
+    width: 80vw;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+#customer-details {
+    align-self: center;
+    justify-self: center;
+    width: 80%;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+
+#customer-details > h3 {
+    justify-self: center;
+    grid-column: 1 / span 2;
+}
+
+.column-one {
+    align-self: center;
+    grid-column: 1;
+}
+
+.column-two {
+    align-self: center;
+    justify-self: start;
+    grid-column: 2;
+}
+
+#product-details {
+    align-self: center;
+    justify-self: center;
 }
 
 @media screen and (max-width: 1080px) {
