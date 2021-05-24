@@ -1,4 +1,4 @@
-#customer-information-container {
+#delivery-information-container {
     min-height: 92vh;
     width: 100vw;
     display: grid;
@@ -8,49 +8,49 @@
     align-items: center;
 }
 
-#customer-information-img-container {
+#delivery-information-img-container {
     grid-row: 2;
     grid-column: 2;
 }
 
-#customer-information-img-container > img {
+#delivery-information-img-container > img {
     width: 65vw;
     height: auto;
 }
 
-#customer-information-header-text {
+#delivery-information-header-text {
     text-align: center;
     width: 35vw;
     grid-column: 2;
     grid-row: 3;
 }
 
-#customer-information-header-text > h1 {
+#delivery-information-header-text > h1 {
     padding-bottom: 0.1em;
 }
 
-#customer-information-header-text > p {
+#delivery-information-header-text > p {
     padding-top: 0.5em;
 }
 
-.customer-information-header-text > hr {
+.delivery-information-header-text > hr {
     border: 1px solid black;
     border-top: none;
     margin: 5px 0 5px 0;
 }
 
-#customer-information-form-container {
+#delivery-information-form-container {
     padding-top: 5vh;
     align-self: start;
     grid-column: 2;
     grid-row: 4;
 }
 
-#customer-information-form-container > form > div {
+#delivery-information-form-container > form > div {
     padding-bottom: 20px;
 }
 
-#customer-information-form-container > form > div > label > input {
+#delivery-information-form-container > form > div > label > input {
     display: grid;
     width: 30vw;
     padding: 6px 3px 3px 6px;
@@ -61,7 +61,7 @@
     font-size: 12px;
 }
 
-#customer-information-form-container > form > a {
+#delivery-information-form-container > form > a {
     width: 30vw;
     padding: 5px;
 }
@@ -80,19 +80,19 @@
 }
 
 @media screen and (max-width: 1080px) {
-    #customer-information-img-container > img {
+    #delivery-information-img-container > img {
         width: 70vw;
     }
 
-    #customer-information-header-text {
+    #delivery-information-header-text {
         width: 45vw;
     }
 
-    #customer-information-form-container > form > div > label > input {
+    #delivery-information-form-container > form > div > label > input {
         width: 40vw;
     }
 
-    #customer-information-form-container > form > a {
+    #delivery-information-form-container > form > a {
         width: 40vw;
     }
 
@@ -102,25 +102,25 @@
 }
 
 @media screen and (max-width: 880px) {
-    #customer-information-header-text > h1 {
+    #delivery-information-header-text > h1 {
         font-size: x-large;
     }
 }
 
 @media screen and (max-width: 800px) {
-    #customer-information-img-container > img {
+    #delivery-information-img-container > img {
         width: 80vw;
     }
 
-    #customer-information-header-text {
+    #delivery-information-header-text {
         width: 55vw;
     }
 
-    #customer-information-form-container > form > div > label > input {
+    #delivery-information-form-container > form > div > label > input {
         width: 50vw;
     }
 
-    #customer-information-form-container > form > a {
+    #delivery-information-form-container > form > a {
         width: 50vw;
     }
 
@@ -130,36 +130,36 @@
 }
 
 @media screen and (max-width: 600px) {
-    #customer-information-header-text {
+    #delivery-information-header-text {
         align-self: start;
     }
 
-    #customer-information-header-text > h1 {
+    #delivery-information-header-text > h1 {
         font-size: large;
     }
 
-    #customer-information-img-container > img {
+    #delivery-information-img-container > img {
         width: 90vw;
     }
 
-    #customer-information-header-text {
+    #delivery-information-header-text {
         width: 55vw;
     }
 
-    #customer-information-form-container {
+    #delivery-information-form-container {
         padding-top: 0;
         align-self: start;
     }
 
-    #customer-information-form-container > form > div > label > input {
+    #delivery-information-form-container > form > div > label > input {
         width: 50vw;
     }
 
-    #customer-information-form-container > form > a {
+    #delivery-information-form-container > form > a {
         width: 50vw;
     }
 
-    #confirm-btn {
+    #continue-btn {
         width: 50vw;
     }
 }

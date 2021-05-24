@@ -10,22 +10,37 @@ const CustomerInformation = () => {
           </div>
           <div id={"customer-information-header-text"}>
               <h1>KUNDEOPPLYSNINGER</h1>
+              <hr />
               <p>Sjekk at kundeopplysningene stemmer.</p>
           </div>
           <div id={"customer-information-form-container"}>
-              <Input
-                  label={"ORGANISASJONSNUMMER"}
-                  type={"number"}
-                  name={"org-nr"}
-                  handleChange={""}
-              />
-              <Input
-                  label={"E-POST"}
-                  type={"email"}
-                  name={"e-mail"}
-                  handleChange={""}
-              />
-              <Link to={""} id={"confirm-btn"}><button>Bekreft</button></Link>
+              <form>
+                  <Input
+                      label={"ORGANISASJONSNUMMER"}
+                      type={"text"}
+                      name={"org-nr"}
+                      handleChange={""}
+                  />
+                  <Input
+                      label={"KONTAKTPERSON"}
+                      type={"text"}
+                      name={"contact-person"}
+                      handleChange={""}
+                  />
+                  <Input
+                      label={"E-POST"}
+                      type={"email"}
+                      name={"e-mail"}
+                      handleChange={""}
+                  />
+                  <Input
+                      label={"TELEFON"}
+                      type={"text"}
+                      name={"phone-number"}
+                      handleChange={""}
+                  />
+                  <Link to={"/leveringsinformasjon"}><button id={"confirm-btn"}>Bekreft</button></Link>
+              </form>
           </div>
       </div>
     );

@@ -46,6 +46,10 @@
   padding-left: 5px;
 }
 
+.form-container > form > textarea {
+  resize: none;
+}
+
 .form-container > form > input,
 .form-container > form > textarea {
   height: 1rem;
