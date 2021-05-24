@@ -69,7 +69,7 @@ const LoginPage = () => {
   return (
     <div style={{ textAlign: "center", padding: "5rem 0rem" }}>
       {isSignup ? <h3>Opprett bruker</h3> : <h3>Logg inn</h3>}
-      <div>
+      <div id={"login-form-container"}>
         <form onSubmit={handleSubmit}>
           {/*TODO fiks label over som i prototype?*/}
           <Input

@@ -1,9 +1,9 @@
 #customer-information-container {
-    min-height: 95vh;
+    min-height: 92vh;
     width: 100vw;
     display: grid;
     grid-template-columns: 1em 1fr 1em;
-    grid-template-rows: 1em 10vh 15vh 65vh 1em;
+    grid-template-rows: 1em 18% 14% 63% 1em;
     justify-items: center;
     align-items: center;
 }
@@ -14,22 +14,68 @@
 }
 
 #customer-information-img-container > img {
-    width: 90vh;
+    width: 65vw;
     height: auto;
 }
 
 #customer-information-header-text {
+    text-align: center;
+    width: 35vw;
     grid-column: 2;
     grid-row: 3;
 }
 
+#customer-information-header-text > h1 {
+    padding-bottom: 0.1em;
+}
+
+#customer-information-header-text > p {
+    padding-top: 0.5em;
+}
+
+.customer-information-header-text > hr {
+    border: 1px solid black;
+    border-top: none;
+    margin: 5px 0 5px 0;
+}
+
 #customer-information-form-container {
+    padding-top: 5vh;
+    align-self: start;
     grid-column: 2;
     grid-row: 4;
+}
+
+#customer-information-form-container > form > div {
+    padding-bottom: 20px;
+}
+
+#customer-information-form-container > form > div > label > input {
+    display: grid;
+    width: 30vw;
+    padding: 6px 3px 3px 6px;
+    margin: 5px;
+    border: 0;
+    outline: none;
+    box-shadow: -5px 5px 0 -4px #000, 5px 5px 0 -4px #000;
+    font-size: 12px;
+}
+
+#customer-information-form-container > form > a {
+    width: 30vw;
+    padding: 5px;
 }
 
 #confirm-btn {
     grid-column: 2;
     grid-row: 4;
+    margin: 5px;
+    width: 30vw;
+    height: 4vh;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    border: none;
+    font-variant-caps: all-small-caps;
+    padding: 5px;
 }
 
