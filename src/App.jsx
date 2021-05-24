@@ -20,6 +20,7 @@ import CustomerInformation from "./pages/CustomerInformation";
 import DeliveryInformation from "./pages/DeliveryInformation";
 import PaymentOptions from "./pages/PaymentOptions";
 import InvoiceInformation from "./pages/InvoiceInformation";
+import OrderConfirmation from "./pages/OrderConfirmation";
 
 const App = () => {
   // User context
@@ -55,6 +56,9 @@ const App = () => {
           <Route path="/handlekurv">
             <Cart />
           </Route>
+          <Route path="/login">
+            <LoginPage />
+          </Route>
           <Route path="/kundeopplysninger">
             <CustomerInformation />
           </Route>
@@ -67,12 +71,35 @@ const App = () => {
           <Route path="/faktura">
             <InvoiceInformation />
           </Route>
-          <Route path="/login">
-            <LoginPage />
+          <Route path="/bekreftelse">
+            <OrderConfirmation />
           </Route>
           <Route path="/minside">
             <ProfilePage />
           </Route>
+          {/*{user ? (
+            <>
+              <Route path="/kundeopplysninger">
+                <CustomerInformation />
+              </Route>
+              <Route path="/leveringsinformasjon">
+                <DeliveryInformation />
+              </Route>
+              <Route path="/betaling">
+                <PaymentOptions />
+              </Route>
+              <Route path="/faktura">
+                <InvoiceInformation />
+              </Route>
+              <Route path="/minside">
+                <ProfilePage />
+              </Route>
+            </>
+          ) : (
+            <Route>
+              <div>Not logged in</div>
+            </Route>
+          )}*/}
         </Switch>
         <Footer />
       </UserContext.Provider>

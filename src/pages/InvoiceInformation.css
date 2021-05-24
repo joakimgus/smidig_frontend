@@ -66,19 +66,6 @@
     padding: 5px;
 }
 
-#continue-btn {
-    grid-column: 2;
-    grid-row: 4;
-    margin: 5px;
-    width: 30vw;
-    height: 4vh;
-    background-color: rgb(29, 29, 29);
-    color: white;
-    border: none;
-    font-variant-caps: all-small-caps;
-    padding: 5px;
-}
-
 @media screen and (max-width: 1080px) {
     #invoice-information-img-container > img {
         width: 70vw;
@@ -93,10 +80,6 @@
     }
 
     #invoice-information-form-container > form > a {
-        width: 40vw;
-    }
-
-    #continue-btn {
         width: 40vw;
     }
 }
@@ -121,10 +104,6 @@
     }
 
     #invoice-information-form-container > form > a {
-        width: 50vw;
-    }
-
-    #continue-btn {
         width: 50vw;
     }
 }
@@ -156,10 +135,6 @@
     }
 
     #invoice-information-form-container > form > a {
-        width: 50vw;
-    }
-
-    #continue-btn {
         width: 50vw;
     }
 }

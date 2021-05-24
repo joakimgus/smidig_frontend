@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
-import './ProductPage.css';
+import "./ProductPage.css";
+import { fetchData } from "../api/apiHandler";
 
 const ProductPage = () => {
   const location = useLocation();
   const data = location.state.params;
+  const [developer, setDeveloper] = useState();
+
+  useEffect(() => {
+    fetchDeveloper();
+  }, []);
+
+  const fetchDeveloper = async () => {
+    const res = await fetchData("/museums/" + data.developer);
+    setDeveloper(res);
+  };
 
   const addToCart = () => {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -45,19 +56,19 @@ const ProductPage = () => {
           <button className={'add-product-to-cart-btn'} onClick={addToCart}>Legg til i handlekurv</button>
         </div>
       </div>
-      <div className={'product-bottom-wrapper'}>
-        <div className={'product-info-container'}>
+      <div className={"product-bottom-wrapper"}>
+        <div className={"product-info-container"}>
           <h3>Mer informasjon</h3>
           <p>{data.description}</p>
         </div>
-        <div className={'product-bottom-right-wrapper'}>
-          <div className={'product-list-container'}>
+        <div className={"product-bottom-right-wrapper"}>
+          <div className={"product-list-container"}>
             <h3>Produkter i pakken</h3>
             <p>-- Item 1</p>
           </div>
-          <div className={'owner-container'}>
+          <div className={"owner-container"}>
             <h3>Utviklet av</h3>
-            <img alt={'logo'} />
+            <img alt={"logo"} />
           </div>
         </div>
       </div>
