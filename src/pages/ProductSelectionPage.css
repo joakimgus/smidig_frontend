@@ -2,10 +2,12 @@
 .utvalg-page-container{
     display: grid;
     grid-template-columns: auto 2em 1fr 2em;
+    grid-template-rows: 2em 1fr 2em;
 }
 
 .utvalg-products-container{
     grid-column: 3;
+    grid-row: 2;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
