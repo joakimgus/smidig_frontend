@@ -33,7 +33,7 @@ const DeliveryInformation = () => {
                         name={"city"}
                         handleChange={""}
                     />
-                    <Link to={"/leveringsinformasjon"}><button id={"confirm-btn"}>Bekreft</button></Link>
+                    <Link to={"/betaling"}><button id={"continue-btn"}>Bekreft</button></Link>
                 </form>
             </div>
         </div>

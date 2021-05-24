@@ -18,6 +18,8 @@ import ProfilePage from "./pages/ProfilePage";
 import ProductPage from "./pages/ProductPage";
 import CustomerInformation from "./pages/CustomerInformation";
 import DeliveryInformation from "./pages/DeliveryInformation";
+import PaymentInformation from "./pages/PaymentInformation";
+import InvoiceInformation from "./pages/InvoiceInformation";
 
 const App = () => {
   // User context
@@ -58,6 +60,12 @@ const App = () => {
           </Route>
           <Route path="/leveringsinformasjon">
             <DeliveryInformation />
+          </Route>
+          <Route path="/betaling">
+            <PaymentInformation />
+          </Route>
+          <Route path="/faktura">
+            <InvoiceInformation />
           </Route>
           <Route path="/login">
             <LoginPage />
