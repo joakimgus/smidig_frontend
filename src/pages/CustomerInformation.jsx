@@ -34,7 +34,7 @@ const CustomerInformation = () => {
   };
 
   return (
-    <div>
+    <>
       {user ? (
         <div id={"customer-information-container"}>
           <div id={"customer-information-img-container"}>
@@ -84,7 +84,7 @@ const CustomerInformation = () => {
       ) : (
         <div>Du nå være innlogget for å bestille</div>
       )}
-    </div>
+    </>
   );
 };
 
