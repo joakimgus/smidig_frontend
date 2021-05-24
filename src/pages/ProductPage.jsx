@@ -64,7 +64,7 @@ const ProductPage = () => {
         <div className={"product-bottom-right-wrapper"}>
           <div className={"product-list-container"}>
             <h3>Produkter i pakken</h3>
-            <p>-- Item 1</p>
+            <p><span>&#8212;</span> Item 1</p>
           </div>
           <div className={"owner-container"}>
             <h3>Utviklet av</h3>
