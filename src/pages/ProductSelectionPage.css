@@ -2,10 +2,15 @@
 .utvalg-page-container {
   display: grid;
   grid-template-columns: auto 2em 1fr 2em;
+  /*TODO endre 2em til riktig når searchbar er klar*/
   grid-template-rows: 2em 1fr 2em;
 }
 
 .utvalg-products-container {
+  border-top: 1px solid rgba(29, 29, 29, 0.5);
+  padding-top: 2em;
+  border-bottom: 1px solid rgba(29, 29, 29, 0.5);
+  padding-bottom: 2em;
   min-height: 64vh;
   height: fit-content;
   width: 80vw;
@@ -29,6 +34,7 @@
   width: 15em;
   height: 10em;
   object-fit: cover;
+  border: 1px solid rgba(29, 29, 29, 0.5);
 }
 
 .utvalg-product-container > h3 {
@@ -49,6 +55,9 @@
   grid-row: 4;
   font-style: italic;
   font-weight: 300;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-top: 5px;
 }
 
 .product-price{

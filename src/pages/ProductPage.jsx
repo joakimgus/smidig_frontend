@@ -21,16 +21,28 @@ const ProductPage = () => {
   return (
     <div className={'productpage-container'}>
       <div className={'product-top-container'}>
+        {/*TODO bytt til swiper*/}
         <img className={'product-image'} src={data.media} alt={'Produkt bilde'} />
         <div className="product-top-right-container">
-          <h3>{data.name}</h3>
-          <h4>Inneholder</h4>
-          <p>{data.shortDescription}</p>
-          <h4>Du trenger:</h4>
-          {data.requiredEquipment.map((e) => (
-              <p className={'equipment-p'}>{e.requiredEquipment}</p>
-          ))}
-          <button onClick={addToCart}>Legg til i handlekurv</button>
+          <div className="row-one-container">
+            <h3>{data.name}</h3>
+            <p className={'tags-p-container'}>
+              {data.tags.map((t) => (
+                  <p className={"tags-p"} style={{ display: "inline-block" }}>
+                    {t} |
+                  </p>
+              ))}
+            </p>
+          </div>
+          <div className="row-two-container">
+            <h4>Inneholder</h4>
+            <p className={'short-desc-p'}>{data.shortDescription}</p>
+            <h4>Du trenger:</h4>
+            {data.requiredEquipment.map((e) => (
+                <p className={'equipment-p'}><span>&#8212;</span> {e}</p>
+            ))}
+          </div>
+          <button className={'add-product-to-cart-btn'} onClick={addToCart}>Legg til i handlekurv</button>
         </div>
       </div>
       <div className={'product-bottom-wrapper'}>

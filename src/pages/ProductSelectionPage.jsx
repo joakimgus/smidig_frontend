@@ -49,13 +49,13 @@ const ProductSelectionPage = () => {
                     className={"utvalg-tags"}
                     style={{ display: "inline-block" }}
                   >
-                    {t},{" "}
+                    {t}, {" "}
                   </p>
                 ))}
               </div>
               <p className={"utvalg-description"}>
-                {e.description.length > 250
-                  ? `${e.description.substring(0, 250)}...`
+                {e.description.length > 265
+                  ? `${e.description.substring(0, 265)}...`
                   : e.description}
               </p>
               <p className={'product-price'}>NOK 0</p>
