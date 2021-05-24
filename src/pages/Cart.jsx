@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Cart.css";
+import {Link} from "react-router-dom";
 
 const Cart = () => {
   const [cart, setCart] = useState();
@@ -78,6 +79,7 @@ const Cart = () => {
             </div>
           </div>
         ))}
+        <Link to={"/kundeopplysninger"}><button>Fortsett til betaling</button></Link>
     </div>
   );
 };
