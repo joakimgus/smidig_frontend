@@ -33,7 +33,7 @@ const DeliveryInformation = () => {
   };
 
   return (
-    <div>
+    <>
       {user ? (
         <div id={"delivery-information-container"}>
           <div id={"delivery-information-img-container"}>
@@ -77,7 +77,7 @@ const DeliveryInformation = () => {
       ) : (
         <div>Du må logge inn</div>
       )}
-    </div>
+    </>
   );
 };
 

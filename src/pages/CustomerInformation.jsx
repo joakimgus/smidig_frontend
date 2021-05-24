@@ -22,7 +22,7 @@ const CustomerInformation = () => {
 
   const saveContactInfo = (e) => {
     e.preventDefault();
-    if (Object.keys(formData).length === 4) {
+    if (Object.keys(formData).length === 3) {
       localStorage.setItem(
         "checkout",
         JSON.stringify({ contactInfo: formData })
@@ -34,7 +34,7 @@ const CustomerInformation = () => {
   };
 
   return (
-    <div>
+    <>
       {user ? (
         <div id={"customer-information-container"}>
           <div id={"customer-information-img-container"}>
@@ -50,12 +50,11 @@ const CustomerInformation = () => {
           </div>
           <div id={"customer-information-form-container"}>
             <form onSubmit={saveContactInfo}>
-              <Input
-                label={"ORGANISASJONSNUMMER"}
-                type={"text"}
-                name={"orgNr"}
-                handleChange={handleChange}
-              />
+              <label>
+                ORGANISASJONSNUMMER
+                <p>{user.orgNr}</p>
+              </label>
+
               <Input
                 label={"KONTAKTPERSON"}
                 type={"text"}
@@ -84,7 +83,7 @@ const CustomerInformation = () => {
       ) : (
         <div>Du nå være innlogget for å bestille</div>
       )}
-    </div>
+    </>
   );
 };
 

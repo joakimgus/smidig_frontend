@@ -33,45 +33,51 @@ const InvoiceInformation = () => {
   };
 
   return (
-    <div id={"invoice-information-container"}>
-      <div id={"invoice-information-img-container"}>
-        <img
-          src={require("../images/payment-information.png").default}
-          alt={"invoice-information"}
-        />
-      </div>
-      <div id={"invoice-information-header-text"}>
-        <h1>BETALING</h1>
-        <hr />
-        <p>Fyll inn fakturainformasjon</p>
-      </div>
-      <div id={"invoice-information-form-container"}>
-        <form onSubmit={saveInvoiceInfo}>
-          <Input
-            label={"ADRESSE"}
-            type={"text"}
-            name={"address"}
-            handleChange={handleChange}
-          />
-          <Input
-            label={"POSTNUMMER"}
-            type={"text"}
-            name={"zip-code"}
-            handleChange={handleChange}
-          />
-          <Input
-            label={"STED"}
-            type={"text"}
-            name={"city"}
-            handleChange={handleChange}
-          />
-          <button type="submit" id={"continue-btn"}>
-            Fortsett
-          </button>
-        </form>
-        {errorMessage && <div>{errorMessage}</div>}
-      </div>
-    </div>
+    <>
+      {user ? (
+        <div id={"invoice-information-container"}>
+          <div id={"invoice-information-img-container"}>
+            <img
+              src={require("../images/payment-information.png").default}
+              alt={"invoice-information"}
+            />
+          </div>
+          <div id={"invoice-information-header-text"}>
+            <h1>BETALING</h1>
+            <hr />
+            <p>Fyll inn fakturainformasjon</p>
+          </div>
+          <div id={"invoice-information-form-container"}>
+            <form onSubmit={saveInvoiceInfo}>
+              <Input
+                label={"ADRESSE"}
+                type={"text"}
+                name={"address"}
+                handleChange={handleChange}
+              />
+              <Input
+                label={"POSTNUMMER"}
+                type={"text"}
+                name={"zip-code"}
+                handleChange={handleChange}
+              />
+              <Input
+                label={"STED"}
+                type={"text"}
+                name={"city"}
+                handleChange={handleChange}
+              />
+              <button type="submit" id={"continue-btn"}>
+                Fortsett
+              </button>
+            </form>
+            {errorMessage && <div>{errorMessage}</div>}
+          </div>
+        </div>
+      ) : (
+        <div>Log in</div>
+      )}
+    </>
   );
 };
 
