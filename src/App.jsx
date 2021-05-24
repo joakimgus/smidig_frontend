@@ -20,6 +20,7 @@ import CustomerInformation from "./pages/CustomerInformation";
 import DeliveryInformation from "./pages/DeliveryInformation";
 import PaymentOptions from "./pages/PaymentOptions";
 import InvoiceInformation from "./pages/InvoiceInformation";
+import OrderConfirmation from "./pages/OrderConfirmation";
 
 const App = () => {
   // User context
@@ -66,6 +67,9 @@ const App = () => {
           </Route>
           <Route path="/faktura">
             <InvoiceInformation />
+          </Route>
+          <Route path="/bekreftelse">
+            <OrderConfirmation />
           </Route>
           <Route path="/login">
             <LoginPage />

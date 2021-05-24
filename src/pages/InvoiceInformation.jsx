@@ -33,7 +33,7 @@ const InvoiceInformation = () => {
                         name={"city"}
                         handleChange={""}
                     />
-                    <Link to={"/betaling"}><button id={"continue-btn"}>Fortsett</button></Link>
+                    <Link to={"/bekreftelse"}><button id={"continue-btn"}>Fortsett</button></Link>
                 </form>
             </div>
         </div>
