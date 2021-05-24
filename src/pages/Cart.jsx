@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Cart.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import Loading from "../components/Loading";
 
 const Cart = () => {
   const [cart, setCart] = useState();
@@ -31,6 +32,10 @@ const Cart = () => {
     setCart(newCart);
     localStorage.setItem("cart", JSON.stringify(newCart));
   };
+  if (!cart) {
+    return <Loading />;
+  }
+  console.log(cart.length);
 
   return (
     <div className={"cart-page-container"}>
@@ -49,37 +54,46 @@ const Cart = () => {
         <h5 className={"remove-title-section"}>Slett</h5>
         <hr />
       </div>
-      {cart &&
+      {cart.length > 0 ? (
         cart.map((i, index) => (
-          <div className={"cart-item-container"}>
-            <div className={"cart-img-text-container"}>
-              <img src={i.media[0]} alt={"item image"} />
-              <div className={"cart-item-text-container"}>
-                <h3>{i.name}</h3>
-                <p className={"cart-product-description"}>
-                  {i.description.substring(0, 50)}
+          <>
+            <div className={"cart-item-container"}>
+              <div className={"cart-img-text-container"}>
+                <img src={i.media[0]} alt={"item image"} />
+                <div className={"cart-item-text-container"}>
+                  <h3>{i.name}</h3>
+                  <p className={"cart-product-description"}>
+                    {i.description.substring(0, 50)}
+                  </p>
+                  <p>Artikkelnr. {i._id}</p>
+                </div>
+              </div>
+              <div className={"item-amount-container"}>
+                <p>
+                  <span onClick={() => changeCounter(false, index)}>-</span>{" "}
+                  {i.counter}{" "}
+                  <span onClick={() => changeCounter(true, index)}>+</span>
                 </p>
-                <p>Artikkelnr. {i._id}</p>
+              </div>
+              <div className={"item-price-container"}>
+                <p>
+                  <span>NOK </span>0.00
+                </p>
+              </div>
+              <div className={"item-remove-container"}>
+                <button onClick={() => removeItem(index)}>x</button>
               </div>
             </div>
-            <div className={"item-amount-container"}>
-              <p>
-                <span onClick={() => changeCounter(false, index)}>-</span>{" "}
-                {i.counter}{" "}
-                <span onClick={() => changeCounter(true, index)}>+</span>
-              </p>
-            </div>
-            <div className={"item-price-container"}>
-              <p>
-                <span>NOK </span>0.00
-              </p>
-            </div>
-            <div className={"item-remove-container"}>
-              <button onClick={() => removeItem(index)}>x</button>
-            </div>
-          </div>
-        ))}
-        <Link to={"/kundeopplysninger"}><button>Fortsett til betaling</button></Link>
+            <Link to={"/kundeopplysninger"}>
+              <button>Fortsett til betaling</button>
+            </Link>
+          </>
+        ))
+      ) : (
+        <div className={"cart-empty-message"}>
+          <p>Du har ingenting i handlekurven</p>
+        </div>
+      )}
     </div>
   );
 };
