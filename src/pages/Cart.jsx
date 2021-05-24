@@ -35,7 +35,6 @@ const Cart = () => {
   if (!cart) {
     return <Loading />;
   }
-  console.log(cart.length);
 
   return (
     <div className={"cart-page-container"}>
