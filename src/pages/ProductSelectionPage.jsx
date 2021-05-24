@@ -43,15 +43,18 @@ const ProductSelectionPage = () => {
                 <img className={'utvalg-product-img'} src={m} alt="img" />
             ))}
             <h3>{e.name}</h3>
-            {e.tags.map((t) => (
-              <p className={'utvalg-tags'} style={{ display: "inline-block" }}>{t}, </p>
-            ))}
+            <div className={'utvalg-tags-container'}>
+              {e.tags.map((t) => (
+                <p className={'utvalg-tags'} style={{ display: "inline-block" }}>{t}, </p>
+              ))}
+            </div>
             <p className={'utvalg-description'}>
               {e.description.length > 150 ?
                   `${e.description.substring(0, 150)}...` : e.description
               }
             </p>
             <button
+                className={'utvalg-add-cart-btn'}
               onClick={() => history.push("/utvalg/pakke", { params: e })}
             >
               Les mer
