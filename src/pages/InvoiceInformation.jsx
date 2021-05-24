@@ -26,7 +26,7 @@ const InvoiceInformation = () => {
       const checkout = JSON.parse(localStorage.getItem("checkout")) || {};
       checkout.invoiceInfo = formData;
       localStorage.setItem("checkout", JSON.stringify(checkout));
-      history.push("/betaling");
+      history.push("/bekreftelse");
     } else {
       setErrorMessage("Du må fylle ut alle feltene");
     }

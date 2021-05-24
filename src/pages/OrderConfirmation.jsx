@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./OrderConfirmation.css";
 
 const OrderConfirmation = () => {
     const [order, setOrder] = useState();
@@ -11,11 +12,14 @@ const OrderConfirmation = () => {
         setOrder(savedOrder);
     }, []);
 
+    console.log(order);
+    console.log(cart);
+
     return(
         <div id={"order-confirmation-container"}>
             <div id={"order-confirmation-img-container"}>
                 <img
-                    src={require("../images/payment-information.png").default}
+                    src={require("../images/confirmation.png").default}
                     alt={"order-confirmation"}
                 />
             </div>
@@ -23,6 +27,8 @@ const OrderConfirmation = () => {
                 <h1>BEKREFTELSE</h1>
                 <hr />
                 <p>Bestillingen er fullført og du vil få tilsendt en bekreftelse på mail.</p>
+            </div>
+            <div id={"order-confirmation-text"}>
             </div>
         </div>
     );
