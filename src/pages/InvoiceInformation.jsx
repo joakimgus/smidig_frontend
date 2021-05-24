@@ -58,7 +58,7 @@ const InvoiceInformation = () => {
               <Input
                 label={"POSTNUMMER"}
                 type={"text"}
-                name={"zip-code"}
+                name={"zipCode"}
                 handleChange={handleChange}
               />
               <Input
