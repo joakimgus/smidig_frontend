@@ -1,59 +1,59 @@
 /*Styling for page content*/
-.utvalg-page-container{
-    display: grid;
-    grid-template-columns: auto 2em 1fr 2em;
-    grid-template-rows: 2em 1fr 2em;
+.utvalg-page-container {
+  display: grid;
+  grid-template-columns: auto 2em 1fr 2em;
+  grid-template-rows: 2em 1fr 2em;
 }
 
-.utvalg-products-container{
-    min-height: 64vh;
-    height: fit-content;
-    width: 80vw;
-    justify-items: center;
-    grid-column: 3;
-    grid-row: 2;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+.utvalg-products-container {
+  min-height: 64vh;
+  height: fit-content;
+  width: 80vw;
+  justify-items: center;
+  grid-column: 3;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
 }
 
 /*Styling for 1 product*/
-.utvalg-product-container{
-    width: 15em;
-    height: 25em;
-    display: grid;
-    grid-template-rows: 10em 20px 20px auto 2em;
+.utvalg-product-container {
+  width: 15em;
+  height: 25em;
+  display: grid;
+  grid-template-rows: 10em 20px 20px auto 2em;
 }
 
-.utvalg-product-img{
-    grid-row: 1;
-    width: 15em;
-    height: 10em;
-    object-fit: cover;
+.utvalg-product-img {
+  grid-row: 1;
+  width: 15em;
+  height: 10em;
+  object-fit: cover;
 }
 
-.utvalg-product-container>h3{
-    grid-row: 2;
-    font-size: large;
+.utvalg-product-container > h3 {
+  grid-row: 2;
+  font-size: large;
 }
 
-.utvalg-tags-container{
-    grid-row: 3;
+.utvalg-tags-container {
+  grid-row: 3;
 }
 
-.utvalg-tags{
-    font-size: 10px;
-    font-style: italic;
+.utvalg-tags {
+  font-size: 10px;
+  font-style: italic;
 }
 
-.utvalg-description{
-    grid-row: 4;
-    font-style: italic;
-    font-weight: 300;
+.utvalg-description {
+  grid-row: 4;
+  font-style: italic;
+  font-weight: 300;
 }
 
-.utvalg-add-cart-btn{
-    grid-row: 5;
-    height: 2em;
-    color: white;
-    background-color: rgb(29,29,29);
+.utvalg-add-cart-btn {
+  grid-row: 5;
+  height: 2em;
+  color: white;
+  background-color: rgb(29, 29, 29);
 }

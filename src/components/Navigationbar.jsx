@@ -65,15 +65,14 @@ const Navigationbar = () => {
           </button>
         </Link>
       ) : (
-          <Link to={"/minside"}>
-              <button className={"nav-btn"} id={"login-btn"}>
-                  <img src={UserIcon} alt={"Bruker ikon"} />
-                  <p>Min side</p>
-              </button>
-          </Link>
+        <Link to={"/minside"}>
+          <button className={"nav-btn"} id={"login-btn"}>
+            <img src={UserIcon} alt={"Bruker ikon"} />
+            <p>Min side</p>
+          </button>
+        </Link>
 
-
-          /*
+        /*
         <Link onClick={logout}>
           <button className={"nav-btn"} id={"login-btn"}>
             <img src={UserIcon} alt={"Bruker ikon"} />

@@ -71,7 +71,6 @@ const LoginPage = () => {
       {isSignup ? <h3>Opprett bruker</h3> : <h3>Logg inn</h3>}
       <div>
         <form onSubmit={handleSubmit}>
-
           {/*TODO fiks label over som i prototype?*/}
           <Input
             name="email"
