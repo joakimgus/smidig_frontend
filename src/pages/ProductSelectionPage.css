@@ -6,22 +6,26 @@
 }
 
 .utvalg-products-container{
+    min-height: 64vh;
+    height: fit-content;
+    justify-items: center;
     grid-column: 3;
     grid-row: 2;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 /*Styling for 1 product*/
 .utvalg-product-container{
-    width: 20vw;
-    height: 20em;
+    width: 15vw;
+    height: 25vw;
     border: 1px solid black;
 }
 
 .utvalg-product-img{
-    width: 15em;
-    height: 10em;
+    width: 15vw;
+    height: 10vw;
     object-fit: cover;
 }
 

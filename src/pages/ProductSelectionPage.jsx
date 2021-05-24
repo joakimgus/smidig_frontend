@@ -46,7 +46,11 @@ const ProductSelectionPage = () => {
             {e.tags.map((t) => (
               <p className={'utvalg-tags'} style={{ display: "inline-block" }}>{t}, </p>
             ))}
-            <p className={'utvalg-description'}>{e.description}</p>
+            <p className={'utvalg-description'}>
+              {e.description.length > 150 ?
+                  `${e.description.substring(0, 150)}...` : e.description
+              }
+            </p>
             <button
               onClick={() => history.push("/utvalg/pakke", { params: e })}
             >
