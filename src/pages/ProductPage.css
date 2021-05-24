@@ -5,10 +5,12 @@
     grid-template-rows: 1em repeat(2,auto) 1em;
     grid-template-columns: 20vw auto 20vw;
     grid-gap: 1em;
-    background-color: #eaeaea;
+    background-color: #ECEDED;
 }
 
 .product-top-container{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
     background-color: white;
     grid-column: 2;
     grid-row: 2;
@@ -50,4 +52,10 @@
     padding: 2em;
     background-color: white;
     height: auto;
+}
+
+@media screen and (max-width: 812px) {
+    .productpage-container{
+        grid-template-columns: 1em auto 1em;
+    }
 }

@@ -54,10 +54,11 @@ const ProductSelectionPage = () => {
                 ))}
               </div>
               <p className={"utvalg-description"}>
-                {e.description.length > 150
-                  ? `${e.description.substring(0, 150)}...`
+                {e.description.length > 250
+                  ? `${e.description.substring(0, 250)}...`
                   : e.description}
               </p>
+              <p className={'product-price'}>NOK 0</p>
               <button
                 className={"utvalg-add-cart-btn"}
                 onClick={() => history.push("/utvalg/pakke", { params: e })}
