@@ -28,13 +28,16 @@ const OrderConfirmation = () => {
       });
       console.log(order);
       const res = await postData("/orders", order);
-      console.log(res);
 
-      // Clean localstorage after ordering
-      localStorage.removeItem("cart");
-      localStorage.removeItem("checkout");
+      if (res === "Success") {
+        // Clean localstorage after ordering
+        localStorage.removeItem("cart");
+        localStorage.removeItem("checkout");
 
-      history.push("/");
+        history.push("/");
+      } else {
+        console.log("Did not register");
+      }
     }
   };
 
