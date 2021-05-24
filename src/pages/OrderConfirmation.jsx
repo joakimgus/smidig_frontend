@@ -17,6 +17,8 @@ const OrderConfirmation = () => {
     });
   }, []);
 
+  console.log(order);
+
   const confirmOrder = async () => {
     // Register order if there is any order
     if (order.orderInfo.length < 1 || Object.keys(order.cart).length < 1) {
@@ -57,25 +59,24 @@ const OrderConfirmation = () => {
         </p>
       </div>
       <div id={"order-confirmation-text"}>
-        <div id={"customer-details"}>
-          <h3>BETALING OG LEVERING</h3>
-          <label className={"column-one"}>ORGANISASJONSNUMMER:</label>
-          <label className={"column-one"}>KONTAKTPERSON:</label>
-          <label className={"column-one"}>E-POST:</label>
-          <label className={"column-one"}>TELEFON:</label>
-          <label className={"column-one"}>LEVERINGSADRESSE:</label>
-          <label className={"column-one"}>POSTNUMMER:</label>
-          <label className={"column-one"}>STED:</label>
-          <label className={"column-two"}></label>
-          <label className={"column-two"}>{order.orderInfo.contactInfo.contactPerson}</label>
-          <label className={"column-two"}>{order.orderInfo.contactInfo.email}</label>
-          <label className={"column-two"}>{order.orderInfo.contactInfo.phoneNumber}</label>
-          <label className={"column-two"}>{order.orderInfo.deliveryInformation.address}</label>
-          <label className={"column-two"}>{order.orderInfo.deliveryInformation.zipCode}</label>
-          <label className={"column-two"}>{order.orderInfo.deliveryInformation.city}</label>
-        </div>
+          <div id={"customer-details"}>
+              <h3>BETALING OG LEVERING</h3>
+              <label className={"column-one"}>KONTAKTPERSON:</label>
+              <label className={"column-one"}>E-POST:</label>
+              <label className={"column-one"}>TELEFON:</label>
+              <label className={"column-one"}>LEVERINGSADRESSE:</label>
+              <label className={"column-one"}>POSTNUMMER:</label>
+              <label className={"column-one"}>STED:</label>
+              <label className={"column-two row-two"}>{order.orderInfo.contactInfo.contactPerson}</label>
+              <label className={"column-two row-three"}>{order.orderInfo.contactInfo.email}</label>
+              <label className={"column-two row-four"}>{order.orderInfo.contactInfo.phoneNumber}</label>
+              <label className={"column-two row-five"}>{order.orderInfo.deliveryInformation.address}</label>
+              <label className={"column-two row-six"}>{order.orderInfo.deliveryInformation.zipCode}</label>
+              <label className={"column-two row-seven"}>{order.orderInfo.deliveryInformation.city}</label>
+          </div>
         <div id={"product-details"}>
           <h3>BESTILTE PRODUKTER</h3>
+            <p>test</p>
         </div>
       </div>
       <button onClick={confirmOrder}>Bekreft bestilling</button>
