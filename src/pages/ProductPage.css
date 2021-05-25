@@ -148,6 +148,14 @@
     object-fit: cover;
 }
 
+.product-image {
+    width: 100%;
+}
+
+.product-swiper {
+    width: 100%;
+}
+
 @media screen and (max-width: 812px) {
     .productpage-container{
         grid-template-columns: 1vw auto 1vw;

@@ -58,6 +58,7 @@ const ProductPage = () => {
       <PopupModal showModal={showModal} setShowModal={setShowModal} />
       <div className={"product-top-container"}>
         <Swiper
+          className={"product-swiper"}
           speed={500}
           slidesPerView={1}
           pagination={{ clickable: true }}
