@@ -37,25 +37,33 @@ const ProductSelectionPage = () => {
       <div className={"utvalg-page-container"}>
         <FilterSidebar />
         <div className={"utvalg-products-container"}>
-          {exhibitions.reverse().map((e) => (
-            <div className={"utvalg-product-container"}>
-              {e.media.map((m) => (
-                <img className={"utvalg-product-img"} src={m} alt="img" />
+          {exhibitions.map((e, a) => (
+            <div
+                className={"utvalg-product-container"}
+                key={a}
+            >
+              {e.media.map((m,b) => (
+                <img className={"utvalg-product-img"}
+                     src={m}
+                     alt="img"
+                     key={b}
+                />
               ))}
               <h3>{e.name}</h3>
               <div className={"utvalg-tags-container"}>
-                {e.tags.map((t) => (
+                {e.tags.map((t,c) => (
                   <p
                     className={"utvalg-tags"}
                     style={{ display: "inline-block" }}
+                    key={c}
                   >
                     {t}, {" "}
                   </p>
                 ))}
               </div>
               <p className={"utvalg-description"}>
-                {e.description.length > 265
-                  ? `${e.description.substring(0, 265)}...`
+                {e.description.length > 250
+                  ? `${e.description.substring(0, 250)}...`
                   : e.description}
               </p>
               <p className={'product-price'}>NOK 0</p>

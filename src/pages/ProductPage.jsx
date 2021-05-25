@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import "./ProductPage.css";
 import { fetchData } from "../api/apiHandler";
+import Loading from "../components/Loading";
 
 const ProductPage = () => {
   const location = useLocation();
@@ -29,6 +30,10 @@ const ProductPage = () => {
     localStorage.setItem("cart", JSON.stringify(cart));
   };
 
+  if (!developer){
+    return <Loading />;
+  }
+
   return (
     <div className={'productpage-container'}>
       <div className={'product-top-container'}>
@@ -38,8 +43,11 @@ const ProductPage = () => {
           <div className="row-one-container">
             <h3>{data.name}</h3>
             <p className={'tags-p-container'}>
-              {data.tags.map((t) => (
-                  <p className={"tags-p"} style={{ display: "inline-block" }}>
+              {data.tags.map((t, i) => (
+                  <p className={"tags-p"}
+                     style={{ display: "inline-block" }}
+                     key={i}
+                  >
                     {t} |
                   </p>
               ))}
@@ -49,8 +57,12 @@ const ProductPage = () => {
             <h4>Inneholder</h4>
             <p className={'short-desc-p'}>{data.shortDescription}</p>
             <h4>Du trenger:</h4>
-            {data.requiredEquipment.map((e) => (
-                <p className={'equipment-p'}><span>&#8212;</span> {e}</p>
+            {data.requiredEquipment.map((e,i) => (
+                <p className={'equipment-p'}
+                   key={i}
+                >
+                  <span>&#8212;</span> {e}
+                </p>
             ))}
           </div>
           <button className={'add-product-to-cart-btn'} onClick={addToCart}>Legg til i handlekurv</button>
@@ -64,16 +76,21 @@ const ProductPage = () => {
         <div className={"product-bottom-right-wrapper"}>
           <div className={"product-list-container"}>
             <h3>Produkter i pakken</h3>
-            <p><span>&#8212;</span> Item 1</p>
+            {data.products.map((e,i)=>(
+                <p key={i}>
+                  <span>&#8212;</span>
+                  {e}
+                </p>
+            ))}
           </div>
           <div className={"owner-container"}>
             <h3>Utviklet av</h3>
-            <img alt={"logo"} />
+            <img src={developer.picture} alt={"logo"} />
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 export default ProductPage;
