@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef } from "react";
 import { useSpring, animated } from "react-spring";
 import { useHistory } from "react-router";
+import { MdClose } from "react-icons/md";
 import "./PopupModal.css";
 
 const PopupModal = ({ showModal, setShowModal }) => {
@@ -55,13 +56,11 @@ const PopupModal = ({ showModal, setShowModal }) => {
                   </button>
                 </div>
               </div>
-              <button
+              <MdClose
                 className={"popup-close-button"}
                 aria-label="Close modal"
                 onClick={() => setShowModal((prev) => !prev)}
-              >
-                X
-              </button>
+              />
             </div>
           </animated.div>
         </div>
