@@ -61,6 +61,12 @@
     font-size: 12px;
 }
 
+#customer-information-orgnr {
+    width: 30vw;
+    padding: 4px;
+    margin: 4px;
+}
+
 #customer-information-form-container > form > a {
     width: 30vw;
     padding: 5px;

@@ -50,8 +50,6 @@
 }
 
 #customer-details, #product-details {
-    background-color: #313131;
-    color: white;
     border-radius: 5px;
     width: 90%;
     min-height: 30vh;
@@ -74,9 +72,14 @@
 
 #product-details {
     align-self: start;
-    justify-self: center;
+    justify-self: start;
     display: grid;
     padding-right: 2em;
+}
+
+.order-cart-item-container {
+    background-color: rgb(191, 191, 191);
+    border-radius: 5px;
 }
 
 .order-cart-item-container {

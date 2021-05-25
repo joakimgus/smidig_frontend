@@ -52,7 +52,7 @@ const CustomerInformation = () => {
             <form onSubmit={saveContactInfo}>
               <label>
                 ORGANISASJONSNUMMER
-                <p>{user.orgNr}</p>
+                <p id={"customer-information-orgnr"}>{user.orgNr}</p>
               </label>
 
               <Input
