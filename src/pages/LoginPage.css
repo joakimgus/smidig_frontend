@@ -27,6 +27,8 @@ h3 {
 
 #login-form-container>form>p{
   font-variant-caps: all-small-caps;
+  margin-left: 4px;
+  margin-top: 5px;
 }
 
 #login-form-container > form > div > label > input {
@@ -37,6 +39,7 @@ h3 {
   outline: none;
   box-shadow: -5px 5px 0 -4px #000, 5px 5px 0 -4px #000;
   font-size: 11px;
+  font-weight: 300;
 }
 
 #login-form-container > form > button,
