@@ -1,5 +1,20 @@
-label {
-  font-variant-caps: all-small-caps;
+.form-container-login{
+  min-height:94vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.fix-login-placement-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -5em;
+}
+
+#login-form-container{
+  grid-column: 2;
 }
 
 h3 {
@@ -7,10 +22,15 @@ h3 {
   font-size: 25px;
   font-weight: 400;
   margin-bottom: 0.5em;
+  text-align: center;
+}
+
+#login-form-container>form>p{
+  font-variant-caps: all-small-caps;
 }
 
 #login-form-container > form > div > label > input {
-  width: 15em;
+  width: 20em;
   padding: 3px;
   margin: 5px;
   border: 0;
@@ -22,7 +42,7 @@ h3 {
 #login-form-container > form > button,
 #switch {
   margin: 5px;
-  width: 15em;
+  width: 17em;
   background-color: rgb(29, 29, 29);
   color: white;
   border: none;

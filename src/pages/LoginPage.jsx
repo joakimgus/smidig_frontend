@@ -67,46 +67,47 @@ const LoginPage = () => {
   };
 
   return (
-    <div style={{ textAlign: "center", padding: "5rem 0rem" }}>
+    <div className={'form-container-login'}>
+      <div className="fix-login-placement-container">
       {isSignup ? <h3>Opprett bruker</h3> : <h3>Logg inn</h3>}
       <div id={"login-form-container"}>
         <form onSubmit={handleSubmit}>
-          {/*TODO fiks label over som i prototype?*/}
+          <p>E-post</p>
           <Input
             className={'input-login'}
             name="email"
-            label="E-post"
             type="email"
             handleChange={handleChange}
           />
+          <p>Passord</p>
           <Input
             className={'input-login'}
             name="password"
-            label="Passord"
             handleChange={handleChange}
             type="password"
           />
           {isSignup && (
             <>
+              <p>Org.nr</p>
               <Input
                 className={'input-login'}
                 name="orgNr"
-                label="Org.nr"
                 handleChange={handleChange}
               />
             </>
           )}
           <button id="submitBtn" type="submit">
-            {isSignup ? "Sign Up" : "Sign In"}
+            {isSignup ? "Opprett bruker" : "Logg inn"}
           </button>
         </form>
         <button id="switch" onClick={switchMode}>
           {/*TODO endre til norsk?*/}
           {isSignup
-            ? "Already have an account? Sign In"
-            : "Dont have an account yet? Sign Up"}
+            ? "Har du bruker? Logg inn"
+            : "Har du ikke bruker? Opprett bruker"}
         </button>
       </div>
+    </div>
     </div>
   );
 };
