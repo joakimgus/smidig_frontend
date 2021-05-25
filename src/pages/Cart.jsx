@@ -40,7 +40,6 @@ const Cart = () => {
     <div className={"cart-page-container"}>
       <div className={"cart-top-text-container"}>
         <h1>Handlekurv</h1>
-        <hr />
         <p>
           Her vil du finne en oversikt over hvilke varer du har i handlekurven
           din.
