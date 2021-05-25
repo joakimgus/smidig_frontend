@@ -131,6 +131,8 @@
     width: 20vw;
     height: 3em;
     grid-column: 1 / span 2;
+    background-color: black;
+    color: white;
 }
 
 .column-one {
@@ -181,6 +183,10 @@
 
     #order-confirmation-header-text {
         width: 45vw;
+    }
+
+    #order-confirmation-text > button {
+        width: 25vw;
     }
 }
 
@@ -244,6 +250,7 @@
     }
 
     #order-confirmation-text > button {
+        width: 30vw;
         align-self: center;
         justify-self: center;
     }
@@ -284,6 +291,12 @@
 
     #order-confirmation-header-text {
         width: 55vw;
+    }
+
+    @media screen and (max-width: 400px){
+        #order-confirmation-text > button {
+            width: 45vw;
+        }
     }
 }
 
