@@ -3,7 +3,6 @@ import "./OrderConfirmation.css";
 import { postData } from "../api/apiHandler";
 import { useHistory } from "react-router";
 import Loading from "../components/Loading";
-import {Link} from "react-router-dom";
 
 const OrderConfirmation = () => {
   const [order, setOrder] = useState();
@@ -28,7 +27,7 @@ const OrderConfirmation = () => {
     } else {
       // Remove data that should not be sent to server
       order.cart = order.cart.map((e) => {
-        return e._id;
+        return { exhibitions: e._id, counter: e.counter };
       });
       console.log(order);
       const res = await postData("/orders", order);
@@ -39,6 +38,8 @@ const OrderConfirmation = () => {
         localStorage.removeItem("checkout");
 
         history.push("/");
+      } else if ("Not in stock") {
+        console.log("not in stock");
       } else {
         console.log("Did not register");
       }
