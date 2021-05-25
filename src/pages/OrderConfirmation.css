@@ -53,10 +53,10 @@
     align-self: center;
     justify-self: center;
     width: 80%;
-    height: 30vh;
+    min-height: 30vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: 1em repeat(6, 1fr) 1em;
 }
 
 #customer-details > h3 {
