@@ -71,7 +71,7 @@ const OrderConfirmation = () => {
                     <label className={"column-one row-two"}>KONTAKTPERSON:</label>
                     <label className={"column-one row-three"}>E-POST:</label>
                     <label className={"column-one row-four"}>TELEFON:</label>
-                    <label className={"column-one row-five"}>LEVERINGSADRESSE:</label>
+                    <label className={"column-one row-five"}>ADRESSE:</label>
                     <label className={"column-one row-six"}>POSTNUMMER:</label>
                     <label className={"column-one row-seven"}>STED:</label>
                     <label className={"column-two row-two"}>{order.orderInfo.contactInfo.contactPerson}</label>
@@ -84,20 +84,20 @@ const OrderConfirmation = () => {
                 <div id={"product-details"}>
                   {order.cart.map((i, index) => (
                       <>
-                        <div className={"cart-item-container"}>
-                          <div className={"cart-img-text-container"}>
+                        <div className={"order-cart-item-container"}>
+                          <div className={"order-cart-img-container"}>
                             <img src={i.media[0]} alt={"item image"} />
-                            <div className={"cart-item-text-container"}>
+                            <div className={"order-cart-item-text-container"}>
                               <h3>{i.name}</h3>
                               <p>Artikkelnr. {i._id}</p>
                             </div>
                           </div>
-                          <div className={"item-amount-container"}>
+                          <div className={"order-item-amount-container"}>
                             <p>
-                              {i.counter}
+                              x {i.counter}
                             </p>
                           </div>
-                          <div className={"item-price-container"}>
+                          <div className={"order-item-price-container"}>
                             <p>
                               <span>NOK </span>0.00
                             </p>
