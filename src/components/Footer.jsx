@@ -1,5 +1,6 @@
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import { Link as SmoothScroll } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -45,7 +46,9 @@ const Footer = () => {
       </div>
       <div className={"social-links-container"}>
         <div className={"top-link"}>
-          <a href="#top">&#8593; Til toppen</a>
+          <SmoothScroll to="top" spy={true} smooth={true}>
+            &#8593; Til toppen
+          </SmoothScroll>
         </div>
         <div className={"social-media-image"}>
           <img src={require("../images/facebook.png").default} />
