@@ -73,12 +73,14 @@ const LoginPage = () => {
         <form onSubmit={handleSubmit}>
           {/*TODO fiks label over som i prototype?*/}
           <Input
+            className={'input-login'}
             name="email"
             label="E-post"
             type="email"
             handleChange={handleChange}
           />
           <Input
+            className={'input-login'}
             name="password"
             label="Passord"
             handleChange={handleChange}
@@ -87,8 +89,9 @@ const LoginPage = () => {
           {isSignup && (
             <>
               <Input
+                className={'input-login'}
                 name="orgNr"
-                label="Organisasjonsnummer"
+                label="Org.nr"
                 handleChange={handleChange}
               />
             </>
