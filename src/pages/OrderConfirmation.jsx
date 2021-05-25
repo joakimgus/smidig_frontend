@@ -3,6 +3,7 @@ import "./OrderConfirmation.css";
 import { postData } from "../api/apiHandler";
 import { useHistory } from "react-router";
 import Loading from "../components/Loading";
+import {Link} from "react-router-dom";
 
 const OrderConfirmation = () => {
   const [order, setOrder] = useState();
@@ -80,16 +81,37 @@ const OrderConfirmation = () => {
                     <label className={"column-two row-seven"}>{order.orderInfo.deliveryInformation.city}</label>
                 </div>
                 <div id={"product-details"}>
-                    <h3>BESTILTE PRODUKTER</h3>
-                    <p>test</p>
+                  {order.cart.map((i, index) => (
+                      <>
+                        <div className={"cart-item-container"}>
+                          <div className={"cart-img-text-container"}>
+                            <img src={i.media[0]} alt={"item image"} />
+                            <div className={"cart-item-text-container"}>
+                              <h3>{i.name}</h3>
+                              <p>Artikkelnr. {i._id}</p>
+                            </div>
+                          </div>
+                          <div className={"item-amount-container"}>
+                            <p>
+                              {i.counter}
+                            </p>
+                          </div>
+                          <div className={"item-price-container"}>
+                            <p>
+                              <span>NOK </span>0.00
+                            </p>
+                          </div>
+                        </div>
+                      </>
+                  ))}
                 </div>
+                <button onClick={confirmOrder}>Bekreft bestilling</button>
             </div>
-        ) :
-            (<div>
-                <p>No orders</p>
-            </div>)
-        }
-      <button onClick={confirmOrder}>Bekreft bestilling</button>
+        ) : (
+            <div id={"order-error"}>
+                <h1>No orders</h1>
+            </div>
+        )}
     </div>
   );
 };
