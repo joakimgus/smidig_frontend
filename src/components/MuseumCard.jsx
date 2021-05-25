@@ -25,9 +25,9 @@ const MuseumCard = ({ name, description, picture, exhibitions }) => {
             ))}
           </div>
         ) : (
-          <div className={"museum-card-exhibitions"}>
+          <p className={"museum-card-exhibitions"}>
             {name} har ingen utstillinger for øyeblikket.
-          </div>
+          </p>
         )}
       </div>
     </div>
