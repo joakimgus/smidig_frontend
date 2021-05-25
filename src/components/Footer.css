@@ -93,6 +93,10 @@ a.clicked {
   height: auto;
 }
 
+.button, button{
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1080px) {
   .footer-container {
     grid-template-columns: 30% 25% 35% 10%;

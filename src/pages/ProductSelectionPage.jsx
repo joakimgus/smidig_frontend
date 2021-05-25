@@ -39,7 +39,8 @@ const ProductSelectionPage = () => {
         <div className={"utvalg-products-container"}>
           {exhibitions.map((e, a) => (
             <div
-                className={"utvalg-product-container"}
+                className={"utvalg-product-container button"}
+                onClick={() => history.push("/utvalg/pakke", { params: e })}
                 key={a}
             >
               {e.media.map((m,b) => (
@@ -67,10 +68,7 @@ const ProductSelectionPage = () => {
                   : e.description}
               </p>
               <p className={'product-price'}>NOK 0</p>
-              <button
-                className={"utvalg-add-cart-btn"}
-                onClick={() => history.push("/utvalg/pakke", { params: e })}
-              >
+              <button className={"utvalg-add-cart-btn"}>
                 Les mer
               </button>
             </div>
