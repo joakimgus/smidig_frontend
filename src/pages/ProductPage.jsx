@@ -15,11 +15,14 @@ import SwiperCore, {
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import "swiper/swiper-bundle.css";
+import PopupModal from "../components/PopupModal";
 
 const ProductPage = () => {
   const location = useLocation();
   const data = location.state.params;
   const [developer, setDeveloper] = useState();
+
+  const [showModal, setShowModal] = useState(false);
 
   SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
@@ -42,6 +45,8 @@ const ProductPage = () => {
       cart.push(data);
     }
     localStorage.setItem("cart", JSON.stringify(cart));
+    setShowModal((prev) => !prev);
+    console.log(showModal);
   };
 
   if (!developer) {
@@ -50,8 +55,8 @@ const ProductPage = () => {
 
   return (
     <div className={"productpage-container"}>
+      <PopupModal showModal={showModal} setShowModal={setShowModal} />
       <div className={"product-top-container"}>
-        {/*TODO bytt til swiper*/}
         <Swiper
           speed={500}
           slidesPerView={1}
