@@ -117,7 +117,7 @@ const ProductPage = () => {
           </div>
           <div className={"owner-container"}>
             <h3>Utviklet av</h3>
-            <img src={developer.picture} alt={"logo"} />
+            <img src={developer.logo} alt={"logo"} />
           </div>
         </div>
       </div>
