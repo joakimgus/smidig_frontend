@@ -181,7 +181,7 @@
   }
 
   .museum-card:nth-child(even)>.museum-card-exhibitions-container>.museum-card-exhibitions {
-    margin-left: 2em;
+    margin-left: 2.2em;
   }
 }
 
