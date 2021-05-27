@@ -22,12 +22,19 @@ const ProductSelectionPage = () => {
   }, []);
 
   useEffect(() => {
-    console.log("endrer");
-    /*setExhibitions((prev) => {
-      prev.filter((e) => {
-        return e;
-      });
-    });*/
+    if (filterMuseums.length === 0) {
+      setExhibitions(allExhibitions);
+      return;
+    }
+    if (exhibitions) {
+      let filteredItems = allExhibitions;
+      if (filterMuseums) {
+        filteredItems = allExhibitions.filter(
+          (item) => item.developer === filterMuseums[0]
+        );
+      }
+      setExhibitions(filteredItems);
+    }
   }, [filterMuseums]);
 
   const fetchExhibitions = async () => {
