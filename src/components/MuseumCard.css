@@ -179,6 +179,10 @@
   .museum-card:nth-child(even) > .museum-card-img-container > #museum-card-img {
     margin-left: 3em;
   }
+
+  .museum-card:nth-child(even)>.museum-card-exhibitions-container>.museum-card-exhibitions {
+    margin-left: 2em;
+  }
 }
 
 @media screen and (min-width: 441px) and (max-width: 560px) {
