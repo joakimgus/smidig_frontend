@@ -27,40 +27,28 @@ const UserInfo = () => {
         <div className={"user-info-container"}>
           <div id={"user-info-text-container"}>
             <h1 id={"user-info-title"}>Min side</h1>
-            <p>Du er logget inn som bruker: {user.email} </p>
+            <div className="userinfo-wrapper">
+            <p>Du er innlogget som <span>{user.email}</span></p>
+            <button className={"profile-edit-btn"}>
+              <img src={Edit} />
+            </button>
+            </div>
           </div>
           <table id={"user-info-table"}>
             <tr className={"user-row"}>
               <td className={"user-info-text"}>E-post: {user.email}</td>
-              <td>
-                <button className={"edit-btn"}>
-                  <img src={Edit} />
-                </button>
-              </td>
             </tr>
             <tr className={"user-row"}>
               <td className={"user-info-text"}>Org. nr.: {user.orgNr}</td>
-              <td>
-                <button className={"edit-btn"}>
-                  <img src={Edit} />
-                </button>
-              </td>
             </tr>
             <tr className={"user-row"}>
               <td className={"user-info-text"}>Password: ********</td>
-              <td className={"edit-btn-column"}>
-                <button className={"edit-btn"}>
-                  <img src={Edit} />
-                </button>
-              </td>
             </tr>
           </table>
           <Link onClick={logout} id={"log-out-btn"}>
-            <button>
-              <p>Logg ut</p>
-            </button>
+            <button>Logg ut</button>
           </Link>
-          <div id={"tidvis-logo"}>
+          <div className={'profile-img-logo'}>
             <img src={require("../images/tidvis-rund.png").default} />
           </div>
         </div>

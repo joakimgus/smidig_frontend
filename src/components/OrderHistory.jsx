@@ -27,16 +27,14 @@ const OrderHistory = () => {
           <h1>Ordrehistorikk</h1>
           <p>En oversikt over tidligere ordre du har gjennomført.</p>
         </div>
-        <div>
-          <div>Her kommer søk</div>
-          <div>Her kommer sorter</div>
+        <div className={'search-sort-container'}>
         </div>
         <table id={"order-history-table"}>
           <tr id={"header-row"}>
             <th className={"table-header date-column"}>Dato</th>
-            <th className={"table-header ordernr-column"}>Ordrenummer</th>
+            <th className={"table-header ordernr-column"}>Ordrenr.</th>
             <th className={"table-header museum-column"}>Museum</th>
-            <th className={"table-header package-column"}>Pakke</th>
+            <th className={"table-header package-column"}>Pakkeløsning</th>
             {/*<th className={"table-header price-column"}>Pris</th>*/}
           </tr>
           {/* TODO insert map for orders */}
