@@ -165,4 +165,8 @@
     .productpage-container{
         grid-template-columns: 1vw auto 1vw;
     }
+
+    .sidebar-filter-thing{
+        display: none;
+    }
 }
