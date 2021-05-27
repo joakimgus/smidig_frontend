@@ -63,8 +63,10 @@
   padding-top: 1em;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-start;
-  column-gap: 2em;
+  column-gap: 2vw;
+  row-gap: 4vh;
   font-weight: 200;
   font-style: italic;
   letter-spacing: 0.5px;
@@ -89,8 +91,10 @@
 
 .museum-card-exhibitions > div > img {
   object-fit: fill;
-  width: 150px;
-  height: 150px;
+  max-width: 150px;
+  min-width: 150px;
+  max-height: 150px;
+  min-height: 150px;
 }
 
 .exhibition-name {
@@ -254,7 +258,7 @@
     padding-bottom: 0.2em;
   }
 
-  #exhibition-item-four {
+  .museum-card-exhibitions:nth-child(4) {
     display: none;
   }
 
