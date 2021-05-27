@@ -36,6 +36,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
+      <div id="top" style={{ height: "0px" }} />
       <UserContext.Provider value={{ user, setUser }}>
         <Navigationbar />
         <Switch>
@@ -93,29 +94,6 @@ const App = () => {
           <Route path="/admin/brukere">
             <ManageUsers />
           </Route>
-          {/*{user ? (
-            <>
-              <Route path="/kundeopplysninger">
-                <CustomerInformation />
-              </Route>
-              <Route path="/leveringsinformasjon">
-                <DeliveryInformation />
-              </Route>
-              <Route path="/betaling">
-                <PaymentOptions />
-              </Route>
-              <Route path="/faktura">
-                <InvoiceInformation />
-              </Route>
-              <Route path="/minside">
-                <ProfilePage />
-              </Route>
-            </>
-          ) : (
-            <Route>
-              <div>Not logged in</div>
-            </Route>
-          )}*/}
         </Switch>
         <Footer />
       </UserContext.Provider>

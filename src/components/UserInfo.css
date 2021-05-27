@@ -1,6 +1,6 @@
 .user-info-container {
   grid-row: 2;
-  grid-column: 2;
+  grid-column: 2 / span 2;
   min-height: 40vh;
   display: grid;
   grid-template-rows: 30% 25% 15% 2em;

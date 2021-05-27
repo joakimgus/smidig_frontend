@@ -8,13 +8,13 @@ import "./Navigationbar.css";
 import { UserContext } from "../context/context";
 
 const Navigationbar = () => {
-  const user = useContext(UserContext);
+  const { user } = useContext(UserContext);
 
-    return (
+  return (
     <div className={"navbar-container"}>
       <Link name="top" id="home-link" to="/">
         <button className={"nav-btn"} id={"home-btn"}>
-          <img id={"logo-img"} src={Logo} alt={'logo'} />
+          <img id={"logo-img"} src={Logo} alt={"logo"} />
         </button>
       </Link>
       <Link to="/museum">
@@ -51,12 +51,23 @@ const Navigationbar = () => {
           </button>
         </Link>
       ) : (
-        <Link to={"/minside"}>
-          <button className={"nav-btn"} id={"login-btn"}>
-            <img src={UserIcon} alt={"Bruker ikon"} />
-            <p>Min side</p>
-          </button>
-        </Link>
+        <>
+          {user.type === "ADMIN" ? (
+            <Link to={"/admin"}>
+              <button className={"nav-btn"} id={"login-btn"}>
+                <img src={UserIcon} alt={"Bruker ikon"} />
+                <p>Admin dashboard</p>
+              </button>
+            </Link>
+          ) : (
+            <Link to={"/minside"}>
+              <button className={"nav-btn"} id={"login-btn"}>
+                <img src={UserIcon} alt={"Bruker ikon"} />
+                <p>Min side</p>
+              </button>
+            </Link>
+          )}
+        </>
       )}
     </div>
   );
