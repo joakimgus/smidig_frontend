@@ -36,7 +36,7 @@ const ContactPage = () => {
             <img
               id={"insta-logo"}
               src={
-                "https://freepikpsd.com/wp-content/uploads/2019/10/instagram-icon-png-black-6-Transparent-Images.png"
+                "https://i.pinimg.com/originals/63/9b/3d/639b3dafb544d6f061fcddd2d6686ddb.png"
               }
               style={{ width: "60px" }}
               alt={"instagram ikon"}
