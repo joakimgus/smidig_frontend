@@ -76,8 +76,8 @@ p {
   padding-right: 0.2em;
 }
 
-a,
-a.clicked {
+.nav-links-item > a,
+.nav-links-item > a.clicked {
   color: white;
   text-decoration: none;
 }
