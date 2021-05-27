@@ -8,12 +8,23 @@ import FilterSidebar from "../components/FilterSidebar";
 
 const ProductSelectionPage = () => {
   const [exhibitions, setExhibitions] = useState();
+  const [filterMuseums, setFilterMuseums] = useState([]);
 
   const history = useHistory();
 
   useEffect(() => {
+    console.log("endrer");
     fetchExhibitions();
-  }, []);
+  }, [JSON.stringify(filterMuseums)]);
+
+  /*useEffect(() => {
+    console.log("endrer");
+    /!*setExhibitions((prev) => {
+      prev.filter((e) => {
+        return e;
+      });
+    });*!/
+  }, [filterMuseums]);*/
 
   const fetchExhibitions = async () => {
     const res = await fetchData("/exhibitions");
@@ -35,7 +46,10 @@ const ProductSelectionPage = () => {
     <>
       <Header title={headerText.title} description={headerText.description} />
       <div className={"utvalg-page-container"}>
-        <FilterSidebar />
+        <FilterSidebar
+          filterMuseums={filterMuseums}
+          setFilterMuseums={setFilterMuseums}
+        />
         <div className={"utvalg-products-container"}>
           {exhibitions.map((e, a) => (
             <div

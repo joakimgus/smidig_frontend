@@ -56,3 +56,8 @@
 .popup-redirect-buttons button {
     margin: 2em;
 }
+
+.popup-check-circle {
+    height: 4rem;
+    width: 4rem;
+}
