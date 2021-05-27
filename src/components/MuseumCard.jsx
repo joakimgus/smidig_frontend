@@ -15,8 +15,8 @@ const MuseumCard = ({ name, description, picture, exhibitions }) => {
         <h1>UTSTILLINGER</h1>
         {exhibitions.length > 0 ? (
           <div className={"museum-card-exhibitions"}>
-            {exhibitions.map((e) => (
-              <div>
+            {exhibitions.map((e, i) => (
+              <div key={i}>
                 <img src={e.media[0]} alt={"img"} />
                 <h3 className={"exhibition-name"}>{e.name}</h3>
               </div>

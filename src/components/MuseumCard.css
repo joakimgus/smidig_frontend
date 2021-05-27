@@ -19,7 +19,7 @@
   font-variant-caps: all-small-caps;
   font-weight: 400;
   font-size: 35px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 /* for the museums image */
@@ -30,6 +30,7 @@
 }
 
 #museum-card-img {
+  object-fit: cover;
   margin-top: 4em;
   min-height: 75%;
   min-width: 75%;
@@ -49,7 +50,7 @@
   font-variant-caps: all-small-caps;
   font-weight: 400;
   font-size: 35px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .museum-card:nth-child(even)>.museum-card-exhibitions-container>.museum-card-exhibitions{
@@ -63,11 +64,13 @@
   padding-top: 1em;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-start;
-  column-gap: 2em;
+  column-gap: 2vw;
+  row-gap: 4vh;
   font-weight: 200;
   font-style: italic;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .museum-card-description {
@@ -76,7 +79,7 @@
   padding-top: 0.8em;
   font-weight: 200;
   font-style: italic;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .museum-card-exhibitions-container > h1 {
@@ -89,8 +92,10 @@
 
 .museum-card-exhibitions > div > img {
   object-fit: fill;
-  width: 150px;
-  height: 150px;
+  max-width: 150px;
+  min-width: 150px;
+  max-height: 150px;
+  min-height: 150px;
 }
 
 .exhibition-name {
@@ -123,19 +128,15 @@
   grid-column: 1;
 }
 
-.museum-card:nth-child(even)
-  > .museum-card-text-container
-  > .museum-card-title {
+.museum-card:nth-child(even)>.museum-card-text-container>.museum-card-title {
   margin-left: 1.5em;
 }
 
-.museum-card:nth-child(even)
-  > .museum-card-text-container
-  > .museum-card-description {
+.museum-card:nth-child(even)>.museum-card-text-container>.museum-card-description {
   margin-left: 3.7em;
   font-weight: 200;
   font-style: italic;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .museum-card:nth-child(even) > .museum-card-img-container {
@@ -160,20 +161,20 @@
     margin-left: 2em;
   }
 
-  .museum-card:nth-child(even)
-    > .museum-card-text-container
-    > .museum-card-title {
+  .museum-card:nth-child(even)> .museum-card-text-container> .museum-card-title {
     margin-left: 1em;
   }
 
-  .museum-card:nth-child(even)
-    > .museum-card-text-container
-    > .museum-card-description {
+  .museum-card:nth-child(even)>.museum-card-text-container>.museum-card-description {
     margin-left: 2.4em;
   }
 
   .museum-card:nth-child(even) > .museum-card-img-container > #museum-card-img {
     margin-left: 3em;
+  }
+
+  .museum-card:nth-child(even)>.museum-card-exhibitions-container>.museum-card-exhibitions {
+    margin-left: 2.2em;
   }
 }
 
@@ -254,7 +255,7 @@
     padding-bottom: 0.2em;
   }
 
-  #exhibition-item-four {
+  .museum-card-exhibitions:nth-child(4) {
     display: none;
   }
 
@@ -262,15 +263,11 @@
     margin-left: 2em;
   }
 
-  .museum-card:nth-child(even)
-    > .museum-card-text-container
-    > .museum-card-title {
+  .museum-card:nth-child(even)> .museum-card-text-container> .museum-card-title {
     margin-left: 0.8em;
   }
 
-  .museum-card:nth-child(even)
-    > .museum-card-text-container
-    > .museum-card-description {
+  .museum-card:nth-child(even)> .museum-card-text-container> .museum-card-description {
     margin-left: 2em;
   }
 }

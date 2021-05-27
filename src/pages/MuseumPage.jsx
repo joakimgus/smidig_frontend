@@ -33,7 +33,7 @@ const MuseumPage = () => {
       <div className={"museum-card-container"}>
         {museums.map((m, i) => (
           <MuseumCard
-            key={m.id}
+            key={i}
             name={m.name}
             description={m.description}
             picture={m.picture}
