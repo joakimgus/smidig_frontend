@@ -22,6 +22,9 @@ h3 {
   font-size: 25px;
   font-weight: 400;
   margin-bottom: 0.5em;
+}
+
+.fix-login-placement-container>h3{
   text-align: center;
 }
 

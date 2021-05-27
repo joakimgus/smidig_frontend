@@ -3,6 +3,7 @@ import UserInfo from "../components/UserInfo";
 import OrderHistory from "../components/OrderHistory";
 import "./ProfilePage.css";
 import { UserContext } from "../context/context";
+import LoginPage from "./LoginPage";
 
 const ProfilePage = () => {
   const { user } = useContext(UserContext);
@@ -15,7 +16,7 @@ const ProfilePage = () => {
           <OrderHistory />
         </div>
       ) : (
-        <div>log in</div>
+        <LoginPage />
       )}
     </div>
   );
