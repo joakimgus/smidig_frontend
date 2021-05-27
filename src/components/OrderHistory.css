@@ -11,12 +11,23 @@
 }
 
 #order-history-text-container > h1 {
-  padding-bottom: 0.1em;
-  border-bottom: 1px solid black;
+  margin-bottom: 0.2em;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-variant-caps: all-small-caps;
+  font-size: 35px;
+  font-weight: 400;
 }
 
 #order-history-text-container > p {
   padding-top: 0.5em;
+  font-size: 12px;
+}
+
+.search-sort-container{
+  width: 15em;
+  height: 1em;
+  border: 1px solid black;
 }
 
 #order-history-table {
@@ -27,16 +38,18 @@
 }
 
 tr#header-row > th {
+  font-size: 14px;
   padding-left: 0.5em;
   padding-bottom: 0.5em;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
 }
 
 tr.order-row > td {
+  font-size: 12px;
   padding-top: 1em;
   padding-left: 0.5em;
   padding-bottom: 1em;
-  border-bottom: 1px solid rgb(112, 112, 112);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 812px) {

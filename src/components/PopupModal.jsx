@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useRef } from "react";
 import { useSpring, animated } from "react-spring";
 import { useHistory } from "react-router";
 import { MdClose } from "react-icons/md";
+import { FaCheckCircle } from "react-icons/fa";
 import "./PopupModal.css";
 
 const PopupModal = ({ showModal, setShowModal }) => {
@@ -45,8 +46,8 @@ const PopupModal = ({ showModal, setShowModal }) => {
           <animated.div style={animation}>
             <div showModal={showModal} className={"popup-modal-wrapper"}>
               <div className={"popup-modal-content"}>
+                <FaCheckCircle className={"popup-check-circle"} />
                 <h1>Varen er lagt til</h1>
-                <p>Finn på en tekst her</p>
                 <div className={"popup-redirect-buttons"}>
                   <button onClick={() => setShowModal((prev) => !prev)}>
                     Fortsett å handle
