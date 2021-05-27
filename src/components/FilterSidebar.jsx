@@ -16,15 +16,12 @@ const FilterSidebar = ({ filterMuseums, setFilterMuseums }) => {
 
   const handleMuseumChange = (e) => {
     const name = e.target.name;
-    const newFilterMuseums = filterMuseums;
     if (filterMuseums.includes(name)) {
-      newFilterMuseums.splice(newFilterMuseums.indexOf(name), 1);
-      setFilterMuseums(newFilterMuseums);
+      console.log("halla");
+      setFilterMuseums(filterMuseums.filter((item) => item !== name));
     } else {
-      newFilterMuseums.push(name);
-      setFilterMuseums(newFilterMuseums);
+      setFilterMuseums((prev) => [...prev, name]);
     }
-    console.log(filterMuseums);
   };
 
   if (!museums) {

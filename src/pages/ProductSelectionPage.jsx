@@ -13,9 +13,8 @@ const ProductSelectionPage = () => {
   const history = useHistory();
 
   useEffect(() => {
-    console.log("endrer");
     fetchExhibitions();
-  }, [JSON.stringify(filterMuseums)]);
+  }, [filterMuseums]);
 
   /*useEffect(() => {
     console.log("endrer");
@@ -27,7 +26,7 @@ const ProductSelectionPage = () => {
   }, [filterMuseums]);*/
 
   const fetchExhibitions = async () => {
-    const res = await fetchData("/exhibitions");
+    const res = await Promise.all(await fetchData("/exhibitions"));
     setExhibitions(res);
   };
 
