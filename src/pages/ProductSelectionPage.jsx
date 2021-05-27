@@ -8,26 +8,30 @@ import FilterSidebar from "../components/FilterSidebar";
 
 const ProductSelectionPage = () => {
   const [exhibitions, setExhibitions] = useState();
+  const [allExhibitions, setAllExhibitions] = useState();
   const [filterMuseums, setFilterMuseums] = useState([]);
 
   const history = useHistory();
 
   useEffect(() => {
-    fetchExhibitions();
-  }, [filterMuseums]);
+    fetchExhibitions().then((res) => {
+      console.log(res);
+      setAllExhibitions(res);
+      setExhibitions(res);
+    });
+  }, []);
 
-  /*useEffect(() => {
+  useEffect(() => {
     console.log("endrer");
-    /!*setExhibitions((prev) => {
+    /*setExhibitions((prev) => {
       prev.filter((e) => {
         return e;
       });
-    });*!/
-  }, [filterMuseums]);*/
+    });*/
+  }, [filterMuseums]);
 
   const fetchExhibitions = async () => {
-    const res = await Promise.all(await fetchData("/exhibitions"));
-    setExhibitions(res);
+    return await Promise.all(await fetchData("/exhibitions"));
   };
 
   const headerText = {
