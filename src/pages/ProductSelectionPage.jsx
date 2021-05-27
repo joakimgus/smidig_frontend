@@ -80,7 +80,7 @@ const ProductSelectionPage = () => {
                     style={{ display: "inline-block" }}
                     key={c}
                   >
-                    {t},{" "}
+                    {c === e.tags.length - 1 ? t : t + ","}
                   </p>
                 ))}
               </div>
