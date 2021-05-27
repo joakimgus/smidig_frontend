@@ -57,6 +57,8 @@ const ProductPage = () => {
     <div className={"productpage-container"}>
       <PopupModal showModal={showModal} setShowModal={setShowModal} />
       <div className={"product-top-container"}>
+        <div className="product-top-left-wrapper">
+          <div className="product-top-left-wrapper2">
         <Swiper
           className={"product-swiper"}
           speed={500}
@@ -77,6 +79,8 @@ const ProductPage = () => {
               </SwiperSlide>
             ))}
         </Swiper>
+        </div>
+        </div>
         <div className="product-top-right-container">
           <div className="row-one-container">
             <h3>{data.name}</h3>
