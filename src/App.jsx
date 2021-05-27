@@ -21,6 +21,10 @@ import DeliveryInformation from "./pages/DeliveryInformation";
 import PaymentOptions from "./pages/PaymentOptions";
 import InvoiceInformation from "./pages/InvoiceInformation";
 import OrderConfirmation from "./pages/OrderConfirmation";
+import AdminDashboard from "./pages/AdminDashboard";
+import AdminProducts from "./pages/AdminProducts";
+import AdminPackages from "./pages/AdminPackages";
+import ManageUsers from "./pages/ManageUsers";
 
 const App = () => {
   // User context
@@ -76,6 +80,18 @@ const App = () => {
           </Route>
           <Route path="/minside">
             <ProfilePage />
+          </Route>
+          <Route path="/admin" exact>
+            <AdminDashboard />
+          </Route>
+          <Route path="/admin/produkter">
+            <AdminProducts />
+          </Route>
+          <Route path="/admin/pakker">
+            <AdminPackages />
+          </Route>
+          <Route path="/admin/brukere">
+            <ManageUsers />
           </Route>
           {/*{user ? (
             <>
