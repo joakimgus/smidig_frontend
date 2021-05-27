@@ -9,33 +9,36 @@ import FilterSidebar from "../components/FilterSidebar";
 const ProductSelectionPage = () => {
   const [exhibitions, setExhibitions] = useState();
   const [allExhibitions, setAllExhibitions] = useState();
-  const [filterMuseums, setFilterMuseums] = useState([]);
+  const [filter, setFilter] = useState({
+    museums: [],
+    tags: [],
+  });
 
   const history = useHistory();
 
   useEffect(() => {
     fetchExhibitions().then((res) => {
-      console.log(res);
       setAllExhibitions(res);
       setExhibitions(res);
     });
   }, []);
 
   useEffect(() => {
-    if (filterMuseums.length === 0) {
+    console.log(exhibitions);
+    if (filter.museums.length === 0) {
       setExhibitions(allExhibitions);
       return;
     }
     if (exhibitions) {
       let filteredItems = allExhibitions;
-      if (filterMuseums) {
-        filteredItems = allExhibitions.filter(
-          (item) => item.developer === filterMuseums[0]
-        );
+      if (filter.museums) {
+        filteredItems = allExhibitions.filter((item) => {
+          return filter.museums.indexOf(item.developer) !== -1;
+        });
       }
       setExhibitions(filteredItems);
     }
-  }, [filterMuseums]);
+  }, [filter]);
 
   const fetchExhibitions = async () => {
     return await Promise.all(await fetchData("/exhibitions"));
@@ -56,10 +59,7 @@ const ProductSelectionPage = () => {
     <>
       <Header title={headerText.title} description={headerText.description} />
       <div className={"utvalg-page-container"}>
-        <FilterSidebar
-          filterMuseums={filterMuseums}
-          setFilterMuseums={setFilterMuseums}
-        />
+        <FilterSidebar filter={filter} setFilter={setFilter} />
         <div className={"utvalg-products-container"}>
           {exhibitions.map((e, a) => (
             <div

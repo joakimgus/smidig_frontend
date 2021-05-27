@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchData } from "../api/apiHandler";
 import Loading from "./Loading";
 
-const FilterSidebar = ({ filterMuseums, setFilterMuseums }) => {
+const FilterSidebar = ({ filter, setFilter }) => {
   const [museums, setMuseums] = useState();
 
   useEffect(() => {
@@ -16,10 +16,29 @@ const FilterSidebar = ({ filterMuseums, setFilterMuseums }) => {
 
   const handleMuseumChange = (e) => {
     const name = e.target.name;
-    if (filterMuseums.includes(name)) {
-      setFilterMuseums(filterMuseums.filter((item) => item !== name));
+    if (filter.museums.includes(name)) {
+      setFilter({
+        ...filter,
+        museums: filter.museums.filter((item) => item !== name),
+      });
     } else {
-      setFilterMuseums((prev) => [...prev, name]);
+      setFilter((prev) => {
+        return { ...filter, museums: [...prev.museums, name] };
+      });
+    }
+  };
+
+  const handleTagChange = (e) => {
+    const name = e.target.name;
+    if (filter.tags.includes(name)) {
+      setFilter({
+        ...filter,
+        tags: filter.tags.filter((item) => item !== name),
+      });
+    } else {
+      setFilter((prev) => {
+        return { ...filter, tags: [...prev.tags, name] };
+      });
     }
   };
 
@@ -33,6 +52,17 @@ const FilterSidebar = ({ filterMuseums, setFilterMuseums }) => {
         className={"sidebar-filter-thing"}
         style={{ width: "15vw", minHeight: "65vh", backgroundColor: "white" }}
       >
+        <div>
+          <label>
+            <input type="checkbox" name={"barn"} onChange={handleTagChange} />
+            Barn
+          </label>
+          <label>
+            <input type="checkbox" name={"voksne"} onChange={handleTagChange} />
+            Voksne
+          </label>
+        </div>
+        <hr />
         {museums.map((m) => (
           <div>
             <label>
