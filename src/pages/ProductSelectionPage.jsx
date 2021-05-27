@@ -15,7 +15,6 @@ const ProductSelectionPage = () => {
 
   useEffect(() => {
     fetchExhibitions().then((res) => {
-      console.log(res);
       setAllExhibitions(res);
       setExhibitions(res);
     });
@@ -29,9 +28,9 @@ const ProductSelectionPage = () => {
     if (exhibitions) {
       let filteredItems = allExhibitions;
       if (filterMuseums) {
-        filteredItems = allExhibitions.filter(
-          (item) => item.developer === filterMuseums[0]
-        );
+        filteredItems = allExhibitions.filter((item) => {
+          return filterMuseums.indexOf(item.developer) !== -1;
+        });
       }
       setExhibitions(filteredItems);
     }
