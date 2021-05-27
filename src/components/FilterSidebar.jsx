@@ -17,7 +17,6 @@ const FilterSidebar = ({ filterMuseums, setFilterMuseums }) => {
   const handleMuseumChange = (e) => {
     const name = e.target.name;
     if (filterMuseums.includes(name)) {
-      console.log("halla");
       setFilterMuseums(filterMuseums.filter((item) => item !== name));
     } else {
       setFilterMuseums((prev) => [...prev, name]);

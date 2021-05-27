@@ -15,19 +15,25 @@ const ProductSelectionPage = () => {
 
   useEffect(() => {
     fetchExhibitions().then((res) => {
-      console.log(res);
       setAllExhibitions(res);
       setExhibitions(res);
     });
   }, []);
 
   useEffect(() => {
-    console.log("endrer");
-    /*setExhibitions((prev) => {
-      prev.filter((e) => {
-        return e;
-      });
-    });*/
+    if (filterMuseums.length === 0) {
+      setExhibitions(allExhibitions);
+      return;
+    }
+    if (exhibitions) {
+      let filteredItems = allExhibitions;
+      if (filterMuseums) {
+        filteredItems = allExhibitions.filter((item) => {
+          return filterMuseums.indexOf(item.developer) !== -1;
+        });
+      }
+      setExhibitions(filteredItems);
+    }
   }, [filterMuseums]);
 
   const fetchExhibitions = async () => {
