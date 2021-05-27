@@ -36,6 +36,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
+      <div id="top" style={{ height: "0px" }} />
       <UserContext.Provider value={{ user, setUser }}>
         <Navigationbar />
         <Switch>
