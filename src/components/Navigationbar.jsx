@@ -8,7 +8,7 @@ import "./Navigationbar.css";
 import { UserContext } from "../context/context";
 
 const Navigationbar = () => {
-  const user = useContext(UserContext);
+  const { user } = useContext(UserContext);
 
     return (
     <div className={"navbar-container"}>
