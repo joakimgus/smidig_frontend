@@ -66,9 +66,10 @@ const ProductPage = () => {
           onSlideChange={() => console.log("slide change")}
         >
           {data.media &&
-            data.media.map((p) => (
+            data.media.map((p, i) => (
               <SwiperSlide>
                 <img
+                  key={i}
                   className={"product-image"}
                   src={p}
                   alt={"Produkt bilde"}

@@ -52,10 +52,14 @@
   letter-spacing: 0.5px;
 }
 
+.museum-card:nth-child(even)>.museum-card-exhibitions-container>.museum-card-exhibitions{
+  margin-left: 4em;
+}
+
 .museum-card-exhibitions {
   width: 90%;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
-  margin-left: 4em;
+  margin-left: 3em;
   padding-top: 1em;
   display: flex;
   flex-direction: row;
