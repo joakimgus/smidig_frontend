@@ -1,5 +1,5 @@
 .admin-products-page-container {
-    height: 93vh;
+    min-height: 93vh;
     margin: 2.9em 0 5px 0;
 }
 
