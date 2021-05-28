@@ -133,11 +133,8 @@ tr.user-row > td.edit-btn-column {
     align-self: end;
     grid-row: 3;
   }
-}
 
-@media screen and (max-width: 450px) {
   .profile-img-logo {
     display: none;
-    padding-top: 1em;
   }
 }

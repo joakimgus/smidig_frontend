@@ -1,11 +1,26 @@
 import React, { useContext } from "react";
 import "./AdminDashboard.css";
 import UserInfo from "../components/UserInfo";
-import AdminDashboardNavigation from "../components/AdminDashboardNavigation";
+import DashboardNavigation from "../components/DashboardNavigation";
 import { UserContext } from "../context/context";
 
 const AdminDashboard = () => {
   const { user } = useContext(UserContext);
+
+  const adminLinks = [
+    {
+      name: "Produkter",
+      link: "/admin/produkter"
+    },
+    {
+      name: "Pakker",
+      link: "/admin/pakker"
+    },
+    {
+      name: "Administrer brukere",
+      link: "/admin/brukere"
+    }
+  ];
 
   if (!user) {
     return "No permission";
@@ -16,7 +31,9 @@ const AdminDashboard = () => {
       {user.type === "ADMIN" && (
         <>
           <UserInfo />
-          <AdminDashboardNavigation />
+          <DashboardNavigation
+              link={adminLinks}
+          />
         </>
       )}
     </div>
