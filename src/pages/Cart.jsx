@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Cart.css";
 import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
+import {TiDelete} from "react-icons/all";
 
 const Cart = () => {
   const [cart, setCart] = useState();
@@ -79,12 +80,11 @@ const Cart = () => {
                 </p>
               </div>
               <div className={"item-remove-container"}>
-                <button onClick={() => removeItem(index)}>x</button>
+                <p onClick={() => removeItem(index)}>
+                  <TiDelete />
+                </p>
               </div>
             </div>
-            <Link to={"/kundeopplysninger"}>
-              <button>Fortsett til betaling</button>
-            </Link>
           </>
         ))
       ) : (
@@ -92,6 +92,9 @@ const Cart = () => {
           <p>Du har ingenting i handlekurven</p>
         </div>
       )}
+      <Link to={"/kundeopplysninger"}>
+        <button>Fortsett til betaling</button>
+      </Link>
     </div>
   );
 };
