@@ -64,16 +64,13 @@ tr.user-row > td.edit-btn-column {
 }
 
 .profile-edit-btn {
-  width: 30px;
-  height: 30px;
   border: none;
   background-color: white;
 }
 
-.profile-edit-btn>img{
-  object-fit: cover;
-  width: 15px;
-  height: 15px;
+.profile-edit-btn>svg{
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .profile-img-logo {

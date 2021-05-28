@@ -4,6 +4,7 @@ import { UserContext } from "../context/context";
 import "./UserInfo.css";
 import Edit from "../images/edit.svg";
 import { fetchData } from "../api/apiHandler";
+import {GrFormEdit} from "react-icons/all";
 
 const UserInfo = () => {
   const { user, setUser } = useContext(UserContext);
@@ -30,7 +31,7 @@ const UserInfo = () => {
             <div className="userinfo-wrapper">
             <p>Du er innlogget som <span>{user.email}</span></p>
             <button className={"profile-edit-btn"}>
-              <img src={Edit} />
+              <GrFormEdit />
             </button>
             </div>
           </div>
