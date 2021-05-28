@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import { fetchData } from "../api/apiHandler";
 import Loading from "./Loading";
 
-const FilterSidebar = ({ filter, setFilter }) => {
+const FilterSidebar = ({
+  filter,
+  setFilter,
+  searchFilter,
+  setSearchFilter,
+}) => {
   const [museums, setMuseums] = useState();
 
   useEffect(() => {
@@ -53,6 +58,33 @@ const FilterSidebar = ({ filter, setFilter }) => {
         style={{ width: "15vw", minHeight: "65vh", backgroundColor: "white" }}
       >
         <div>
+          <input
+            type="text"
+            placeholder={"Søk etter utstillinger"}
+            onChange={(e) => setSearchFilter(e.target.value)}
+          />
+        </div>
+        <div>
+          <h1>Spesifikasjoner</h1>
+          <label>
+            <input type="checkbox" name={"lyd"} onChange={handleTagChange} />
+            Lyd
+          </label>
+          <label>
+            <input type="checkbox" name={"fysisk"} onChange={handleTagChange} />
+            Fysisk
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name={"digital"}
+              onChange={handleTagChange}
+            />
+            Digital
+          </label>
+        </div>
+        <div>
+          <h1>Brukergruppe</h1>
           <label>
             <input type="checkbox" name={"barn"} onChange={handleTagChange} />
             Barn
@@ -63,8 +95,9 @@ const FilterSidebar = ({ filter, setFilter }) => {
           </label>
         </div>
         <hr />
-        {museums.map((m) => (
-          <div>
+        <div>
+          <h1>Museum</h1>
+          {museums.map((m) => (
             <label>
               <input
                 type="checkbox"
@@ -73,8 +106,8 @@ const FilterSidebar = ({ filter, setFilter }) => {
               />
               {m.name}
             </label>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </>
   );
