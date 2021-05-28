@@ -35,9 +35,7 @@ const OrderHistory = () => {
             <th className={"table-header ordernr-column"}>Ordrenr.</th>
             <th className={"table-header museum-column"}>Museum</th>
             <th className={"table-header package-column"}>Pakkeløsning</th>
-            {/*<th className={"table-header price-column"}>Pris</th>*/}
           </tr>
-          {/* TODO insert map for orders */}
           {orders.map((o) => (
             <tr className={"order-row"}>
               <td className={"date-column"}>
@@ -54,7 +52,6 @@ const OrderHistory = () => {
                   <div>{e.name}</div>
                 ))}
               </td>
-              {/* <td className={"price-column"}>0.-</td>*/}
             </tr>
           ))}
         </table>

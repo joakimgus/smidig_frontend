@@ -25,6 +25,7 @@ import AdminDashboard from "./pages/AdminDashboard";
 import AdminProducts from "./pages/AdminProducts";
 import AdminPackages from "./pages/AdminPackages";
 import ManageUsers from "./pages/ManageUsers";
+import SuperuserDashboard from "./pages/SuperuserDashboard";
 
 const App = () => {
   // User context
@@ -93,6 +94,9 @@ const App = () => {
           </Route>
           <Route path="/admin/brukere">
             <ManageUsers />
+          </Route>
+          <Route path={"/superbruker"}>
+            <SuperuserDashboard />
           </Route>
         </Switch>
         <Footer />
