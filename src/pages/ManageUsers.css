@@ -36,7 +36,7 @@
     max-width: 100vw;
     display: grid;
     grid-column-gap: 5px;
-    grid-template-columns: 2em 10% 20% repeat(3, 10%) 2em;
+    grid-template-columns: 2em 10% 25% repeat(3, 10%) 2em;
     grid-template-rows: repeat(2, auto);
 }
 
@@ -78,7 +78,7 @@
     max-height: 100px;
     display: grid;
     grid-column-gap: 5px;
-    grid-template-columns: 2em 10% 20% repeat(3, 10%) 2em;
+    grid-template-columns: 2em 10% 25% repeat(3, 10%) 2em;
 }
 
 .manage-user-org-nr-column{
@@ -101,4 +101,19 @@
     width: 2em;
     height: 2em;
     margin-top: -4px;
+}
+
+@media screen and (max-width: 768px){
+    .manage-users-table-specifications {
+        grid-template-columns: 2em 10% 25% 20% repeat(2, 10%) 2em;
+    }
+
+    .manage-users-container{
+        margin-bottom: 1em;
+        max-width: 100vw;
+        max-height: 100px;
+        display: grid;
+        grid-column-gap: 5px;
+        grid-template-columns: 2em 10% 25% 20% repeat(2, 10%) 2em;
+    }
 }
