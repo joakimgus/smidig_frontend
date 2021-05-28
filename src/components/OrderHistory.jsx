@@ -6,13 +6,31 @@ import moment from "moment";
 
 const OrderHistory = () => {
   const [orders, setOrders] = useState();
+  const [allOrders, setAllOrders] = useState();
+  const [searchFilter, setSearchFilter] = useState("");
+
   useEffect(() => {
     getOrderHistory();
   }, []);
 
+  useEffect(() => {
+    if (searchFilter.length === 0) {
+      setOrders(allOrders);
+    } else {
+      console.log(searchFilter);
+      let filteredItems = orders.filter((item) => {
+        console.log(item);
+        //const name = item.name.toLowerCase();
+        //return name.includes(searchFilter);
+      });
+      setOrders(filteredItems);
+    }
+  }, [searchFilter]);
+
   const getOrderHistory = async () => {
     const res = await fetchData("/orders");
     setOrders(res);
+    setAllOrders(res);
     console.log(res);
   };
 
@@ -27,7 +45,18 @@ const OrderHistory = () => {
           <h1>Ordrehistorikk</h1>
           <p>En oversikt over tidligere ordre du har gjennomført.</p>
         </div>
-        <div className={'search-sort-container'}>
+        <div className={"search-sort-container"}>
+          <div className={"search-sort-container"}>
+            <input
+              type="text"
+              placeholder={"Søk etter utstillinger"}
+              onChange={(e) => setSearchFilter(e.target.value)}
+            />
+          </div>
+          <select name="sort" id="sort">
+            <option value="true">Nyeste</option>
+            <option value="false">Eldste</option>
+          </select>
         </div>
         <table id={"order-history-table"}>
           <tr id={"header-row"}>
