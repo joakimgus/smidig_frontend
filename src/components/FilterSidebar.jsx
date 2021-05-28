@@ -19,30 +19,16 @@ const FilterSidebar = ({
     setMuseums(res);
   };
 
-  const handleMuseumChange = (e) => {
+  const handleChange = (e, f) => {
     const name = e.target.name;
-    if (filter.museums.includes(name)) {
+    if (filter[f.name].includes(name)) {
       setFilter({
         ...filter,
-        museums: filter.museums.filter((item) => item !== name),
+        [f.name]: filter[f.name].filter((item) => item !== name),
       });
     } else {
       setFilter((prev) => {
-        return { ...filter, museums: [...prev.museums, name] };
-      });
-    }
-  };
-
-  const handleTagChange = (e) => {
-    const name = e.target.name;
-    if (filter.tags.includes(name)) {
-      setFilter({
-        ...filter,
-        tags: filter.tags.filter((item) => item !== name),
-      });
-    } else {
-      setFilter((prev) => {
-        return { ...filter, tags: [...prev.tags, name] };
+        return { ...filter, [f.name]: [...prev[f.name], name] };
       });
     }
   };
@@ -67,18 +53,26 @@ const FilterSidebar = ({
         <div>
           <h1>Spesifikasjoner</h1>
           <label>
-            <input type="checkbox" name={"lyd"} onChange={handleTagChange} />
+            <input
+              type="checkbox"
+              name={"lyd"}
+              onChange={(e) => handleChange(e, { name: "tags" })}
+            />
             Lyd
           </label>
           <label>
-            <input type="checkbox" name={"fysisk"} onChange={handleTagChange} />
+            <input
+              type="checkbox"
+              name={"fysisk"}
+              onChange={(e) => handleChange(e, { name: "tags" })}
+            />
             Fysisk
           </label>
           <label>
             <input
               type="checkbox"
               name={"digital"}
-              onChange={handleTagChange}
+              onChange={(e) => handleChange(e, { name: "tags" })}
             />
             Digital
           </label>
@@ -86,11 +80,19 @@ const FilterSidebar = ({
         <div>
           <h1>Brukergruppe</h1>
           <label>
-            <input type="checkbox" name={"barn"} onChange={handleTagChange} />
+            <input
+              type="checkbox"
+              name={"barn"}
+              onChange={(e) => handleChange(e, { name: "tags" })}
+            />
             Barn
           </label>
           <label>
-            <input type="checkbox" name={"voksne"} onChange={handleTagChange} />
+            <input
+              type="checkbox"
+              name={"voksne"}
+              onChange={(e) => handleChange(e, { name: "tags" })}
+            />
             Voksne
           </label>
         </div>
@@ -102,7 +104,7 @@ const FilterSidebar = ({
               <input
                 type="checkbox"
                 name={m._id}
-                onChange={handleMuseumChange}
+                onChange={(e) => handleChange(e, { name: "museums" })}
               />
               {m.name}
             </label>
