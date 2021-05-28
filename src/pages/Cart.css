@@ -111,13 +111,10 @@
   justify-self: center;
 }
 
-.item-remove-container > button {
+.item-remove-container>p>svg{
   width: 2em;
   height: 2em;
-  border-radius: 50%;
-  padding-bottom: 2px;
-  background-color: black;
-  color: white;
+  margin-top: -5px;
 }
 
 .cart-empty-message {

@@ -1,6 +1,6 @@
 #admin-dashboard-container {
     margin-top: 2.9em;
-    min-height: 80vh;
+    min-height: 100vh;
     min-width: 100%;
     display: grid;
     grid-template-rows: 1em repeat(2, auto) 1em;

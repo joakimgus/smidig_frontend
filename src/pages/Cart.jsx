@@ -80,7 +80,7 @@ const Cart = () => {
                 </p>
               </div>
               <div className={"item-remove-container"}>
-                <p onClick={() => removeItem(index)}>
+                <p className={'button'} onClick={() => removeItem(index)}>
                   <TiDelete />
                 </p>
               </div>
