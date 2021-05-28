@@ -56,7 +56,7 @@ const Navigationbar = () => {
             <Link to={"/admin"}>
               <button className={"nav-btn"} id={"login-btn"}>
                 <img src={UserIcon} alt={"Bruker ikon"} />
-                <p>Admin dashboard</p>
+                <p>Admin</p>
               </button>
             </Link>
           ) : (

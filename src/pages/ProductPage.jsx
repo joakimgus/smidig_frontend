@@ -103,7 +103,7 @@ const ProductPage = () => {
               </p>
             ))}
           </div>
-          <button className={"add-product-to-cart-btn"} onClick={addToCart}>
+          <button className={"add-product-to-cart-btn button"} onClick={addToCart}>
             Legg til i handlekurv
           </button>
         </div>
