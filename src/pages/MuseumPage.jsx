@@ -16,6 +16,7 @@ const MuseumPage = () => {
 
   useEffect(() => {
     fetchMuseums();
+    window.scrollTo(0, 0);
   }, []);
 
   const fetchMuseums = async () => {

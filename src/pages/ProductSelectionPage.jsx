@@ -22,6 +22,7 @@ const ProductSelectionPage = () => {
       setAllExhibitions(res);
       setExhibitions(res);
     });
+    window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {

@@ -28,6 +28,7 @@ const ProductPage = () => {
 
   useEffect(() => {
     fetchDeveloper();
+    window.scrollTo(0, 0);
   }, []);
 
   const fetchDeveloper = async () => {
