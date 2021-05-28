@@ -93,7 +93,7 @@ const Cart = () => {
         </div>
       )}
       <Link to={"/kundeopplysninger"}>
-        <button>Fortsett til betaling</button>
+        <button className={'button cart-continue-to-checkout-btn'}>Fortsett til betaling</button>
       </Link>
     </div>
   );

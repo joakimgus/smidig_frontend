@@ -123,6 +123,15 @@
   padding: 5rem 0;
 }
 
+.cart-continue-to-checkout-btn{
+  margin-left: 2em;
+  color: white;
+  background-color: black;
+  width: 16em;
+  height: 2.5em;
+  font-variant-caps: all-small-caps;
+}
+
 @media screen and (max-width: 812px) {
   .cart-top-text-container {
     grid-template-columns: 2em 1fr 2em;
