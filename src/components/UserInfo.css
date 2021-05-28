@@ -139,7 +139,7 @@ tr.user-row > td.edit-btn-column {
 }
 
 @media screen and (max-width: 450px) {
-  #tidvis-logo {
+  .profile-img-logo {
     display: none;
     padding-top: 1em;
   }
