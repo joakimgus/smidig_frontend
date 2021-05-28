@@ -29,13 +29,18 @@ const ProductSelectionPage = () => {
     console.log(exhibitions);
     if (filter.museums.length === 0) {
       setExhibitions(allExhibitions);
-      return;
+      //return;
     }
+    let filteredItems = allExhibitions;
     if (exhibitions) {
-      let filteredItems = allExhibitions;
-      if (filter.museums) {
+      if (filter.museums.length > 0) {
         filteredItems = allExhibitions.filter((item) => {
           return filter.museums.indexOf(item.developer) !== -1;
+        });
+      }
+      if (filter.tags.length > 0) {
+        filteredItems = filteredItems.filter((item) => {
+          return filter.tags.indexOf(item.tags[0].toLowerCase()) !== -1;
         });
       }
       setExhibitions(filteredItems);
