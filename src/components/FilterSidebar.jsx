@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../api/apiHandler";
 import Loading from "./Loading";
+import SearchBar from "./SearchBar";
 
-const FilterSidebar = ({
-  filter,
-  setFilter,
-  searchFilter,
-  setSearchFilter,
-}) => {
+const FilterSidebar = ({ filter, setFilter, setSearchFilter }) => {
   const [museums, setMuseums] = useState();
 
   useEffect(() => {
@@ -43,13 +39,7 @@ const FilterSidebar = ({
         className={"sidebar-filter-thing"}
         style={{ width: "15vw", minHeight: "65vh", backgroundColor: "white" }}
       >
-        <div>
-          <input
-            type="text"
-            placeholder={"Søk etter utstillinger"}
-            onChange={(e) => setSearchFilter(e.target.value)}
-          />
-        </div>
+        <SearchBar setSearchFilter={setSearchFilter} />
         <div>
           <h1>Spesifikasjoner</h1>
           <label>
