@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import "./DashboardNavigation.css";
+import "./style/DashboardNavigation.css";
 
 const DashboardNavigation = ({link}) => {
     return(

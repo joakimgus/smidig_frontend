@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../api/apiHandler";
 import Loading from "../components/Loading";
-import './ManageUsers.css';
+import './style/ManageUsers.css';
 import {BiMailSend, TiDelete} from "react-icons/all";
 
 const ManageUsers = () => {

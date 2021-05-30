@@ -1,4 +1,4 @@
-import "./OrderHistory.css";
+import "./style/OrderHistory.css";
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../api/apiHandler";
 import Loading from "./Loading";

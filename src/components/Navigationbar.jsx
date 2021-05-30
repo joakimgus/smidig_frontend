@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import "./Navigationbar.css";
+import "./style/Navigationbar.css";
 import Logo from "../images/Logo.svg";
 import CartIcon from "../images/shopping-cart-sign.png";
 import UserIcon from "../images/user-icon.png";
 import { Link } from "react-router-dom";
-import "./Navigationbar.css";
+import "./style/Navigationbar.css";
 import { UserContext } from "../context/context";
 
 const Navigationbar = () => {

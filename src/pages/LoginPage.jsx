@@ -3,7 +3,7 @@ import { Input } from "../components/Input";
 import { useHistory } from "react-router";
 import { postData } from "../api/apiHandler";
 import { UserContext } from "../context/context";
-import "./LoginPage.css";
+import "./style/LoginPage.css";
 
 const LoginPage = () => {
   const [isSignup, setIsSignup] = useState(false);

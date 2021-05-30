@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./AdminDashboard.css";
+import "./style/AdminDashboard.css";
 import UserInfo from "../components/UserInfo";
 import DashboardNavigation from "../components/DashboardNavigation";
 import { UserContext } from "../context/context";

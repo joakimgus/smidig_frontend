@@ -1,6 +1,6 @@
 import React from "react";
 import TargetAudience from "../images/Group 155.png";
-import "./Slides.css";
+import "./style/Slides.css";
 
 const SlideThree = () => {
   return (

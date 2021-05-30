@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
-import "./ProductPage.css";
+import "./style/ProductPage.css";
 import { fetchData } from "../api/apiHandler";
 import Loading from "../components/Loading";
 

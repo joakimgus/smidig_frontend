@@ -2,7 +2,7 @@ import { Input } from "../components/Input";
 import { useHistory } from "react-router-dom";
 import { UserContext } from "../context/context";
 import React, { useContext, useState } from "react";
-import "./InvoiceInformation.css";
+import "./style/InvoiceInformation.css";
 
 const InvoiceInformation = () => {
   const [formData, setFormData] = useState({

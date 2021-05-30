@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css";
+import "./style/Header.css";
 
 const Header = ({ title, description }) => {
   const imgPath = require("../images/header-img.png").default;

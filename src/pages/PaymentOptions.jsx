@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import "./PaymentOptions.css";
+import "./style/PaymentOptions.css";
 
 const PaymentOptions = () => {
     return(

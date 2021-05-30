@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./OrderConfirmation.css";
+import "./style/OrderConfirmation.css";
 import { postData } from "../api/apiHandler";
 import { useHistory } from "react-router";
 import Loading from "../components/Loading";

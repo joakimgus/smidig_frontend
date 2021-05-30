@@ -1,6 +1,6 @@
 import UserInfo from "../components/UserInfo";
 import DashboardNavigation from "../components/DashboardNavigation";
-import "./SuperuserDashboard.css";
+import "./style/SuperuserDashboard.css";
 
 const SuperuserDashboard = () => {
     const superuserLinks = [

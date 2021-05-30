@@ -1,5 +1,5 @@
 import React from "react";
-import "./MuseumCard.css";
+import "./style/MuseumCard.css";
 
 const MuseumCard = ({ name, description, picture, exhibitions }) => {
   return (

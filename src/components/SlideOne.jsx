@@ -1,5 +1,5 @@
 import React from "react";
-import "./Slides.css";
+import "./style/Slides.css";
 import Abstract from "../images/Abstract font blub.png";
 
 const SlideOne = () => {

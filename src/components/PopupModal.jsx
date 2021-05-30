@@ -3,7 +3,7 @@ import { useSpring, animated } from "react-spring";
 import { useHistory } from "react-router";
 import { MdClose } from "react-icons/md";
 import { FaCheckCircle } from "react-icons/fa";
-import "./PopupModal.css";
+import "./style/PopupModal.css";
 
 const PopupModal = ({ showModal, setShowModal }) => {
   const modalRef = useRef();

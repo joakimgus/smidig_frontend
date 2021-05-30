@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import "./ContactPage.css";
+import "./style/ContactPage.css";
 import { Input } from "../components/Input";
 
 const ContactPage = () => {

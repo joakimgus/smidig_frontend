@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import UserInfo from "../components/UserInfo";
 import OrderHistory from "../components/OrderHistory";
-import "./ProfilePage.css";
+import "./style/ProfilePage.css";
 import { UserContext } from "../context/context";
 import LoginPage from "./LoginPage";
 

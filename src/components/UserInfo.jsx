@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { UserContext } from "../context/context";
-import "./UserInfo.css";
+import "./style/UserInfo.css";
 import { fetchData } from "../api/apiHandler";
 import {GrFormEdit} from "react-icons/all";
 

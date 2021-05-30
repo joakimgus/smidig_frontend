@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
-import "./ProductSelectionPage.css";
+import "./style/ProductSelectionPage.css";
 import { fetchData } from "../api/apiHandler";
 import Loading from "../components/Loading";
 import { useHistory } from "react-router";

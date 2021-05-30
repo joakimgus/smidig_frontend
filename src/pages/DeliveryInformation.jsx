@@ -1,6 +1,6 @@
 import { Input } from "../components/Input";
 import { useHistory } from "react-router-dom";
-import "./DeliveryInformation.css";
+import "./style/DeliveryInformation.css";
 import { UserContext } from "../context/context";
 import React, { useContext, useState } from "react";
 

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import MuseumCard from "../components/MuseumCard";
-import "./MuseumPage.css";
+import "./style/MuseumPage.css";
 import { fetchData } from "../api/apiHandler";
 import Header from "../components/Header";
 import Loading from "../components/Loading";

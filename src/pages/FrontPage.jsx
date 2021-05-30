@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./FrontPage.css";
+import "./style/FrontPage.css";
 import SlideOne from "../components/SlideOne";
 import SwiperCore, {
   Navigation,

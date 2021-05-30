@@ -1,5 +1,5 @@
 import React from "react";
-import "./Slides.css";
+import "./style/Slides.css";
 import Process2 from "../images/kjøpsprosess2.png";
 
 const SlideFive = () => {

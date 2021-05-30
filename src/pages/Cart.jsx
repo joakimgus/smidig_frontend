@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Cart.css";
+import "./style/Cart.css";
 import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
 import {TiDelete} from "react-icons/all";

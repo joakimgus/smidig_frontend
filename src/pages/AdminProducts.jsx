@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchData } from "../api/apiHandler";
 import Loading from "../components/Loading";
 import moment from "moment";
-import "./AdminProducts.css";
+import "./style/AdminProducts.css";
 import { TiDelete } from "react-icons/all";
 
 const AdminProducts = () => {
