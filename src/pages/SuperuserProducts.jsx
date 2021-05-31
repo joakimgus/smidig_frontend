@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import './style/SuperuserProducts.css';
 import moment from "moment";
-import {TiDelete} from "react-icons/all";
+import {GrAdd, TiDelete} from "react-icons/all";
 import {fetchData} from "../api/apiHandler";
 import Loading from "../components/Loading";
 
@@ -32,6 +32,9 @@ const SuperuserProducts = () => {
                     databasen. Disse produktene kan brukes til å sette sammen
                     pakkeløsninger.
                 </p>
+                <div className={'su-add-products-container button'}>
+                    <GrAdd /><p>Legg til produkter</p>
+                </div>
             </div>
             <div className={"su-table-specifications"}>
                 <h5 className={"su-date-title-section"}>Dato lagt til</h5>
