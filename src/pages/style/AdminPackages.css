@@ -1,0 +1,33 @@
+#admin-packages-page-container {
+    min-height: 93vh;
+    margin: 2.9em 0 5px 0;
+}
+
+.admin-packages-top-text-container {
+    /*TODO endre høyden her for media query?*/
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 2em repeat(2, 1fr) 2em;
+    align-content: center;
+    justify-content: center;
+}
+
+.admin-packages-top-text-container > h1,
+.admin-packages-top-text-container > p,
+.admin-packages-top-text-container > hr {
+    grid-column: 2;
+}
+
+.admin-packages-top-text-container > h1 {
+    font-variant-caps: all-small-caps;
+    font-weight: 400;
+}
+
+.admin-packages-top-text-container > p {
+    width: fit-content;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    padding-top: 1em;
+    margin-top: 1em;
+    font-style: italic;
+    font-weight: 300;
+}
