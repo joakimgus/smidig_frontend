@@ -9,7 +9,7 @@ const AdminPackages = () => {
     fetchData("/exhibitions").then((res) => {
       setPackages(res);
     });
-  });
+  }, []);
 
   const deletePackage = async (id) => {
     console.log("Deleting package " + id + ", but not really");
@@ -28,7 +28,7 @@ const AdminPackages = () => {
           litt mer meningsfullt her (fix)
         </p>
       </div>
-      {packages.map((p) => (
+      {packages?.map((p) => (
         <>
           <div>
             {/*Dette burde linke videre til en egen side for den spesifike pakken der man kan endre på alt + vise alt*/}
@@ -37,7 +37,6 @@ const AdminPackages = () => {
             <p>ID utvikler(museum): {p.developer}</p>
             <p>Aktiv: {p.isActive ? "Aktiv" : "Inaktiv"}</p>{" "}
             {/*Kanskje en knapp her for å endre aktiv:inaktiv?*/}
-            <p></p>
           </div>
           <br />
         </>
