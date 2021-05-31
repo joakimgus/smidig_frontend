@@ -34,6 +34,8 @@ const OrderHistory = () => {
     console.log(res);
   };
 
+  const sortByDate = (e) => {};
+
   if (!orders) {
     return <Loading />;
   }
@@ -53,7 +55,7 @@ const OrderHistory = () => {
               onChange={(e) => setSearchFilter(e.target.value)}
             />
           </div>
-          <select name="sort" id="sort">
+          <select onChange={sortByDate} name="sort" id="sort">
             <option value="true">Nyeste</option>
             <option value="false">Eldste</option>
           </select>
