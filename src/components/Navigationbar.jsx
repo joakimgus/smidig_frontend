@@ -62,7 +62,7 @@ const Navigationbar = () => {
           ) : (
             <>
               {user.type === "SUPER" ? (
-                <Link to={"/minside"}>
+                <Link to={"/superbruker"}>
                   <button className={"nav-btn"} id={"login-btn"}>
                     <img src={UserIcon} alt={"Bruker ikon"} />
                     <p>Superside</p>
