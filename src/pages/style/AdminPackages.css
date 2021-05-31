@@ -112,6 +112,21 @@
     font-size: 12px;
 }
 
+.admin-packages-active-btn,
+.admin-packages-delete-btn,
+.admin-packages-edit-btn,
+.admin-packages-preview-btn {
+    justify-self: center;
+}
+
+.admin-packages-active-btn>svg,
+.admin-packages-delete-btn>svg,
+.admin-packages-edit-btn>svg,
+.admin-packages-preview-btn>svg {
+    width: 2em;
+    height: 2em;
+}
+
 .admin-packages-preview-btn {
     grid-column: 3;
 }
