@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+/*import React, { useState, useEffect } from "react";
 import { fetchData } from "../api/apiHandler";
 import Loading from "../components/Loading";
 
@@ -31,17 +31,29 @@ const AdminPackages = () => {
       {packages.map((p) => (
         <>
           <div>
-            {/*Dette burde linke videre til en egen side for den spesifike pakken der man kan endre på alt + vise alt*/}
+            {Dette burde linke videre til en egen side for den spesifike pakken der man kan endre på alt + vise alt}
             <p>Navn: {p.name}</p>
             <p>ID/Artikkelnr: {p._id}</p>
             <p>ID utvikler(museum): {p.developer}</p>
             <p>Aktiv: {p.isActive ? "Aktiv" : "Inaktiv"}</p>{" "}
-            {/*Kanskje en knapp her for å endre aktiv:inaktiv?*/}
+            {Kanskje en knapp her for å endre aktiv:inaktiv?}
             <p></p>
           </div>
           <br />
         </>
       ))}
+    </div>
+  );
+};
+*/
+
+const AdminPackages = () => {
+  return (
+    <div id={"admin-packages-container"}>
+      <h3>Test package</h3>
+      <h3>Test package</h3>
+      <h3>Test package</h3>
+      <h3>Test package</h3>
     </div>
   );
 };
