@@ -19,9 +19,8 @@ const OrderHistory = () => {
     } else {
       console.log(searchFilter);
       let filteredItems = orders.filter((item) => {
-        console.log(item);
-        //const name = item.name.toLowerCase();
-        //return name.includes(searchFilter);
+        const name = item.museums[0].name.toLowerCase();
+        return name.includes(searchFilter);
       });
       setOrders(filteredItems);
     }
