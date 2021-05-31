@@ -5,6 +5,7 @@ import { fetchData } from "../api/apiHandler";
 import Loading from "../components/Loading";
 import { useHistory } from "react-router";
 import FilterSidebar from "../components/FilterSidebar";
+import SearchBar from "../components/SearchBar";
 
 const ProductSelectionPage = () => {
   const [exhibitions, setExhibitions] = useState();
@@ -76,7 +77,7 @@ const ProductSelectionPage = () => {
   }
 
   return (
-    <>
+    <div className={'contain-page-products'}>
       <Header title={headerText.title} description={headerText.description} />
       <div className={"utvalg-page-container"}>
         <FilterSidebar
@@ -120,7 +121,7 @@ const ProductSelectionPage = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
