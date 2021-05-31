@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchData } from "../api/apiHandler";
 import Loading from "./Loading";
 import SearchBar from "./SearchBar";
+import './style/FilterSidebar.css';
 
 const FilterSidebar = ({ filter, setFilter, setSearchFilter }) => {
   const [museums, setMuseums] = useState();
