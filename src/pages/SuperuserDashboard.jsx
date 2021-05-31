@@ -6,11 +6,11 @@ const SuperuserDashboard = () => {
     const superuserLinks = [
         {
             name: "Produkter",
-            link: "/superuser/produkter"
+            link: "/superbruker/produkter"
         },
         {
-            name: "Pakker",
-            link: "/superuser/pakker"
+            name: "Pakkeløsninger",
+            link: "/superbruker/pakker"
         }
     ];
 
