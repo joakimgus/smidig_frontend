@@ -34,7 +34,17 @@ const OrderHistory = () => {
     console.log(res);
   };
 
-  const sortByDate = (e) => {};
+  const sortByDate = (e) => {
+    if (e.target.value === "true") {
+      setOrders((prev) =>
+        prev.sort((a, b) => Date.now(a.orderDate) - Date.now(b.orderDate))
+      );
+    } else {
+      setOrders((prev) =>
+        prev.sort((a, b) => Date.now(b.orderDate) - Date.now(a.orderDate))
+      );
+    }
+  };
 
   if (!orders) {
     return <Loading />;

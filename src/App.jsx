@@ -1,7 +1,7 @@
 import * as React from "react";
-import { useEffect, useState } from "react";
-import { BrowserRouter, Link } from "react-router-dom";
-import { Route, Switch } from "react-router";
+import {useEffect, useState} from "react";
+import {BrowserRouter} from "react-router-dom";
+import {Route, Switch} from "react-router";
 import "./App.css";
 import FrontPage from "./pages/FrontPage";
 import MuseumPage from "./pages/MuseumPage";
@@ -12,8 +12,8 @@ import Cart from "./pages/Cart";
 import LoginPage from "./pages/LoginPage";
 import Navigationbar from "./components/Navigationbar";
 import Footer from "./components/Footer";
-import { fetchData } from "./api/apiHandler";
-import { UserContext } from "./context/context";
+import {fetchData} from "./api/apiHandler";
+import {UserContext} from "./context/context";
 import ProfilePage from "./pages/ProfilePage";
 import ProductPage from "./pages/ProductPage";
 import CustomerInformation from "./pages/CustomerInformation";
@@ -26,6 +26,7 @@ import AdminProducts from "./pages/AdminProducts";
 import AdminPackages from "./pages/AdminPackages";
 import ManageUsers from "./pages/ManageUsers";
 import SuperuserDashboard from "./pages/SuperuserDashboard";
+import AdminPackagesForApproval from "./pages/AdminPackagesForApproval";
 
 const App = () => {
   // User context
@@ -91,6 +92,9 @@ const App = () => {
           </Route>
           <Route path="/admin/pakker">
             <AdminPackages />
+          </Route>
+          <Route path="/admin/pakker-til-godkjenning">
+            <AdminPackagesForApproval />
           </Route>
           <Route path="/admin/brukere">
             <ManageUsers />

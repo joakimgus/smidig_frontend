@@ -84,15 +84,11 @@
     display: grid;
     grid-column-gap: 5px;
     grid-template-columns: 2em 15% repeat(3, 20%) repeat(2, 8%) 2em;
+    overflow-wrap: break-word;
 }
 
 .admin-product-order-date-column{
     grid-column: 2;
-}
-
-.order-nr,
-.product-owner-museum{
-    overflow-wrap: break-word;
 }
 
 .product-amount-title-section,
