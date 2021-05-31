@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { fetchData } from "../api/apiHandler";
 import Loading from "../components/Loading";
 import "./style/AdminPackages.css";
+import {BiShow, GrFormEdit, TiDelete, RiSearchEyeLine} from "react-icons/all";
 
 const AdminPackages = () => {
   const [packages, setPackages] = useState();
@@ -42,7 +43,6 @@ const AdminPackages = () => {
       {packages?.map((p) => (
         <>
           <div className={"admin-packages-item-container"}>
-            {/*Dette burde linke videre til en egen side for den spesifike pakken der man kan endre på alt + vise alt*/}
             <div className={"admin-packages-img-text-container"}>
               <img src={p.media[0]} alt={"item image"} />
               <div className={"admin-packages-item-text-container"}>
@@ -53,10 +53,18 @@ const AdminPackages = () => {
                 <p>Artikkelnr: {p._id}</p>
               </div>
             </div>
-            {/*
-            <p>ID utvikler(museum): {p.developer}</p>
-            <p>Aktiv: {p.isActive ? "Aktiv" : "Inaktiv"}</p>{" "}
-            Kanskje en knapp her for å endre aktiv:inaktiv?*/}
+            <p className={"admin-packages-preview-btn button"}>
+              <RiSearchEyeLine />
+            </p>
+            <p className={"admin-packages-active-btn button"}>
+              <BiShow />
+            </p>
+            <p className={"admin-packages-edit-btn button"}>
+              <GrFormEdit />
+            </p>
+            <p className={"admin-packages-delete-btn button"}>
+              <TiDelete />
+            </p>
           </div>
         </>
       ))}

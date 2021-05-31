@@ -111,3 +111,19 @@
     font-weight: 300;
     font-size: 12px;
 }
+
+.admin-packages-preview-btn {
+    grid-column: 3;
+}
+
+.admin-packages-active-btn {
+    grid-column: 4;
+}
+
+.admin-packages-edit-btn {
+    grid-column: 5;
+}
+
+.admin-packages-delete-btn {
+    grid-column: 6;
+}
