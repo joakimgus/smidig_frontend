@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchData } from "../api/apiHandler";
 import Loading from "./Loading";
 import SearchBar from "./SearchBar";
-import './style/FilterSidebar.css';
+import "./style/FilterSidebar.css";
 
 const FilterSidebar = ({ filter, setFilter, setSearchFilter }) => {
   const [museums, setMuseums] = useState();
@@ -35,14 +35,11 @@ const FilterSidebar = ({ filter, setFilter, setSearchFilter }) => {
   }
 
   return (
-    <>
-      <div
-        className={"sidebar-filter-thing"}
-        style={{ width: "15vw", minHeight: "65vh", backgroundColor: "white" }}
-      >
-        <SearchBar setSearchFilter={setSearchFilter} />
-        <div>
-          <h1>Spesifikasjoner</h1>
+    <div className={"sidebar-container"}>
+      <SearchBar setSearchFilter={setSearchFilter} />
+      <div className={"filter-container"}>
+        <div className={'specs-area'}>
+          <h3>Spesifikasjoner</h3>
           <label>
             <input
               type="checkbox"
@@ -68,8 +65,8 @@ const FilterSidebar = ({ filter, setFilter, setSearchFilter }) => {
             Digital
           </label>
         </div>
-        <div>
-          <h1>Brukergruppe</h1>
+        <div className={'user-area'}>
+          <h3>Brukergruppe</h3>
           <label>
             <input
               type="checkbox"
@@ -87,12 +84,12 @@ const FilterSidebar = ({ filter, setFilter, setSearchFilter }) => {
             Voksne
           </label>
         </div>
-        <hr />
-        <div>
-          <h1>Museum</h1>
-          {museums.map((m) => (
+        <div className={'museum-area'}>
+          <h3>Museum</h3>
+          {museums.map((m, i) => (
             <label>
               <input
+                key={i}
                 type="checkbox"
                 name={m._id}
                 onChange={(e) => handleChange(e, { name: "museums" })}
@@ -102,7 +99,7 @@ const FilterSidebar = ({ filter, setFilter, setSearchFilter }) => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
