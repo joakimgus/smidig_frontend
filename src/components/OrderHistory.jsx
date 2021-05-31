@@ -17,10 +17,11 @@ const OrderHistory = () => {
     if (searchFilter.length === 0) {
       setOrders(allOrders);
     } else {
-      console.log(searchFilter);
       let filteredItems = orders.filter((item) => {
-        const name = item.museums[0].name.toLowerCase();
-        return name.includes(searchFilter);
+        if (item.museums.length > 0) {
+          const name = item.museums[0].name.toLowerCase();
+          return name.includes(searchFilter);
+        }
       });
       setOrders(filteredItems);
     }
