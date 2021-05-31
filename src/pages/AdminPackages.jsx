@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchData } from "../api/apiHandler";
 import Loading from "../components/Loading";
+import "./style/AdminPackages.css";
 
 const AdminPackages = () => {
   const [packages, setPackages] = useState();
@@ -20,12 +21,12 @@ const AdminPackages = () => {
   }
 
   return (
-    <div id={"admin-packages-container"}>
+    <div id={"admin-packages-page-container"}>
       <div className={"admin-packages-top-text-container"}>
         <h1>Pakker</h1>
         <p>
-          Jeg kan ikke skrive, dette er slik produkter-siden har ting, bare noe
-          litt mer meningsfullt her (fix)
+            Her vil du finne en oversikt over hvilke pakkeløsninger som ligger i
+            databasen. Disse pakkene kan vises i nettbutikken.
         </p>
       </div>
       {packages?.map((p) => (
