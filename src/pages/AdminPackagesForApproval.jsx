@@ -35,8 +35,8 @@ const AdminPackagesForApproval = () => {
             <div className={"admin-packages-approval-table-specifications"}>
                 <h5 className={"date-title-section package-section"}>Dato lagt til</h5>
                 <h5 className={"id-title-section package-section"}>Artikkelnr.</h5>
-                <h5 className={"package-name-title-section package-section package-section"}>Navn</h5>
-                <h5 className={"owner-title-section package-section"}>Museum</h5>
+                <h5 className={"package-name-title-section package-section"}>Navn</h5>
+                <h5 className={"package-owner-title-section package-section"}>Museum</h5>
                 <h5 className={"preview-title-section package-section"}>Forhåndsvis</h5>
                 <h5 className={"edit-title-section package-section"}>Rediger</h5>
                 <hr />

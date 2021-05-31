@@ -111,6 +111,14 @@
   justify-self: center;
 }
 
+.item-amount-container>p{
+  font-size: 15px;
+}
+
+.item-amount-container>p>span>svg{
+  font-size: 10px;
+}
+
 .item-remove-container>p>svg{
   width: 2em;
   height: 2em;

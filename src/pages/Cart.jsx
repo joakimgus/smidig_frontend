@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./style/Cart.css";
 import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
-import {TiDelete} from "react-icons/all";
+import {AiOutlineMinus, GrAdd, TiDelete} from "react-icons/all";
 
 const Cart = () => {
   const [cart, setCart] = useState();
@@ -69,9 +69,19 @@ const Cart = () => {
               </div>
               <div className={"item-amount-container"}>
                 <p>
-                  <span onClick={() => changeCounter(false, index)}>-</span>{" "}
+                  <span
+                      className={'button'}
+                      onClick={() => changeCounter(false, index)}
+                  >
+                    <AiOutlineMinus />
+                  </span>{" "}
                   {i.counter}{" "}
-                  <span onClick={() => changeCounter(true, index)}>+</span>
+                  <span
+                      className={'button'}
+                      onClick={() => changeCounter(true, index)}
+                  >
+                    <GrAdd />
+                  </span>
                 </p>
               </div>
               <div className={"item-price-container"}>
