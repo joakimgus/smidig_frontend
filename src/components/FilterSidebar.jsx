@@ -12,8 +12,9 @@ const FilterSidebar = ({ filter, setFilter, setSearchFilter }) => {
   }, []);
 
   const fetchMuseums = async () => {
-    const res = await fetchData("/museums");
+    const res = await fetchData("/museums/names");
     setMuseums(res);
+    console.log(res);
   };
 
   const handleChange = (e, f) => {
@@ -38,7 +39,7 @@ const FilterSidebar = ({ filter, setFilter, setSearchFilter }) => {
     <div className={"sidebar-container"}>
       <SearchBar setSearchFilter={setSearchFilter} />
       <div className={"filter-container"}>
-        <div className={'specs-area'}>
+        <div className={"specs-area"}>
           <h3>Spesifikasjoner</h3>
           <label>
             <input
@@ -65,7 +66,7 @@ const FilterSidebar = ({ filter, setFilter, setSearchFilter }) => {
             Digital
           </label>
         </div>
-        <div className={'user-area'}>
+        <div className={"user-area"}>
           <h3>Brukergruppe</h3>
           <label>
             <input
@@ -84,7 +85,7 @@ const FilterSidebar = ({ filter, setFilter, setSearchFilter }) => {
             Voksne
           </label>
         </div>
-        <div className={'museum-area'}>
+        <div className={"museum-area"}>
           <h3>Museum</h3>
           {museums.map((m, i) => (
             <label>
