@@ -7,10 +7,3 @@
   flex-wrap: nowrap;
   justify-content: center;
 }
-
-.about-us-page-container > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}

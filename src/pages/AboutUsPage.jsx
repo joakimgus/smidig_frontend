@@ -26,8 +26,13 @@ const AboutUsPage = () => {
               key={i}
           >
             <h1>{m.name}</h1>
-            <p>{m.description}</p>
-            <img src={m.logo} alt={'logo'} style={{height: '15em', objectFit: 'scale-down'}} />
+            <div
+                className={'card-box'}
+                key={i}
+            >
+              <p>{m.description}</p>
+              <img src={m.logo} alt={'logo'} style={{height: '15em', objectFit: 'scale-down'}} />
+            </div>
           </div>
       ))}
     </div>
