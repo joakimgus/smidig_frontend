@@ -7,7 +7,10 @@ import {
   GrFormEdit,
   TiDelete,
   RiSearchEyeLine,
-  GrAdd, AiOutlineCheck,
+  GrAdd,
+  BsCheck,
+  AiOutlineCheck,
+  AiOutlineEyeInvisible,
 } from "react-icons/all";
 import { Link } from "react-router-dom";
 
@@ -38,17 +41,17 @@ const AdminPackages = () => {
           Her vil du finne en oversikt over hvilke pakkeløsninger som ligger i
           databasen, og kan administreres.
         </p>
-        <div className={'admin-package-link-container'}>
+        <div className={"admin-package-link-container"}>
           <Link
-              className={"admin-add-new-packages-container button"}
-              to={"/admin/lag-ny-pakke"}
+            className={"admin-add-new-packages-container button"}
+            to={"/admin/lag-ny-pakke"}
           >
             <GrAdd />
             <p>Lag ny pakkeløsning</p>
           </Link>
           <Link
-              className={"admin-approve-packages-container button"}
-              to={"/admin/pakker-til-godkjenning"}
+            className={"admin-approve-packages-container button"}
+            to={"/admin/pakker-til-godkjenning"}
           >
             <AiOutlineCheck />
             <p>Pakkeløsninger til godkjenning</p>
@@ -80,7 +83,7 @@ const AdminPackages = () => {
               <RiSearchEyeLine />
             </p>
             <p className={"admin-packages-active-btn button"}>
-              <BiShow />
+              {p.isActive ? <BiShow /> : <AiOutlineEyeInvisible />}
             </p>
             <p className={"admin-packages-edit-btn button"}>
               <GrFormEdit />
