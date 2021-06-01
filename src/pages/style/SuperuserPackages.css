@@ -1,0 +1,163 @@
+.su-packages-page-container {
+    min-height: 93vh;
+    margin: 2.9em 0 5px 0;
+}
+
+.su-packages-top-text-container {
+    /*TODO endre høyden her for media query?*/
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 2em repeat(2, 1fr) 2em;
+    align-content: center;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.su-add-new-packages-container{
+    width: fit-content;
+    margin-top: 1em;
+    padding: 5px;
+}
+
+.su-add-new-packages-container>p{
+    display: inline-block;
+    margin-left: 5px;
+    font-variant-caps: all-small-caps;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.su-add-new-packages-container>svg{
+    font-size: 10px;
+}
+
+.su-add-new-packages-container,
+.su-packages-top-text-container > h1,
+.su-packages-top-text-container > p,
+.su-packages-top-text-container > hr {
+    grid-column: 2;
+}
+
+.su-packages-top-text-container > h1 {
+    font-variant-caps: all-small-caps;
+    font-weight: 400;
+}
+
+.su-packages-top-text-container > p {
+    width: fit-content;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    padding-top: 1em;
+    margin-top: 1em;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.su-packages-table-specifications {
+    max-width: 100vw;
+    display: grid;
+    grid-column-gap: 5px;
+    grid-template-columns: 2em 15% repeat(2, 20%) repeat(2, 8%) 2em;
+    grid-template-rows: repeat(2, auto);
+    margin-top: 3em;
+}
+
+.su-packages-title-section{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.su-packages-preview-section{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.su-packages-active-section{
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.su-packages-edit-section{
+    grid-column: 5;
+    grid-row: 1;
+}
+
+.su-packages-delete-section{
+    grid-column: 6;
+    grid-row: 1;
+}
+
+.su-packages-table-specifications > hr {
+    border-color: rgba(0, 0, 0, 0.2);
+    grid-row: 2;
+    grid-column: 2 / span 5;
+    margin: 10px 0 10px 0;
+}
+
+.su-packages-item-container {
+    max-height: 100px;
+    display: grid;
+    grid-template-columns: 2em auto repeat(4, 12%) 2em;
+    padding-bottom: 1em;
+}
+
+.su-packages-img-text-container {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 100px auto;
+}
+
+.su-packages-img-text-container > img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.su-packages-item-text-container {
+    max-height: 100px;
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-content: space-evenly;
+    margin-left: 10px;
+}
+
+.su-packages-item-text-container > h3 {
+    font-size: 18px;
+}
+
+.su-packages-item-text-container > p {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.su-packages-active-btn,
+.su-packages-delete-btn,
+.su-packages-edit-btn,
+.su-packages-preview-btn {
+    justify-self: center;
+}
+
+.su-packages-active-btn>svg,
+.su-packages-delete-btn>svg,
+.su-packages-edit-btn>svg,
+.su-packages-preview-btn>svg {
+    width: 2em;
+    height: 2em;
+}
+
+.su-packages-preview-btn {
+    grid-column: 3;
+}
+
+.su-packages-active-btn {
+    grid-column: 4;
+}
+
+.su-packages-edit-btn {
+    grid-column: 5;
+}
+
+.su-packages-delete-btn {
+    grid-column: 6;
+}

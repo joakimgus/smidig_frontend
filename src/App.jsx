@@ -28,6 +28,7 @@ import ManageUsers from "./pages/ManageUsers";
 import SuperuserDashboard from "./pages/SuperuserDashboard";
 import AdminPackagesForApproval from "./pages/AdminPackagesForApproval";
 import SuperuserProducts from "./pages/SuperuserProducts";
+import SuperuserPackages from "./pages/SuperuserPackages";
 
 const App = () => {
   // User context
@@ -105,6 +106,9 @@ const App = () => {
           </Route>
           <Route path={'/superbruker/produkter'}>
             <SuperuserProducts />
+          </Route>
+          <Route path={'/superbruker/pakker'}>
+            <SuperuserPackages />
           </Route>
         </Switch>
         <Footer />

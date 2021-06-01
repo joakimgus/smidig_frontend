@@ -33,9 +33,9 @@ const AdminPackages = () => {
         </p>
       </div>
       <div className={"admin-packages-table-specifications"}>
-        <h5 className={"admin-packages-title-section"}>Pakke</h5>
+        <h5 className={"admin-packages-title-section"}>Pakkenavn</h5>
         <h5 className={"admin-packages-preview-section"}>Forhåndsvisning</h5>
-        <h5 className={"admin-packages-active-section"}>Aktiv/Inaktiv</h5>
+        <h5 className={"admin-packages-active-section"}>Status</h5>
         <h5 className={"admin-packages-edit-section"}>Rediger</h5>
         <h5 className={"admin-packages-delete-section"}>Slett</h5>
         <hr />
