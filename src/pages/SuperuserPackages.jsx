@@ -4,6 +4,7 @@ import './style/SuperuserPackages.css';
 import {BiShow, GrAdd, GrFormEdit, RiSearchEyeLine, TiDelete} from "react-icons/all";
 import {fetchData} from "../api/apiHandler";
 import Loading from "../components/Loading";
+import {Link} from "react-router-dom";
 
 const SuperuserPackages = () => {
 
@@ -32,10 +33,10 @@ const SuperuserPackages = () => {
                 <p>
                     Her vil du finne en oversikt over eksisterende pakkeløsninger laget av bedriften.
                 </p>
-                <div className={'su-add-new-packages-container button'}>
+                <Link className={'su-add-new-packages-container button'} to={'/superbruker/lag-ny-pakke'}>
                     <GrAdd />
                     <p>Lag ny pakkeløsning</p>
-                </div>
+                </Link>
             </div>
             <div className={"su-packages-table-specifications"}>
                 <h5 className={"su-packages-title-section"}>Pakke</h5>

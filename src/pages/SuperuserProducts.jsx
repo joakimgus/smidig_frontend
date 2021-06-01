@@ -4,6 +4,7 @@ import moment from "moment";
 import {GrAdd, TiDelete} from "react-icons/all";
 import {fetchData} from "../api/apiHandler";
 import Loading from "../components/Loading";
+import {Link} from "react-router-dom";
 
 const SuperuserProducts = () => {
 
@@ -32,9 +33,9 @@ const SuperuserProducts = () => {
                     databasen. Disse produktene kan brukes til å sette sammen
                     pakkeløsninger.
                 </p>
-                <div className={'su-add-products-container button'}>
+                <Link className={'su-add-products-container button'} to={'/superbruker/legg-til-produkt'}>
                     <GrAdd /><p>Legg til produkter</p>
-                </div>
+                </Link>
             </div>
             <div className={"su-table-specifications"}>
                 <h5 className={"su-date-title-section"}>Dato lagt til</h5>
