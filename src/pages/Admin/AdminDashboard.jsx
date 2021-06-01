@@ -10,20 +10,20 @@ const AdminDashboard = () => {
   const adminLinks = [
     {
       name: "Produkter",
-      link: "/admin/produkter"
+      link: "/admin/produkter",
     },
     {
       name: "Administrer pakkeløsninger",
-      link: "/admin/pakker"
+      link: "/admin/pakker",
     },
     {
-      name: 'Pakkeløsninger til godkjenning',
-      link: '/admin/pakker-til-godkjenning'
+      name: "Pakkeløsninger til godkjenning",
+      link: "/admin/pakker-til-godkjenning",
     },
     {
       name: "Administrer brukere",
-      link: "/admin/brukere"
-    }
+      link: "/admin/brukere",
+    },
   ];
 
   if (!user) {
@@ -35,9 +35,7 @@ const AdminDashboard = () => {
       {user.type === "ADMIN" && (
         <>
           <UserInfo />
-          <DashboardNavigation
-              link={adminLinks}
-          />
+          <DashboardNavigation link={adminLinks} />
         </>
       )}
     </div>

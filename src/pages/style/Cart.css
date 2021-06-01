@@ -111,15 +111,15 @@
   justify-self: center;
 }
 
-.item-amount-container>p{
+.item-amount-container > p {
   font-size: 15px;
 }
 
-.item-amount-container>p>span>svg{
+.item-amount-container > p > span > svg {
   font-size: 10px;
 }
 
-.item-remove-container>p>svg{
+.item-remove-container > p > svg {
   width: 2em;
   height: 2em;
   margin-top: -5px;
@@ -131,7 +131,7 @@
   padding: 5rem 0;
 }
 
-.cart-continue-to-checkout-btn{
+.cart-continue-to-checkout-btn {
   margin: 2em 0 2em 2em;
   color: white;
   background-color: black;

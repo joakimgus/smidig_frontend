@@ -3,7 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import { UserContext } from "../context/context";
 import "./style/UserInfo.css";
 import { fetchData } from "../api/apiHandler";
-import {GrFormEdit} from "react-icons/all";
+import { GrFormEdit } from "react-icons/all";
 
 const UserInfo = () => {
   const { user, setUser } = useContext(UserContext);
@@ -28,10 +28,12 @@ const UserInfo = () => {
           <div id={"user-info-text-container"}>
             <h1 id={"user-info-title"}>Min side</h1>
             <div className="userinfo-wrapper">
-            <p>Du er innlogget som <span>{user.email}</span></p>
-            <button className={"profile-edit-btn"}>
-              <GrFormEdit />
-            </button>
+              <p>
+                Du er innlogget som <span>{user.email}</span>
+              </p>
+              <button className={"profile-edit-btn"}>
+                <GrFormEdit />
+              </button>
             </div>
           </div>
           <table id={"user-info-table"}>
@@ -48,7 +50,7 @@ const UserInfo = () => {
           <Link onClick={logout} id={"log-out-btn"}>
             <button>Logg ut</button>
           </Link>
-          <div className={'profile-img-logo'}>
+          <div className={"profile-img-logo"}>
             <img src={require("../images/tidvis-rund.png").default} />
           </div>
         </div>

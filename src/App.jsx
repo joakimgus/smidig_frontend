@@ -1,7 +1,7 @@
 import * as React from "react";
-import {useEffect, useState} from "react";
-import {BrowserRouter} from "react-router-dom";
-import {Route, Switch} from "react-router";
+import { useEffect, useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import { Route, Switch } from "react-router";
 import "./App.css";
 import FrontPage from "./pages/FrontPage";
 import MuseumPage from "./pages/MuseumPage";
@@ -12,8 +12,8 @@ import Cart from "./pages/Cart";
 import LoginPage from "./pages/LoginPage";
 import Navigationbar from "./components/Navigationbar";
 import Footer from "./components/Footer";
-import {fetchData} from "./api/apiHandler";
-import {UserContext} from "./context/context";
+import { fetchData } from "./api/apiHandler";
+import { UserContext } from "./context/context";
 import ProfilePage from "./pages/ProfilePage";
 import ProductPage from "./pages/ProductPage";
 import CustomerInformation from "./pages/CustomerInformation";
@@ -98,7 +98,7 @@ const App = () => {
           <Route path="/admin/pakker">
             <AdminPackages />
           </Route>
-          <Route path={'/admin/lag-ny-pakke'}>
+          <Route path={"/admin/lag-ny-pakke"}>
             <AdminAddPackage />
           </Route>
           <Route path="/admin/pakker-til-godkjenning">
@@ -110,16 +110,16 @@ const App = () => {
           <Route path={"/superbruker"} exact>
             <SuperuserDashboard />
           </Route>
-          <Route path={'/superbruker/produkter'}>
+          <Route path={"/superbruker/produkter"}>
             <SuperuserProducts />
           </Route>
-          <Route path={'/superbruker/pakker'}>
+          <Route path={"/superbruker/pakker"}>
             <SuperuserPackages />
           </Route>
-          <Route path={'/superbruker/legg-til-produkt'}>
+          <Route path={"/superbruker/legg-til-produkt"}>
             <SuperuserAddProduct />
           </Route>
-          <Route path={'/superbruker/lag-ny-pakke'}>
+          <Route path={"/superbruker/lag-ny-pakke"}>
             <SuperuserAddPackage />
           </Route>
         </Switch>

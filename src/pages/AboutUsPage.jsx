@@ -1,9 +1,9 @@
 import React from "react";
-import './style/AboutUsPage.css';
+import "./style/AboutUsPage.css";
 
 const AboutUsPage = () => {
   return (
-    <div className={'about-us-page-container'}>
+    <div className={"about-us-page-container"}>
       <div>
         <h1>Tidvis</h1>
         <p>

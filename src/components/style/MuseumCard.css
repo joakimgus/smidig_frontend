@@ -46,14 +46,16 @@
   justify-self: center;
 }
 
-.museum-card-exhibitions-container>h1{
+.museum-card-exhibitions-container > h1 {
   font-variant-caps: all-small-caps;
   font-weight: 400;
   font-size: 35px;
   letter-spacing: 1px;
 }
 
-.museum-card:nth-child(even)>.museum-card-exhibitions-container>.museum-card-exhibitions{
+.museum-card:nth-child(even)
+  > .museum-card-exhibitions-container
+  > .museum-card-exhibitions {
   margin-left: 4em;
 }
 
@@ -129,11 +131,15 @@
   grid-column: 1;
 }
 
-.museum-card:nth-child(even)>.museum-card-text-container>.museum-card-title {
+.museum-card:nth-child(even)
+  > .museum-card-text-container
+  > .museum-card-title {
   margin-left: 1.5em;
 }
 
-.museum-card:nth-child(even)>.museum-card-text-container>.museum-card-description {
+.museum-card:nth-child(even)
+  > .museum-card-text-container
+  > .museum-card-description {
   margin-left: 3.7em;
   font-weight: 200;
   font-style: italic;
@@ -162,11 +168,15 @@
     margin-left: 2em;
   }
 
-  .museum-card:nth-child(even)> .museum-card-text-container> .museum-card-title {
+  .museum-card:nth-child(even)
+    > .museum-card-text-container
+    > .museum-card-title {
     margin-left: 1em;
   }
 
-  .museum-card:nth-child(even)>.museum-card-text-container>.museum-card-description {
+  .museum-card:nth-child(even)
+    > .museum-card-text-container
+    > .museum-card-description {
     margin-left: 2.4em;
   }
 
@@ -174,7 +184,9 @@
     margin-left: 3em;
   }
 
-  .museum-card:nth-child(even)>.museum-card-exhibitions-container>.museum-card-exhibitions {
+  .museum-card:nth-child(even)
+    > .museum-card-exhibitions-container
+    > .museum-card-exhibitions {
     margin-left: 2.2em;
   }
 }
@@ -264,11 +276,15 @@
     margin-left: 2em;
   }
 
-  .museum-card:nth-child(even)> .museum-card-text-container> .museum-card-title {
+  .museum-card:nth-child(even)
+    > .museum-card-text-container
+    > .museum-card-title {
     margin-left: 0.8em;
   }
 
-  .museum-card:nth-child(even)> .museum-card-text-container> .museum-card-description {
+  .museum-card:nth-child(even)
+    > .museum-card-text-container
+    > .museum-card-description {
     margin-left: 2em;
   }
 }

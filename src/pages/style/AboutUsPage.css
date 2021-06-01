@@ -1,16 +1,16 @@
-.about-us-page-container{
-    margin-top: 2.9em;
-    height: 94vh;
-    padding: 1em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
+.about-us-page-container {
+  margin-top: 2.9em;
+  height: 94vh;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
-.about-us-page-container>div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+.about-us-page-container > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }

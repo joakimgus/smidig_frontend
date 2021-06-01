@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./style/Cart.css";
 import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
-import {AiOutlineMinus, GrAdd, TiDelete} from "react-icons/all";
+import { AiOutlineMinus, GrAdd, TiDelete } from "react-icons/all";
 
 const Cart = () => {
   const [cart, setCart] = useState();
@@ -70,15 +70,15 @@ const Cart = () => {
               <div className={"item-amount-container"}>
                 <p>
                   <span
-                      className={'button'}
-                      onClick={() => changeCounter(false, index)}
+                    className={"button"}
+                    onClick={() => changeCounter(false, index)}
                   >
                     <AiOutlineMinus />
                   </span>{" "}
                   {i.counter}{" "}
                   <span
-                      className={'button'}
-                      onClick={() => changeCounter(true, index)}
+                    className={"button"}
+                    onClick={() => changeCounter(true, index)}
                   >
                     <GrAdd />
                   </span>
@@ -90,7 +90,7 @@ const Cart = () => {
                 </p>
               </div>
               <div className={"item-remove-container"}>
-                <p className={'button'} onClick={() => removeItem(index)}>
+                <p className={"button"} onClick={() => removeItem(index)}>
                   <TiDelete />
                 </p>
               </div>
@@ -103,7 +103,9 @@ const Cart = () => {
         </div>
       )}
       <Link to={"/kundeopplysninger"}>
-        <button className={'button cart-continue-to-checkout-btn'}>Fortsett til betaling</button>
+        <button className={"button cart-continue-to-checkout-btn"}>
+          Fortsett til betaling
+        </button>
       </Link>
     </div>
   );

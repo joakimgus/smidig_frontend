@@ -2,8 +2,14 @@ import React, { useState, useEffect } from "react";
 import { fetchData } from "../../api/apiHandler";
 import Loading from "../../components/Loading";
 import "../style/Admin/AdminPackages.css";
-import {BiShow, GrFormEdit, TiDelete, RiSearchEyeLine, GrAdd} from "react-icons/all";
-import {Link} from "react-router-dom";
+import {
+  BiShow,
+  GrFormEdit,
+  TiDelete,
+  RiSearchEyeLine,
+  GrAdd,
+} from "react-icons/all";
+import { Link } from "react-router-dom";
 
 const AdminPackages = () => {
   const [packages, setPackages] = useState();
@@ -29,10 +35,13 @@ const AdminPackages = () => {
       <div className={"admin-packages-top-text-container"}>
         <h1>Pakker</h1>
         <p>
-            Her vil du finne en oversikt over hvilke pakkeløsninger som ligger i
-            databasen. Disse pakkene kan vises i nettbutikken.
+          Her vil du finne en oversikt over hvilke pakkeløsninger som ligger i
+          databasen. Disse pakkene kan vises i nettbutikken.
         </p>
-        <Link className={'admin-add-new-packages-container button'} to={'/admin/lag-ny-pakke'}>
+        <Link
+          className={"admin-add-new-packages-container button"}
+          to={"/admin/lag-ny-pakke"}
+        >
           <GrAdd />
           <p>Lag ny pakkeløsning</p>
         </Link>

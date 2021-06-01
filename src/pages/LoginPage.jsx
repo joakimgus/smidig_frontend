@@ -67,47 +67,47 @@ const LoginPage = () => {
   };
 
   return (
-    <div className={'form-container-login'}>
+    <div className={"form-container-login"}>
       <div className="fix-login-placement-container">
-      {isSignup ? <h3>Opprett bruker</h3> : <h3>Logg inn</h3>}
-      <div id={"login-form-container"}>
-        <form onSubmit={handleSubmit}>
-          <p>E-post</p>
-          <Input
-            className={'input-login'}
-            name="email"
-            type="email"
-            handleChange={handleChange}
-          />
-          <p>Passord</p>
-          <Input
-            className={'input-login'}
-            name="password"
-            handleChange={handleChange}
-            type="password"
-          />
-          {isSignup && (
-            <>
-              <p>Org.nr</p>
-              <Input
-                className={'input-login'}
-                name="orgNr"
-                handleChange={handleChange}
-              />
-            </>
-          )}
-          <button id="submitBtn" type="submit">
-            {isSignup ? "Opprett bruker" : "Logg inn"}
+        {isSignup ? <h3>Opprett bruker</h3> : <h3>Logg inn</h3>}
+        <div id={"login-form-container"}>
+          <form onSubmit={handleSubmit}>
+            <p>E-post</p>
+            <Input
+              className={"input-login"}
+              name="email"
+              type="email"
+              handleChange={handleChange}
+            />
+            <p>Passord</p>
+            <Input
+              className={"input-login"}
+              name="password"
+              handleChange={handleChange}
+              type="password"
+            />
+            {isSignup && (
+              <>
+                <p>Org.nr</p>
+                <Input
+                  className={"input-login"}
+                  name="orgNr"
+                  handleChange={handleChange}
+                />
+              </>
+            )}
+            <button id="submitBtn" type="submit">
+              {isSignup ? "Opprett bruker" : "Logg inn"}
+            </button>
+          </form>
+          <button id="switch" onClick={switchMode}>
+            {/*TODO endre til norsk?*/}
+            {isSignup
+              ? "Har du bruker? Logg inn"
+              : "Har du ikke bruker? Opprett bruker"}
           </button>
-        </form>
-        <button id="switch" onClick={switchMode}>
-          {/*TODO endre til norsk?*/}
-          {isSignup
-            ? "Har du bruker? Logg inn"
-            : "Har du ikke bruker? Opprett bruker"}
-        </button>
+        </div>
       </div>
-    </div>
     </div>
   );
 };

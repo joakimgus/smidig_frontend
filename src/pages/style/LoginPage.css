@@ -1,28 +1,28 @@
-.form-container-login{
+.form-container-login {
   margin-top: 2.9em;
-  min-height:94vh;
+  min-height: 94vh;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
 }
 
-.fix-login-placement-container{
+.fix-login-placement-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: -5em;
 }
 
-#login-form-container{
+#login-form-container {
   grid-column: 2;
 }
 
-.fix-login-placement-container>h3{
+.fix-login-placement-container > h3 {
   text-align: center;
 }
 
-#login-form-container>form>p{
+#login-form-container > form > p {
   font-variant-caps: all-small-caps;
   margin-left: 4px;
   margin-top: 5px;

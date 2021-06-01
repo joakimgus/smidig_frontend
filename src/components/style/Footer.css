@@ -93,7 +93,8 @@ p {
   height: auto;
 }
 
-.button, button{
+.button,
+button {
   cursor: pointer;
 }
 

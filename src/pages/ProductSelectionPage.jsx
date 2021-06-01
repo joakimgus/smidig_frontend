@@ -77,7 +77,7 @@ const ProductSelectionPage = () => {
   }
 
   return (
-    <div className={'contain-page-products'}>
+    <div className={"contain-page-products"}>
       <Header title={headerText.title} description={headerText.description} />
       <div className={"utvalg-page-container"}>
         <FilterSidebar

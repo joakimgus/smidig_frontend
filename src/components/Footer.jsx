@@ -46,28 +46,26 @@ const Footer = () => {
       </div>
       <div className={"social-links-container"}>
         <div className={"top-link"}>
-          <SmoothScroll
-              className='button'
-              to="top" spy={true} smooth={true}>
+          <SmoothScroll className="button" to="top" spy={true} smooth={true}>
             &#8593; Til toppen
           </SmoothScroll>
         </div>
         <div className={"social-media-image"}>
           <img
-              className={'button'}
-              src={require("../images/facebook.png").default}
+            className={"button"}
+            src={require("../images/facebook.png").default}
           />
         </div>
         <div className={"social-media-image"}>
           <img
-              className={'button'}
-              src={require("../images/instagram.png").default}
+            className={"button"}
+            src={require("../images/instagram.png").default}
           />
         </div>
         <div className={"social-media-image"}>
           <img
-              className={'button'}
-              src={require("../images/linkedin.png").default}
+            className={"button"}
+            src={require("../images/linkedin.png").default}
           />
         </div>
       </div>

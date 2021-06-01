@@ -1,6 +1,6 @@
-.searchbar-container>input{
-    padding: 5px;
-    width: 13vw;
-    font-variant-caps: all-small-caps;
-    text-align: right;
+.searchbar-container > input {
+  padding: 5px;
+  width: 13vw;
+  font-variant-caps: all-small-caps;
+  text-align: right;
 }

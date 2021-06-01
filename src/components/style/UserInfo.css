@@ -18,7 +18,7 @@
   font-weight: 400;
 }
 
-.userinfo-wrapper{
+.userinfo-wrapper {
   display: flex;
   justify-content: space-between;
 }
@@ -68,7 +68,7 @@ tr.user-row > td.edit-btn-column {
   background-color: white;
 }
 
-.profile-edit-btn>svg{
+.profile-edit-btn > svg {
   width: 1.5em;
   height: 1.5em;
 }
@@ -80,7 +80,7 @@ tr.user-row > td.edit-btn-column {
   grid-row: 2;
 }
 
-.profile-img-logo>img{
+.profile-img-logo > img {
   width: 200px;
   height: 200px;
   object-fit: cover;
