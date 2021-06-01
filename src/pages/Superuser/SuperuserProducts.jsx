@@ -10,6 +10,7 @@ const SuperuserProducts = () => {
   const [products, setProducts] = useState();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchData("/products/ourProducts").then((res) => {
       setProducts(res);
     });
