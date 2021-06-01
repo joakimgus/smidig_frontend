@@ -13,12 +13,14 @@
   margin-top: 5em;
 }
 
+.admin-approve-packages-container,
 .admin-add-new-packages-container {
   width: fit-content;
   margin-top: 1em;
   padding: 5px;
 }
 
+.admin-approve-packages-container > p,
 .admin-add-new-packages-container > p {
   display: inline-block;
   margin-left: 5px;
@@ -27,10 +29,13 @@
   font-weight: 400;
 }
 
+.admin-approve-packages-container > svg,
 .admin-add-new-packages-container > svg {
   font-size: 10px;
+  color: black;
 }
 
+.admin-package-link-container,
 .admin-add-new-packages-container,
 .admin-packages-top-text-container > h1,
 .admin-packages-top-text-container > p,

@@ -7,7 +7,7 @@ import {
   GrFormEdit,
   TiDelete,
   RiSearchEyeLine,
-  GrAdd,
+  GrAdd, BsCheck, AiOutlineCheck,
 } from "react-icons/all";
 import { Link } from "react-router-dom";
 
@@ -33,18 +33,27 @@ const AdminPackages = () => {
   return (
     <div id={"admin-packages-page-container"}>
       <div className={"admin-packages-top-text-container"}>
-        <h1>Pakker</h1>
+        <h1>Pakkeløsninger</h1>
         <p>
           Her vil du finne en oversikt over hvilke pakkeløsninger som ligger i
-          databasen. Disse pakkene kan vises i nettbutikken.
+          databasen, og kan administreres.
         </p>
-        <Link
-          className={"admin-add-new-packages-container button"}
-          to={"/admin/lag-ny-pakke"}
-        >
-          <GrAdd />
-          <p>Lag ny pakkeløsning</p>
-        </Link>
+        <div className={'admin-package-link-container'}>
+          <Link
+              className={"admin-add-new-packages-container button"}
+              to={"/admin/lag-ny-pakke"}
+          >
+            <GrAdd />
+            <p>Lag ny pakkeløsning</p>
+          </Link>
+          <Link
+              className={"admin-approve-packages-container button"}
+              to={"/admin/pakker-til-godkjenning"}
+          >
+            <AiOutlineCheck />
+            <p>Pakkeløsninger til godkjenning</p>
+          </Link>
+        </div>
       </div>
       <div className={"admin-packages-table-specifications"}>
         <h5 className={"admin-packages-title-section"}>Pakke</h5>

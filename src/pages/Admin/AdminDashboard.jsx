@@ -13,12 +13,8 @@ const AdminDashboard = () => {
       link: "/admin/produkter",
     },
     {
-      name: "Administrer pakkeløsninger",
+      name: "Pakkeløsninger",
       link: "/admin/pakker",
-    },
-    {
-      name: "Pakkeløsninger til godkjenning",
-      link: "/admin/pakker-til-godkjenning",
     },
     {
       name: "Administrer brukere",
