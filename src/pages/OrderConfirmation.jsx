@@ -98,7 +98,7 @@ const OrderConfirmation = () => {
               <>
                 <div className={"order-cart-item-container"}>
                   <div className={"order-cart-img-container"}>
-                    <img src={i.media[0]} alt={"item image"} />
+                    <img src={i.media[0]} alt={"item"} />
                     <div className={"order-cart-item-text-container"}>
                       <h3>{i.name}</h3>
                       <p>Artikkelnr. {i._id}</p>

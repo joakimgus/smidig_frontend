@@ -60,7 +60,7 @@ const SuperuserPackages = () => {
         <>
           <div className={"su-packages-item-container"}>
             <div className={"su-packages-img-text-container"}>
-              <img src={p.media[0]} alt={"Package image"} />
+              <img src={p.media[0]} alt={"Package"} />
               <div className={"su-packages-item-text-container"}>
                 <h3>{p.name}</h3>
                 <p className={"su-packages-description"}>
