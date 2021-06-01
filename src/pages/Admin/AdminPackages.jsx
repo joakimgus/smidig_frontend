@@ -7,7 +7,7 @@ import {
   GrFormEdit,
   TiDelete,
   RiSearchEyeLine,
-  GrAdd, BsCheck, AiOutlineCheck,
+  GrAdd, AiOutlineCheck,
 } from "react-icons/all";
 import { Link } from "react-router-dom";
 
