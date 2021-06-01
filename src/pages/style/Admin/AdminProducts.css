@@ -10,8 +10,28 @@
   grid-template-columns: 2em repeat(2, 1fr) 2em;
   align-content: center;
   justify-content: center;
+  margin-top: 5em;
 }
 
+.admin-add-products-container {
+  width: fit-content;
+  margin-top: 1em;
+  padding: 5px;
+}
+
+.admin-add-products-container > p {
+  display: inline-block;
+  margin-left: 5px;
+  font-variant-caps: all-small-caps;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.admin-add-products-container > svg {
+  font-size: 10px;
+}
+
+.admin-add-products-container,
 .admin-products-top-text-container > h1,
 .admin-products-top-text-container > p,
 .admin-products-top-text-container > hr {
@@ -38,6 +58,7 @@
   grid-column-gap: 5px;
   grid-template-columns: 2em 15% repeat(3, 20%) repeat(2, 8%) 2em;
   grid-template-rows: repeat(2, auto);
+  margin-top: 3em;
 }
 
 .date-title-section {

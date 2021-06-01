@@ -3,7 +3,8 @@ import { fetchData } from "../../api/apiHandler";
 import Loading from "../../components/Loading";
 import moment from "moment";
 import "../style/Admin/AdminProducts.css";
-import { TiDelete } from "react-icons/all";
+import {GrAdd, TiDelete} from "react-icons/all";
+import {Link} from "react-router-dom";
 
 const AdminProducts = () => {
   const [products, setProducts] = useState();
@@ -42,6 +43,13 @@ const AdminProducts = () => {
           databasen. Disse produktene kan brukes til å sette sammen
           pakkeløsninger.
         </p>
+        <Link
+            className={"admin-add-products-container button"}
+            to={"/admin/legg-til-produkt"}
+        >
+          <GrAdd />
+          <p>Legg til produkter</p>
+        </Link>
       </div>
       <div className={"admin-table-specifications"}>
         <h5 className={"date-title-section"}>Dato lagt til</h5>

@@ -32,6 +32,7 @@ import SuperuserPackages from "./pages/Superuser/SuperuserPackages";
 import SuperuserAddProduct from "./pages/Superuser/SuperuserAddProduct";
 import SuperuserAddPackage from "./pages/Superuser/SuperuserAddPackage";
 import AdminAddPackage from "./pages/Admin/AdminAddPackage";
+import AdminAddProduct from "./pages/Admin/AdminAddProduct";
 
 const App = () => {
   // User context
@@ -94,6 +95,9 @@ const App = () => {
           </Route>
           <Route path="/admin/produkter">
             <AdminProducts />
+          </Route>
+          <Route path={"/admin/legg-til-produkt"}>
+            <AdminAddProduct />
           </Route>
           <Route path="/admin/pakker">
             <AdminPackages />
