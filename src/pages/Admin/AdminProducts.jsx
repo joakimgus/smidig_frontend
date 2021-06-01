@@ -3,8 +3,8 @@ import { fetchData } from "../../api/apiHandler";
 import Loading from "../../components/Loading";
 import moment from "moment";
 import "../style/Admin/AdminProducts.css";
-import {GrAdd, TiDelete} from "react-icons/all";
-import {Link} from "react-router-dom";
+import { GrAdd, TiDelete } from "react-icons/all";
+import { Link } from "react-router-dom";
 
 const AdminProducts = () => {
   const [products, setProducts] = useState();
@@ -13,17 +13,21 @@ const AdminProducts = () => {
   useEffect(() => {
     fetchData("/products").then(async (res) => {
       await Promise.all(
-        res.map(async (r) => {
+        await res.map(async (r) => {
           fetchData("/museums/" + r.developer).then((dev) => {
             r.developerName = dev.name;
             //setProducts();
           });
         })
       );
-      console.log(res);
-      setProducts(res);
+
+      // Not optimal, have to wait for nested calls before setting state
+      setTimeout(() => {
+        setProducts(res);
+      }, 1000);
       setLoading(false);
     });
+    window.scrollTo(0, 0);
   }, []);
 
   const deleteProduct = async (id) => {
@@ -44,8 +48,8 @@ const AdminProducts = () => {
           pakkeløsninger.
         </p>
         <Link
-            className={"admin-add-products-container button"}
-            to={"/admin/legg-til-produkt"}
+          className={"admin-add-products-container button"}
+          to={"/admin/legg-til-produkt"}
         >
           <GrAdd />
           <p>Legg til produkter</p>

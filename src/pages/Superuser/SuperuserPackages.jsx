@@ -20,6 +20,7 @@ const SuperuserPackages = () => {
     fetchData("/exhibitions/ourExhibitions").then((res) => {
       setPackages(res);
     });
+    window.scrollTo(0, 0);
   }, []);
 
   console.log(packages);
