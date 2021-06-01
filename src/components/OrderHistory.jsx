@@ -36,13 +36,23 @@ const OrderHistory = () => {
 
   const sortByDate = (e) => {
     if (e.target.value === "true") {
-      setOrders((prev) =>
-        prev.sort((a, b) => Date.now(a.orderDate) - Date.now(b.orderDate))
-      );
+      setOrders((prev) => [
+        ...prev
+          .slice()
+          .sort(
+            (a, b) =>
+              moment().valueOf(a.orderDate) - moment().valueOf(b.orderDate)
+          ),
+      ]);
     } else {
-      setOrders((prev) =>
-        prev.sort((a, b) => Date.now(b.orderDate) - Date.now(a.orderDate))
-      );
+      setOrders((prev) => [
+        ...prev
+          .slice()
+          .sort(
+            (a, b) =>
+              moment().valueOf(b.orderDate) - moment().valueOf(a.orderDate)
+          ),
+      ]);
     }
   };
 

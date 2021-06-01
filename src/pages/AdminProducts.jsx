@@ -7,10 +7,21 @@ import { TiDelete } from "react-icons/all";
 
 const AdminProducts = () => {
   const [products, setProducts] = useState();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchData("/products").then((res) => {
+    fetchData("/products").then(async (res) => {
+      await Promise.all(
+        res.map(async (r) => {
+          fetchData("/museums/" + r.developer).then((dev) => {
+            r.developerName = dev.name;
+            //setProducts();
+          });
+        })
+      );
+      console.log(res);
       setProducts(res);
+      setLoading(false);
     });
   }, []);
 
@@ -18,7 +29,7 @@ const AdminProducts = () => {
     console.log("Deleting product " + id + ", but not really");
   };
 
-  if (!products) {
+  if (!products || loading) {
     return <Loading />;
   }
 
@@ -53,7 +64,7 @@ const AdminProducts = () => {
               <p className={"order-nr"}>{o._id}</p>
             </div>
             <div className="admin-product-owner-column">
-              <p className={"product-owner-museum"}>{o.developer}</p>
+              <p className={"product-owner-museum"}>{o.developerName}</p>
             </div>
             <div className="admin-product-name-column">
               <p className={"product-item-name"}>{o.name}</p>
