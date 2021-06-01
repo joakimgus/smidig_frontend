@@ -1,5 +1,5 @@
 import React from "react";
-import './style/SuperuserAddProduct.css';
+import '../style/Superuser/SuperuserAddProduct.css';
 
 const SuperuserAddProduct = () => {
     return(

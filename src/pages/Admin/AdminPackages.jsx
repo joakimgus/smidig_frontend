@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { fetchData } from "../api/apiHandler";
-import Loading from "../components/Loading";
-import "./style/AdminPackages.css";
+import { fetchData } from "../../api/apiHandler";
+import Loading from "../../components/Loading";
+import "../style/Admin/AdminPackages.css";
 import {BiShow, GrFormEdit, TiDelete, RiSearchEyeLine, GrAdd} from "react-icons/all";
 import {Link} from "react-router-dom";
 

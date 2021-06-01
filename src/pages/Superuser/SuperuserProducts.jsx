@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
-import './style/SuperuserProducts.css';
+import '../style/Superuser/SuperuserProducts.css';
 import moment from "moment";
 import {GrAdd, TiDelete} from "react-icons/all";
-import {fetchData} from "../api/apiHandler";
-import Loading from "../components/Loading";
+import {fetchData} from "../../api/apiHandler";
+import Loading from "../../components/Loading";
 import {Link} from "react-router-dom";
 
 const SuperuserProducts = () => {

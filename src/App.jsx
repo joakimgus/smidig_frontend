@@ -21,17 +21,17 @@ import DeliveryInformation from "./pages/DeliveryInformation";
 import PaymentOptions from "./pages/PaymentOptions";
 import InvoiceInformation from "./pages/InvoiceInformation";
 import OrderConfirmation from "./pages/OrderConfirmation";
-import AdminDashboard from "./pages/AdminDashboard";
-import AdminProducts from "./pages/AdminProducts";
-import AdminPackages from "./pages/AdminPackages";
-import ManageUsers from "./pages/ManageUsers";
-import SuperuserDashboard from "./pages/SuperuserDashboard";
-import AdminPackagesForApproval from "./pages/AdminPackagesForApproval";
-import SuperuserProducts from "./pages/SuperuserProducts";
-import SuperuserPackages from "./pages/SuperuserPackages";
-import SuperuserAddProduct from "./pages/SuperuserAddProduct";
-import SuperuserAddPackage from "./pages/SuperuserAddPackage";
-import AdminAddPackage from "./pages/AdminAddPackage";
+import AdminDashboard from "./pages/Admin/AdminDashboard";
+import AdminProducts from "./pages/Admin/AdminProducts";
+import AdminPackages from "./pages/Admin/AdminPackages";
+import ManageUsers from "./pages/Admin/ManageUsers";
+import SuperuserDashboard from "./pages/Superuser/SuperuserDashboard";
+import AdminPackagesForApproval from "./pages/Admin/AdminPackagesForApproval";
+import SuperuserProducts from "./pages/Superuser/SuperuserProducts";
+import SuperuserPackages from "./pages/Superuser/SuperuserPackages";
+import SuperuserAddProduct from "./pages/Superuser/SuperuserAddProduct";
+import SuperuserAddPackage from "./pages/Superuser/SuperuserAddPackage";
+import AdminAddPackage from "./pages/Admin/AdminAddPackage";
 
 const App = () => {
   // User context

@@ -1,9 +1,9 @@
 import React from "react";
 import {useEffect, useState} from "react";
-import './style/SuperuserPackages.css';
+import '../style/Superuser/SuperuserPackages.css';
 import {BiShow, GrAdd, GrFormEdit, RiSearchEyeLine, TiDelete} from "react-icons/all";
-import {fetchData} from "../api/apiHandler";
-import Loading from "../components/Loading";
+import {fetchData} from "../../api/apiHandler";
+import Loading from "../../components/Loading";
 import {Link} from "react-router-dom";
 
 const SuperuserPackages = () => {

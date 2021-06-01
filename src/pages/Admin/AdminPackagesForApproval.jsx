@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "./style/AdminPackagesForApproval.css";
+import "../style/Admin/AdminPackagesForApproval.css";
 import moment from "moment";
 import { RiSearchEyeLine, GrFormEdit } from "react-icons/all";
-import { fetchData } from "../api/apiHandler";
-import Loading from "../components/Loading";
+import { fetchData } from "../../api/apiHandler";
+import Loading from "../../components/Loading";
 
 const AdminPackagesForApproval = () => {
   const [products, setProducts] = useState();

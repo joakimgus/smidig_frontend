@@ -1,5 +1,5 @@
 import React from "react";
-import './style/AdminAddPackage.css';
+import '../style/Admin/AdminAddPackage.css';
 
 const AdminAddPackage = () => {
     return(

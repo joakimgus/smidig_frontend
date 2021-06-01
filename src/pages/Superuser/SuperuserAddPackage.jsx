@@ -1,5 +1,5 @@
 import React from "react";
-import './style/SuperuserAddPackage.css';
+import '../style/Superuser/SuperuserAddPackage.css';
 
 const SuperuserAddPackage = () => {
     return(

@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import "./style/AdminDashboard.css";
-import UserInfo from "../components/UserInfo";
-import DashboardNavigation from "../components/DashboardNavigation";
-import { UserContext } from "../context/context";
+import "../style/Admin/AdminDashboard.css";
+import UserInfo from "../../components/UserInfo";
+import DashboardNavigation from "../../components/DashboardNavigation";
+import { UserContext } from "../../context/context";
 
 const AdminDashboard = () => {
   const { user } = useContext(UserContext);
