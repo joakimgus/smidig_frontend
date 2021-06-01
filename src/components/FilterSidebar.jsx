@@ -4,8 +4,8 @@ import Loading from "./Loading";
 import SearchBar from "./SearchBar";
 import "./style/FilterSidebar.css";
 
-const FilterSidebar = ({ filter, setFilter, setSearchFilter }) => {
-  const [museums, setMuseums] = useState();
+const FilterSidebar = ({ filter, setFilter, setSearchFilter, museums }) => {
+  /*const [museums, setMuseums] = useState();
 
   useEffect(() => {
     fetchMuseums();
@@ -15,7 +15,7 @@ const FilterSidebar = ({ filter, setFilter, setSearchFilter }) => {
     const res = await fetchData("/museums/names");
     setMuseums(res);
     console.log(res);
-  };
+  };*/
 
   const handleChange = (e, f) => {
     const name = e.target.name;

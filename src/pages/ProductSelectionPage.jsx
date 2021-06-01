@@ -15,6 +15,7 @@ const ProductSelectionPage = () => {
     tags: [],
   });
   const [searchFilter, setSearchFilter] = useState("");
+  const [museums, setMuseums] = useState();
 
   const history = useHistory();
 
@@ -24,6 +25,12 @@ const ProductSelectionPage = () => {
       setExhibitions(res);
     });
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    fetchMuseums().then((res) => {
+      setMuseums(res);
+    });
   }, []);
 
   useEffect(() => {
@@ -65,6 +72,10 @@ const ProductSelectionPage = () => {
     return await Promise.all(await fetchData("/exhibitions"));
   };
 
+  const fetchMuseums = async () => {
+    return await fetchData("/museums/names");
+  };
+
   const headerText = {
     title: "Utvalg",
     description:
@@ -85,6 +96,7 @@ const ProductSelectionPage = () => {
           setFilter={setFilter}
           searchFilter={searchFilter}
           setSearchFilter={setSearchFilter}
+          museums={museums}
         />
         <div className={"utvalg-products-container"}>
           {exhibitions.map((e, a) => (
