@@ -81,9 +81,9 @@ tr.user-row > td.edit-btn-column {
 }
 
 .profile-img-logo > img {
-  width: 200px;
+  width: 250px;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 @media screen and (max-width: 960px) {

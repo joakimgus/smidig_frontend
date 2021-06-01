@@ -51,7 +51,7 @@ const UserInfo = () => {
             <button>Logg ut</button>
           </Link>
           <div className={"profile-img-logo"}>
-            <img src={require("../images/tidvis-rund.png").default} />
+            <img src={require("../images/hovedlogo-web.png").default} />
           </div>
         </div>
       )}
