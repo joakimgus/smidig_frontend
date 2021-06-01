@@ -2,12 +2,12 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "../style/Superuser/SuperuserPackages.css";
 import {
-  AiOutlineEyeInvisible,
   BiShow,
   GrAdd,
   GrFormEdit,
   RiSearchEyeLine,
   TiDelete,
+  BiLowVision,
 } from "react-icons/all";
 import { fetchData } from "../../api/apiHandler";
 import Loading from "../../components/Loading";
@@ -59,7 +59,10 @@ const SuperuserPackages = () => {
       </div>
       {packages?.map((p) => (
         <>
-          <div className={"su-packages-item-container"}>
+          <div
+            style={!p.isActive ? { opacity: "0.5" } : { opacity: "1" }}
+            className={"su-packages-item-container"}
+          >
             <div className={"su-packages-img-text-container"}>
               <img src={p.media[0]} alt={"Package"} />
               <div className={"su-packages-item-text-container"}>
@@ -74,7 +77,7 @@ const SuperuserPackages = () => {
               <RiSearchEyeLine />
             </p>
             <p className={"su-packages-active-btn button"}>
-              {p.isActive ? <BiShow /> : <AiOutlineEyeInvisible />}
+              {p.isActive ? <BiShow /> : <BiLowVision />}
             </p>
             <p className={"su-packages-edit-btn button"}>
               <GrFormEdit />

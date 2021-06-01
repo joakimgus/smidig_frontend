@@ -10,7 +10,7 @@ import {
   GrAdd,
   BsCheck,
   AiOutlineCheck,
-  AiOutlineEyeInvisible,
+  BiLowVision,
 } from "react-icons/all";
 import { Link } from "react-router-dom";
 
@@ -68,7 +68,10 @@ const AdminPackages = () => {
       </div>
       {packages?.map((p) => (
         <>
-          <div className={"admin-packages-item-container"}>
+          <div
+            style={!p.isActive ? { opacity: "0.5" } : { opacity: "1" }}
+            className={"admin-packages-item-container"}
+          >
             <div className={"admin-packages-img-text-container"}>
               <img src={p.media[0]} alt={"item image"} />
               <div className={"admin-packages-item-text-container"}>
@@ -83,7 +86,7 @@ const AdminPackages = () => {
               <RiSearchEyeLine />
             </p>
             <p className={"admin-packages-active-btn button"}>
-              {p.isActive ? <BiShow /> : <AiOutlineEyeInvisible />}
+              {p.isActive ? <BiShow /> : <BiLowVision />}
             </p>
             <p className={"admin-packages-edit-btn button"}>
               <GrFormEdit />
