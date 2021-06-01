@@ -11,20 +11,9 @@ const AdminProducts = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchData("/products").then(async (res) => {
-      await Promise.all(
-        await res.map(async (r) => {
-          fetchData("/museums/" + r.developer).then((dev) => {
-            r.developerName = dev.name;
-            //setProducts();
-          });
-        })
-      );
-
-      // Not optimal, have to wait for nested calls before setting state
-      setTimeout(() => {
-        setProducts(res);
-      }, 1000);
+    fetchData("/products/withDev").then((res) => {
+      setProducts(res);
+      console.log(res);
       setLoading(false);
     });
     window.scrollTo(0, 0);
