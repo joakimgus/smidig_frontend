@@ -1,5 +1,5 @@
 import React from "react";
-import TargetAudience from "../images/Group 155.png";
+import TargetAudience from "../images/target-group.png";
 import "./style/Slides.css";
 
 const SlideThree = () => {

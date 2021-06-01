@@ -1,5 +1,5 @@
 import React from "react";
-import ItemImg from "../images/Image 2.png";
+import ItemImg from "../images/museum-artifact.png";
 
 const SlideTwo = () => {
   return (

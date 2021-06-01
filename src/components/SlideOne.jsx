@@ -1,6 +1,6 @@
 import React from "react";
 import "./style/Slides.css";
-import Abstract from "../images/Abstract font blub.png";
+import Abstract from "../images/abstract-blub.png";
 
 const SlideOne = () => {
   return (
