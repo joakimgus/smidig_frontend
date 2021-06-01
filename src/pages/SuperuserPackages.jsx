@@ -38,7 +38,7 @@ const SuperuserPackages = () => {
                 </div>
             </div>
             <div className={"su-packages-table-specifications"}>
-                <h5 className={"su-packages-title-section"}>Pakkenavn</h5>
+                <h5 className={"su-packages-title-section"}>Pakke</h5>
                 <h5 className={"su-packages-preview-section"}>Forhåndsvisning</h5>
                 <h5 className={"su-packages-active-section"}>Status</h5>
                 <h5 className={"su-packages-edit-section"}>Rediger</h5>
