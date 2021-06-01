@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "../style/Superuser/SuperuserPackages.css";
 import {
+  AiOutlineEyeInvisible,
   BiShow,
   GrAdd,
   GrFormEdit,
@@ -16,7 +17,7 @@ const SuperuserPackages = () => {
   const [packages, setPackages] = useState();
 
   useEffect(() => {
-    fetchData("/exhibitions").then((res) => {
+    fetchData("/exhibitions/ourExhibitions").then((res) => {
       setPackages(res);
     });
   }, []);
@@ -72,7 +73,7 @@ const SuperuserPackages = () => {
               <RiSearchEyeLine />
             </p>
             <p className={"su-packages-active-btn button"}>
-              <BiShow />
+              {p.isActive ? <BiShow /> : <AiOutlineEyeInvisible />}
             </p>
             <p className={"su-packages-edit-btn button"}>
               <GrFormEdit />

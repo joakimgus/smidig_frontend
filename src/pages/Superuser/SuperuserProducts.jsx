@@ -10,7 +10,7 @@ const SuperuserProducts = () => {
   const [products, setProducts] = useState();
 
   useEffect(() => {
-    fetchData("/products").then((res) => {
+    fetchData("/products/ourProducts").then((res) => {
       setProducts(res);
     });
   }, []);
