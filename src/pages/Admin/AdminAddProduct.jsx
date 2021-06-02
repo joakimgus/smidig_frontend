@@ -1,10 +1,76 @@
-import React from "react";
+import React, {useState} from "react";
 import "../style/Admin/AdminAddProduct.css";
 
 const AdminAddProduct = () => {
+    const [formData, setFormData] = useState({
+        product: "",
+    });
+
+    const [errorMessage, setErrorMessage] = useState(null);
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const saveProduct = (e) => {
+        e.preventDefault();
+        {/* TODO */ }
+        if (Object.keys(formData).length === 3) {
+            console.log(formData);
+        } else {
+            setErrorMessage("Du må fylle ut alle feltene");
+        }
+    };
+
     return (
         <div className={"admin-add-product-page-container"}>
-            Admin Content for å legge til produkt.
+            <div className={"admin-add-product-top-text-container"}>
+                <h3>Legg til produkt</h3>
+            </div>
+            <div className={"add-product-sidebar add-product-left"} />
+            <div className={"add-product-sidebar add-product-right"} />
+            <form
+                className={"admin-add-product-text-container"}
+                onSubmit={saveProduct}
+            >
+                <label id={"admin-add-product-name-label"}>
+                    Navn:
+                    <br />
+                    <input
+                        id={"admin-add-product-name-input"}
+                        type={"text"}
+                        name={"productName"}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label id={"admin-add-product-description-label"}>
+                    Beskrivelse:
+                    <br />
+                    <textarea
+                        id={"admin-add-product-description-ta"}
+                        name={"productDescription"}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label id={"admin-add-product-developer-label"}>
+                    Utvikler:
+                    <br />
+                    <select id={"admin-add-product-select-developer"}>
+                        {/* TODO map gjennom eksisterende museer/superbrukere */}
+                        <option>Tidvis</option>
+                        <option>Viking</option>
+                    </select>
+                </label>
+                <button
+                    id={"admin-add-product-add-btn"}
+                    type={"adminbmit"}
+                >
+                    Legg til produkt
+                </button>
+            </form>
         </div>
     );
 };
