@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Loading from "../../components/Loading";
 import { useHistory } from "react-router";
 import FileBase from "react-file-base64";
+import { postData } from "../../api/apiHandler";
 
 const SuperUserAddPackageInfo = () => {
   const [info, setInfo] = useState({
@@ -28,7 +29,7 @@ const SuperUserAddPackageInfo = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const pIds = products.items.map((p) => p._id);
@@ -38,11 +39,14 @@ const SuperUserAddPackageInfo = () => {
       products: pIds,
     };
 
-    console.log(exhibition);
     // SEND TO SERVER
+    console.log(exhibition);
 
-    history.push("/");
     // REDIRECT
+    history.push("/");
+
+    const res = await postData("/exhibitions/add", exhibition);
+    console.log(res);
   };
 
   if (!products) {
