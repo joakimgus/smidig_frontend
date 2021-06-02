@@ -13,7 +13,7 @@ const SuperUserAddPackageInfo = () => {
     shortDescription: "",
     description: "",
   });
-
+  const [error, setError] = useState();
   const [products, setProducts] = useState();
 
   const history = useHistory();
@@ -43,10 +43,14 @@ const SuperUserAddPackageInfo = () => {
     console.log(exhibition);
 
     // REDIRECT
-    history.push("/");
 
     const res = await postData("/exhibitions/add", exhibition);
-    console.log(res);
+
+    if (res === "success") {
+      history.push("/");
+    } else {
+      setError(res);
+    }
   };
 
   if (!products) {
@@ -81,6 +85,7 @@ const SuperUserAddPackageInfo = () => {
         multiple={false}
         onDone={({ base64 }) => setInfo({ ...info, media: [base64] })}
       />
+      {error && error}
     </div>
   );
 };
