@@ -74,6 +74,7 @@ form.su-add-product-text-container {
   height: 10rem;
   border: 1px solid black;
   box-shadow: none;
+  resize: none;
 }
 
 #su-add-product-add-btn {
@@ -84,10 +85,6 @@ form.su-add-product-text-container {
   background-color: white;
   color: black;
   border: 1px solid black;
-}
-
-#su-add-product-description-ta {
-  resize: none;
 }
 
 @media screen and (max-width: 1024px) {
