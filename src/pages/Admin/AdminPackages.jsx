@@ -13,9 +13,11 @@ import {
   BiLowVision,
 } from "react-icons/all";
 import { Link } from "react-router-dom";
+import {useHistory} from "react-router";
 
 const AdminPackages = () => {
   const [packages, setPackages] = useState();
+  const history = useHistory();
 
   useEffect(() => {
     fetchData("/exhibitions").then((res) => {
@@ -88,9 +90,12 @@ const AdminPackages = () => {
             <p className={"admin-packages-active-btn button"}>
               {p.isActive ? <BiShow /> : <BiLowVision />}
             </p>
-            <Link className={"admin-packages-edit-btn button"} to={'/admin/rediger-pakke'} >
+            <p
+                className={"admin-packages-edit-btn button"}
+                onClick={() => history.push("/admin/rediger-pakke", { params: p })}
+            >
               <GrFormEdit />
-            </Link>
+            </p>
             <p className={"admin-packages-delete-btn button"}>
               <TiDelete />
             </p>
