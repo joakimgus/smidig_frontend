@@ -20,11 +20,24 @@ const SuperUserAddPackageInfo = () => {
     setProducts(JSON.parse(localStorage.getItem("newExhibition")));
   }, []);
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    setInfo({
+      ...info,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const pIds = products.items.map((p) => p._id);
+
+    const exhibition = {
+      ...info,
+      products: pIds,
+    };
+
+    console.log(exhibition);
     // SEND TO SERVER
     // REDIRECT
   };
