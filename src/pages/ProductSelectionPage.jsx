@@ -48,7 +48,9 @@ const ProductSelectionPage = () => {
       }
       if (filter.tags.length > 0) {
         filteredItems = filteredItems.filter((item) => {
-          return filter.tags.indexOf(item.tags[0].toLowerCase()) !== -1;
+          if (item.tags.length > 0) {
+            return filter.tags.indexOf(item.tags[0].toLowerCase()) !== -1;
+          }
         });
       }
       setExhibitions(filteredItems);
