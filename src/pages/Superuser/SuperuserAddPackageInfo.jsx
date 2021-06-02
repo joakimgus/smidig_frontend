@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Loading from "../../components/Loading";
 import { useHistory } from "react-router";
+import FileBase from "react-file-base64";
 
 const SuperUserAddPackageInfo = () => {
   const [info, setInfo] = useState({
@@ -39,6 +40,8 @@ const SuperUserAddPackageInfo = () => {
 
     console.log(exhibition);
     // SEND TO SERVER
+
+    history.push("/");
     // REDIRECT
   };
 
@@ -69,6 +72,11 @@ const SuperUserAddPackageInfo = () => {
         />
         <button type={"submit"}>Lag pakke</button>
       </form>
+      <FileBase
+        type="file"
+        multiple={false}
+        onDone={({ base64 }) => setInfo({ ...info, media: [base64] })}
+      />
     </div>
   );
 };
