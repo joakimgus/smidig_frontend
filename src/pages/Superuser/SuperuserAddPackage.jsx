@@ -69,9 +69,13 @@ const SuperuserAddPackage = () => {
   const handleClick = async () => {
     // Just log out selected products for now
     console.log(columns);
+    localStorage.setItem(
+      "newExhibition",
+      JSON.stringify(columns.productsAdded)
+    );
 
-    const res = await postData("/exhibitions/add", columns);
-    console.log(res);
+    //const res = await postData("/exhibitions/add", columns);
+    //console.log(res);
   };
 
   if (!products) {
