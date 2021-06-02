@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../style/Superuser/SuperuserAddPackage.css";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import { fetchData } from "../../api/apiHandler";
+import { fetchData, postData } from "../../api/apiHandler";
 import Loading from "../../components/Loading";
+import FileBase from "react-file-base64";
 
 const onDragEnd = (result, columns, setColumns) => {
   if (!result.destination) return;
@@ -44,6 +45,7 @@ const onDragEnd = (result, columns, setColumns) => {
 const SuperuserAddPackage = () => {
   const [columns, setColumns] = useState({});
   const [products, setProducts] = useState();
+  const [postData, setPostData] = useState({});
 
   useEffect(() => {
     fetchData("/products/ourProducts").then((res) => setProducts(res));
@@ -64,9 +66,12 @@ const SuperuserAddPackage = () => {
     }
   }, [products]);
 
-  const handleClick = () => {
+  const handleClick = async () => {
     // Just log out selected products for now
-    console.log(columns.productsAdded.items);
+    console.log(columns);
+
+    const res = await postData("/exhibitions/add", columns);
+    console.log(res);
   };
 
   if (!products) {
@@ -151,7 +156,14 @@ const SuperuserAddPackage = () => {
           })}
         </DragDropContext>
       </div>
-      <button onClick={handleClick}>Legg til i pakken</button>
+      <div>
+        <button onClick={handleClick}>Legg til i pakken</button>
+        <FileBase
+          type="file"
+          multiple={false}
+          onDone={({ base64 }) => setPostData({ ...postData, media: base64 })}
+        />
+      </div>
     </div>
   );
 };
