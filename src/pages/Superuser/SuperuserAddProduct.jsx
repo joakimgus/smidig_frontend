@@ -30,9 +30,8 @@ const SuperuserAddProduct = () => {
         <div className={"su-add-product-top-text-container"}>
             <h3>Legg til produkt</h3>
         </div>
-        <div className={"su-add-product-img-container"}>
-            img here
-        </div>
+        <div className={"add-product-sidebar add-product-left"} />
+        <div className={"add-product-sidebar add-product-right"} />
         <form
             className={"su-add-product-text-container"}
             onSubmit={saveProduct}
@@ -55,13 +54,6 @@ const SuperuserAddProduct = () => {
                     name={"productDescription"}
                     onChange={handleChange}
                 />
-            </label>
-            <label id={"su-add-product-package-label"}>
-                Legge til produkt i pakke?
-                <br />
-                <select id={"su-add-product-package-select"}>
-                    <option>Nei</option>
-                </select>
             </label>
             <button
                 id={"su-add-product-add-btn"}
