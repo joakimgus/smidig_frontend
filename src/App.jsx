@@ -128,7 +128,7 @@ const App = () => {
           <Route path={"/superbruker/legg-til-produkt"}>
             <SuperuserAddProduct />
           </Route>
-          <Route path={"/superbruker/lag-ny-pakke"}>
+          <Route exact path={"/superbruker/lag-ny-pakke"}>
             <SuperuserAddPackage />
           </Route>
           <Route path={"/superbruker/lag-ny-pakke/info"}>
