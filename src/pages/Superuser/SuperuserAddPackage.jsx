@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../style/Superuser/SuperuserAddPackage.css";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import { fetchData, postData } from "../../api/apiHandler";
+import { fetchData } from "../../api/apiHandler";
 import Loading from "../../components/Loading";
 import FileBase from "react-file-base64";
 
