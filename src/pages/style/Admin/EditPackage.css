@@ -2,3 +2,35 @@
     min-height: 93vh;
     margin: 2.9em 0 5px 0;
 }
+
+.img-add-delete-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.package-add-img-btn,
+.package-delete-img-btn{
+    display: flex;
+}
+
+.package-add-img-btn>svg {
+    width: 1em;
+    height: 1em;
+    padding-top: 5px;
+    margin-right: 5px;
+}
+
+.package-delete-img-btn>svg {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.package-add-img-btn>p,
+.package-delete-img-btn>p{
+    display: inline-block;
+    font-variant-caps: all-small-caps;
+    height: 24px;
+    font-size: 14px;
+    line-height: 1.7;
+}
