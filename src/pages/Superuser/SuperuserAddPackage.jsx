@@ -3,7 +3,7 @@ import "../style/Superuser/SuperuserAddPackage.css";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { fetchData } from "../../api/apiHandler";
 import Loading from "../../components/Loading";
-import FileBase from "react-file-base64";
+import { useHistory } from "react-router";
 
 const onDragEnd = (result, columns, setColumns) => {
   if (!result.destination) return;
@@ -45,7 +45,8 @@ const onDragEnd = (result, columns, setColumns) => {
 const SuperuserAddPackage = () => {
   const [columns, setColumns] = useState({});
   const [products, setProducts] = useState();
-  const [postData, setPostData] = useState({});
+
+  const history = useHistory();
 
   useEffect(() => {
     fetchData("/products/ourProducts").then((res) => setProducts(res));
@@ -74,8 +75,7 @@ const SuperuserAddPackage = () => {
       JSON.stringify(columns.productsAdded)
     );
 
-    //const res = await postData("/exhibitions/add", columns);
-    //console.log(res);
+    history.push("/superbruker/lag-ny-pakke/info");
   };
 
   if (!products) {
@@ -162,11 +162,6 @@ const SuperuserAddPackage = () => {
       </div>
       <div>
         <button onClick={handleClick}>Legg til i pakken</button>
-        <FileBase
-          type="file"
-          multiple={false}
-          onDone={({ base64 }) => setPostData({ ...postData, media: base64 })}
-        />
       </div>
     </div>
   );
