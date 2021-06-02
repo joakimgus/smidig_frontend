@@ -88,9 +88,9 @@ const AdminPackages = () => {
             <p className={"admin-packages-active-btn button"}>
               {p.isActive ? <BiShow /> : <BiLowVision />}
             </p>
-            <p className={"admin-packages-edit-btn button"}>
+            <Link className={"admin-packages-edit-btn button"} to={'/admin/rediger-pakke'} >
               <GrFormEdit />
-            </p>
+            </Link>
             <p className={"admin-packages-delete-btn button"}>
               <TiDelete />
             </p>

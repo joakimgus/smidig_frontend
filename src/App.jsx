@@ -33,6 +33,7 @@ import SuperuserAddProduct from "./pages/Superuser/SuperuserAddProduct";
 import SuperuserAddPackage from "./pages/Superuser/SuperuserAddPackage";
 import AdminAddPackage from "./pages/Admin/AdminAddPackage";
 import AdminAddProduct from "./pages/Admin/AdminAddProduct";
+import EditPackage from "./pages/Admin/EditPackage";
 
 const App = () => {
   // User context
@@ -104,6 +105,9 @@ const App = () => {
           </Route>
           <Route path={"/admin/lag-ny-pakke"}>
             <AdminAddPackage />
+          </Route>
+          <Route path={'/admin/rediger-pakke'}>
+            <EditPackage />
           </Route>
           <Route path="/admin/pakker-til-godkjenning">
             <AdminPackagesForApproval />
