@@ -25,13 +25,15 @@ const AboutUsPage = () => {
               className={'company-wrapper'}
               key={i}
           >
-            <h1>{m.name}</h1>
             <div
                 className={'card-box'}
                 key={i}
             >
+              <h1>{m.name}</h1>
               <p>{m.description}</p>
-              <img src={m.logo} alt={'logo'} style={{height: '15em', objectFit: 'scale-down'}} />
+            </div>
+            <div className="box">
+              <img src={m.logo} alt={'logo'} style={{objectFit: 'scale-down'}} />
             </div>
           </div>
       ))}
