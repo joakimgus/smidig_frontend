@@ -4,6 +4,7 @@ import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { fetchData } from "../../api/apiHandler";
 import Loading from "../../components/Loading";
 import FileBase from "react-file-base64";
+import { useHistory } from "react-router";
 
 const onDragEnd = (result, columns, setColumns) => {
   if (!result.destination) return;
@@ -47,6 +48,8 @@ const SuperuserAddPackage = () => {
   const [products, setProducts] = useState();
   const [postData, setPostData] = useState({});
 
+  const history = useHistory();
+
   useEffect(() => {
     fetchData("/products/ourProducts").then((res) => setProducts(res));
   }, []);
@@ -73,6 +76,8 @@ const SuperuserAddPackage = () => {
       "newExhibition",
       JSON.stringify(columns.productsAdded)
     );
+
+    history.push("/superbruker/lag-ny-pakke/info");
 
     //const res = await postData("/exhibitions/add", columns);
     //console.log(res);
