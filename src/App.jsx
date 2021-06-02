@@ -138,6 +138,9 @@ const App = () => {
           <Route path={"/superbruker/lag-ny-pakke/info"}>
             <SuperuserAddPackageInfo />
           </Route>
+          <Route path={"/superbruker/forhandsvis-pakke"}>
+            <PreviewPackage />
+          </Route>
         </Switch>
         <Footer />
       </UserContext.Provider>

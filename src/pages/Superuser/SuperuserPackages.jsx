@@ -12,9 +12,11 @@ import {
 import { fetchData } from "../../api/apiHandler";
 import Loading from "../../components/Loading";
 import { Link } from "react-router-dom";
+import {useHistory} from "react-router";
 
 const SuperuserPackages = () => {
   const [packages, setPackages] = useState();
+  const history = useHistory();
 
   useEffect(() => {
     fetchData("/exhibitions/ourExhibitions").then((res) => {
@@ -73,7 +75,10 @@ const SuperuserPackages = () => {
                 <p>Artikkelnr: {p._id}</p>
               </div>
             </div>
-            <p className={"su-packages-preview-btn button"}>
+            <p
+                className={"su-packages-preview-btn button"}
+                onClick={() => history.push("/superbruker/forhandsvis-pakke", { params: p })}
+            >
               <RiSearchEyeLine />
             </p>
             <p className={"su-packages-active-btn button"}>
