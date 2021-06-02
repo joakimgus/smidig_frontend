@@ -84,7 +84,9 @@ const AdminPackages = () => {
                 <p>Artikkelnr: {p._id}</p>
               </div>
             </div>
-            <p className={"admin-packages-preview-btn button"}>
+            <p className={"admin-packages-preview-btn button"}
+               onClick={() => history.push("/admin/forhandsvis-pakke", {params: p})}
+            >
               <RiSearchEyeLine />
             </p>
             <p className={"admin-packages-active-btn button"}>
