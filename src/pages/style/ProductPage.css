@@ -9,6 +9,16 @@
   background-color: #eceded;
 }
 
+.back-container{
+  justify-self: center;
+  margin-top: 2em;
+}
+
+.back-container>svg{
+  height: 2.5em;
+  width: 2.5em;
+}
+
 .product-top-container {
   display: grid;
   grid-template-columns: 1.1fr 1fr;

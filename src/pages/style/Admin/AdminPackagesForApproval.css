@@ -4,13 +4,13 @@
 }
 
 .admin-packages-approval-top-text-container {
-  /*TODO endre høyden her for media query?*/
   height: 20vh;
   margin-bottom: 3em;
   display: grid;
   grid-template-columns: 2em repeat(2, 1fr) 2em;
   align-content: center;
   justify-content: center;
+  margin-top: 5em;
 }
 
 .admin-packages-approval-top-text-container > h1,
