@@ -35,7 +35,11 @@ const SuperuserAddProduct = () => {
     if (Object.keys(formData).length === 4) {
       console.log(formData);
       const res = await postData("/products/addProduct", formData);
-      console.log(res);
+      if (res === "success") {
+        history.push("/superbruker/produkter");
+      } else {
+        setErrorMessage(res);
+      }
     } else {
       setErrorMessage("Du må fylle ut alle feltene");
     }
