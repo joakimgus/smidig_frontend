@@ -16,11 +16,11 @@ const PaymentOptions = () => {
         <p>Velg betalingsmåte og fyll inn betalingsinformasjon.</p>
       </div>
       <div id={"payment-option-buttons-container"}>
-        <button className={"payment-option-btn"}>KORTBETALING</button>
+        <button className={"payment-option-btn"} disabled={true}>KORTBETALING</button>
         <Link to={"/faktura"}>
           <button className={"payment-option-btn"}>FAKTURA</button>
         </Link>
-        <button className={"payment-option-btn"}>VIPPS</button>
+        <button className={"payment-option-btn"} disabled={true}>VIPPS</button>
       </div>
     </div>
   );

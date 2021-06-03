@@ -31,9 +31,10 @@ import SuperuserProducts from "./pages/Superuser/SuperuserProducts";
 import SuperuserPackages from "./pages/Superuser/SuperuserPackages";
 import SuperuserAddProduct from "./pages/Superuser/SuperuserAddProduct";
 import SuperuserAddPackage from "./pages/Superuser/SuperuserAddPackage";
+import SuperuserEditPackage from "./pages/Superuser/SuperuserEditPackage";
 import AdminAddPackage from "./pages/Admin/AdminAddPackage";
 import AdminAddProduct from "./pages/Admin/AdminAddProduct";
-import EditPackage from "./pages/Admin/EditPackage";
+import AdminEditPackage from "./pages/Admin/AdminEditPackage";
 import SuperuserAddPackageInfo from "./pages/Superuser/SuperuserAddPackageInfo";
 import PreviewPackage from "./pages/Admin/PreviewPackage";
 
@@ -112,7 +113,7 @@ const App = () => {
             <PreviewPackage />
           </Route>
           <Route path={"/admin/rediger-pakke"}>
-            <EditPackage />
+            <AdminEditPackage />
           </Route>
           <Route path="/admin/pakker-til-godkjenning">
             <AdminPackagesForApproval />
@@ -140,6 +141,9 @@ const App = () => {
           </Route>
           <Route path={"/superbruker/forhandsvis-pakke"}>
             <PreviewPackage />
+          </Route>
+          <Route path={"/superbruker/rediger-pakke"}>
+            <SuperuserEditPackage />
           </Route>
         </Switch>
         <Footer />

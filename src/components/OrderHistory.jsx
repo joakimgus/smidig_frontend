@@ -68,13 +68,12 @@ const OrderHistory = () => {
           <p>En oversikt over tidligere ordre du har gjennomført.</p>
         </div>
         <div className={"search-sort-container"}>
-          <div className={"search-sort-container"}>
-            <input
-              type="text"
-              placeholder={"Søk etter utstillinger"}
-              onChange={(e) => setSearchFilter(e.target.value)}
-            />
-          </div>
+          <input
+            id={"order-history-search"}
+            type="text"
+            placeholder={"Søk etter utstillinger"}
+            onChange={(e) => setSearchFilter(e.target.value)}
+          />
           <select onChange={sortByDate} name="sort" id="sort">
             <option value="true">Nyeste</option>
             <option value="false">Eldste</option>

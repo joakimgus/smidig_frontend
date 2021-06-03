@@ -84,7 +84,9 @@ const SuperuserPackages = () => {
             <p className={"su-packages-active-btn button"}>
               {p.isActive ? <BiShow /> : <BiLowVision />}
             </p>
-            <p className={"su-packages-edit-btn button"}>
+            <p className={"su-packages-edit-btn button"}
+               onClick={() => history.push("/superbruker/rediger-pakke", { params: p })}
+            >
               <GrFormEdit />
             </p>
             <p className={"su-packages-delete-btn button"}>

@@ -25,12 +25,25 @@
 }
 
 .search-sort-container {
-  width: 15em;
-  height: 1em;
-  border: 1px solid black;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, auto);
+  width: 40%;
+  height: 40%;
+  align-self: center;
+  justify-self: end;
+}
+
+#sort, #order-history-search {
+  justify-self: end;
+  align-self: end;
+  height: 100%;
+  width: 80%;
 }
 
 #order-history-table {
+  justify-self: start;
+  align-self: start;
   table-layout: fixed;
   width: 100%;
   text-align: left;
