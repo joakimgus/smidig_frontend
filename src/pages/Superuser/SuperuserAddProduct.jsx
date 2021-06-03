@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "../style/Superuser/SuperuserAddProduct.css";
 import {useHistory} from "react-router";
+import {IoArrowBackCircle} from "react-icons/all";
 
 const SuperuserAddProduct = () => {
     const [formData, setFormData] = useState({
@@ -31,6 +32,9 @@ const SuperuserAddProduct = () => {
     return (
         <div className={"su-add-product-page-container"}>
             <div className={"su-add-product-top-text-container"}>
+                <div className="back-container" onClick={() => history.push("/superbruker/produkter")}>
+                    <IoArrowBackCircle />
+                </div>
                 <h3>Legg til produkt</h3>
             </div>
             <div

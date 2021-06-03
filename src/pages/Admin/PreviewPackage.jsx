@@ -1,4 +1,4 @@
-import {useLocation} from "react-router";
+import {useHistory, useLocation} from "react-router";
 import React, {useEffect, useState} from "react";
 import {fetchData} from "../../api/apiHandler";
 import Loading from "../../components/Loading";
@@ -21,6 +21,8 @@ const PreviewPackage = () => {
     const data = location.state.params;
     const [developer, setDeveloper] = useState();
 
+    const history = useHistory();
+
     SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
     useEffect(() => {
@@ -39,7 +41,7 @@ const PreviewPackage = () => {
 
     return (
         <div className={"productpage-container"}>
-            <div className="back-container">
+            <div className="back-container" onClick={() => history.push("/admin/produkter")}>
                 <IoArrowBackCircle />
             </div>
             <div className={"product-top-container"}>

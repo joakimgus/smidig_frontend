@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { UserContext } from "../context/context";
 import "./style/UserInfo.css";
@@ -7,6 +7,8 @@ import { GrFormEdit } from "react-icons/all";
 
 const UserInfo = () => {
   const { user, setUser } = useContext(UserContext);
+
+  const [edit, setEdit] = useState("false");
 
   const history = useHistory();
 
@@ -19,7 +21,13 @@ const UserInfo = () => {
     }
   };
 
-  console.log(user);
+  const toggleEdit = () => {
+    if (edit === "true") {
+      setEdit("false");
+    } else {
+      setEdit("true");
+    }
+  };
 
   return (
     <>
@@ -31,14 +39,25 @@ const UserInfo = () => {
               <p>
                 Du er innlogget som <span>{user.email}</span>
               </p>
-              <button className={"profile-edit-btn"}>
+              <button onClick={toggleEdit} className={"profile-edit-btn"}>
                 <GrFormEdit />
               </button>
             </div>
           </div>
           <table id={"user-info-table"}>
             <tr className={"user-row"}>
-              <td className={"user-info-text"}>E-post: {user.email}</td>
+              <td className={"user-info-text"}>
+                E-post:{" "}
+                <span
+                  contenteditable={edit}
+                  accessKey={"email"}
+                  onInput={(e) =>
+                    setUser({ ...user, email: e.target.outerText })
+                  }
+                >
+                  {user.email}
+                </span>
+              </td>
             </tr>
             <tr className={"user-row"}>
               <td className={"user-info-text"}>Org. nr.: {user.orgNr}</td>
