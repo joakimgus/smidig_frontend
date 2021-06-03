@@ -11,7 +11,7 @@ const AboutUsPage = () => {
     {
       name: "Hvem er vi?",
       description:
-        "Hvem er tidvis og Mobilt minimuseum (datterselskapet)? Tidvis er et ideelt selskap som utforsker og utvikler nye måter å formidle og tilgjengeliggjøre forskning på, med et spesielt fokus på historie. Vi mener historie er viktig, fordi det danner utgangspunktet for vår forståelse av nåtiden og hva vi forventer av fremtiden. Vår målsetning er å benytte både velkjente og nye virkemidler og teknologier. Eksempler på slike er databaser, spill, 3D-modeller, augmented og virtual reality, animasjoner, interaktive sanseopplevelser og god, fleksibel design på alle flater. Vi ønsker å nå bredt ut til flest mulig med elegante løsninger. Slik gjør vi det lettere for mennesker i dag å få erfaring med fortiden, og legger til rette for at flere får et bredere kunnskapsgrunnlag for å reflektere over nåtiden og fremtiden.",
+        "Hvem er tidvis og hva er Mobilt minimuseum? \n Tidvis er et ideelt selskap som utforsker og utvikler nye måter å formidle og tilgjengeliggjøre forskning på, med et spesielt fokus på historie. Vi mener historie er viktig, fordi det danner utgangspunktet for vår forståelse av nåtiden og hva vi forventer av fremtiden. Vår målsetning er å benytte både velkjente og nye virkemidler og teknologier. \n Mobilt minimuseum er et konsept som har blitt utviklet i av tidvis og både utvikles og produseres in house. Vi har et stort ønske om å kunne tilby fullverdige opplevelser rett hjem til folket. Dette prosjektet startet som en tanke og utviklet seg til et fullverdig nytenkende konsept, som utnytter ny teknologi og kreativitet, for å kunne skape en helt unik opplevelse i en helt annen formfaktor enn før.",
       logo: LogoTidvis,
     },
     {
