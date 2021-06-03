@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
 import "./style/ContactPage.css";
-import { Input } from "../components/Input";
 
 const ContactPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const headerText = {
     title: "Kontakt oss",
     description:
