@@ -49,35 +49,37 @@ const CustomerInformation = () => {
             <p>Sjekk at kundeopplysningene stemmer.</p>
           </div>
           <div id={"customer-information-form-container"}>
-            <form onSubmit={saveContactInfo}>
-              <label>
-                ORGANISASJONSNUMMER
-                <p id={"customer-information-orgnr"}>{user.orgNr}</p>
-              </label>
+            <div className="form-wrap-customer-cart">
+              <form onSubmit={saveContactInfo}>
+                <label>
+                  ORGANISASJONSNUMMER:
+                  <p id={"customer-information-orgnr"}>{user.orgNr}</p>
+                </label>
 
-              <Input
-                label={"KONTAKTPERSON"}
-                type={"text"}
-                name={"contactPerson"}
-                handleChange={handleChange}
-              />
-              <Input
-                label={"E-POST"}
-                type={"email"}
-                name={"email"}
-                handleChange={handleChange}
-              />
-              <Input
-                label={"TELEFON"}
-                type={"text"}
-                name={"phoneNumber"}
-                handleChange={handleChange}
-              />
-              <button type="submit" id={"confirm-btn"}>
-                Bekreft
-              </button>
-            </form>
-            {errorMessage && <div>{errorMessage}</div>}
+                <Input
+                    label={"KONTAKTPERSON"}
+                    type={"text"}
+                    name={"contactPerson"}
+                    handleChange={handleChange}
+                />
+                <Input
+                    label={"E-POST"}
+                    type={"email"}
+                    name={"email"}
+                    handleChange={handleChange}
+                />
+                <Input
+                    label={"TELEFON"}
+                    type={"text"}
+                    name={"phoneNumber"}
+                    handleChange={handleChange}
+                />
+                <button type="submit" id={"confirm-btn"}>
+                  Bekreft
+                </button>
+              </form>
+              {errorMessage && <div>{errorMessage}</div>}
+            </div>
           </div>
         </div>
       ) : (
