@@ -18,7 +18,7 @@ const PaymentOptions = () => {
       <div id={"payment-option-buttons-container"}>
         <button className={"payment-option-btn"} disabled={true}>KORTBETALING</button>
         <Link to={"/faktura"}>
-          <button className={"payment-option-btn"}>FAKTURA</button>
+          <button className={"payment-option-btn button"}>FAKTURA</button>
         </Link>
         <button className={"payment-option-btn"} disabled={true}>VIPPS</button>
       </div>
