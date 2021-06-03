@@ -1,0 +1,34 @@
+.admin-package-preview-container {
+    min-height: 94vh;
+    margin: 2.9em 0 3em 0;
+}
+
+.admin-package-preview-top-text-container {
+    height: 20vh;
+    margin-bottom: 3em;
+    display: grid;
+    grid-template-columns: 2em repeat(2, 1fr) 2em;
+    align-content: center;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.admin-package-preview-top-text-container > h1,
+.admin-package-preview-top-text-container > p,
+.admin-package-preview-top-text-container > hr {
+    grid-column: 2;
+}
+
+.admin-package-preview-top-text-container > h1 {
+    font-variant-caps: all-small-caps;
+    font-weight: 400;
+}
+
+.admin-package-preview-top-text-container > p {
+    width: fit-content;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    padding-top: 1em;
+    margin-top: 1em;
+    font-style: italic;
+    font-weight: 300;
+}
