@@ -77,9 +77,10 @@
 
 .museum-card-description {
   width: 88%;
+  font-weight: 200;
+  font-size: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding-top: 0.8em;
-  font-weight: 200;
   font-style: italic;
   letter-spacing: 1px;
 }
