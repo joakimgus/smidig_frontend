@@ -1,12 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Loading from "../components/Loading";
 import { useHistory } from "react-router";
 import FileBase from "react-file-base64";
-import { postData } from "../api/apiHandler";
+import { fetchData, postData } from "../api/apiHandler";
 import "./style/AddPackageInfo.css";
+import { UserContext } from "../context/context";
 
 const AddPackageInfo = () => {
+  const { user } = useContext(UserContext);
+
+  let redirect;
+  let initialState;
+  if (user.type === "SUPER") {
+    initialState = { developer: user.museumId };
+    redirect = "/superbruker/lag-ny-pakke/forhandsvisning";
+  } else if (user.type === "ADMIN") {
+    // initialState = {};
+    redirect = "/admin/lag-ny-pakke/forhandsvisning";
+  }
+
   const [info, setInfo] = useState({
+    ...initialState,
     media: [],
     tags: [],
     requiredEquipment: [],
@@ -14,13 +28,20 @@ const AddPackageInfo = () => {
     shortDescription: "",
     description: "",
   });
+
+  const [developer, setDeveloper] = useState();
   const [error, setError] = useState();
   const [products, setProducts] = useState();
+  const [museums, setMuseums] = useState();
 
   const history = useHistory();
 
   useEffect(() => {
     setProducts(JSON.parse(localStorage.getItem("newExhibition")));
+  }, []);
+
+  useEffect(() => {
+    fetchData("/museums/names").then((res) => setMuseums(res));
   }, []);
 
   const handleChange = (e) => {
@@ -35,16 +56,22 @@ const AddPackageInfo = () => {
 
     const pIds = products.items.map((p) => p._id);
 
-    const exhibition = {
-      ...info,
-      products: pIds,
-    };
+    let exhibition;
+    if (!developer) {
+      if (user.type === "ADMIN") {
+        setError("Du må velge en utvikler");
+      } else {
+        exhibition = { ...info, products: pIds };
+      }
+    } else {
+      exhibition = { ...info, developer, products: pIds };
+    }
 
     console.log(exhibition);
 
     localStorage.setItem("newExhibition", JSON.stringify(exhibition));
 
-    history.push("/superbruker/lag-ny-pakke/forhandsvisning");
+    history.push(redirect);
 
     /*// SEND TO SERVER
     console.log(exhibition);
@@ -60,7 +87,7 @@ const AddPackageInfo = () => {
     }*/
   };
 
-  if (!products) {
+  if (!products || !museums || !user) {
     return <Loading />;
   }
 
@@ -111,6 +138,21 @@ const AddPackageInfo = () => {
             />
             {error && error}
           </div>
+          {user.type === "ADMIN" && (
+            <label id={"admin-add-product-developer-label"}>
+              Utvikler:
+              <br />
+              <select
+                id={"admin-add-product-select-developer"}
+                onChange={(e) => setDeveloper(e.target.value)}
+                value={developer}
+              >
+                {museums.map((m) => (
+                  <option value={m._id}>{m.name}</option>
+                ))}
+              </select>
+            </label>
+          )}
           <button type={"submit"}>Gå videre</button>
         </form>
       </div>
