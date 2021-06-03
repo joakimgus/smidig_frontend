@@ -1,12 +1,11 @@
-import React, {useEffect, useState} from "react";
-import '../style/Admin/EditPackage.css';
 import {useLocation} from "react-router";
+import React, {useEffect, useState} from "react";
 import {fetchData} from "../../api/apiHandler";
 import Loading from "../../components/Loading";
-import Photo from '../../images/placeholder-image.png';
+import Photo from "../../images/placeholder-image.png";
 import {GrAdd, TiDelete} from "react-icons/all";
 
-const EditPackage = () => {
+const SuperuserEditPackage = () => {
     const location = useLocation();
     const data = location.state.params;
     const [developer, setDeveloper] = useState();
@@ -87,18 +86,14 @@ const EditPackage = () => {
                             </p>
                         ))}
                     </div>
-                    <div className={"package-owner-container"}>
+                    <div className={"owner-container"}>
                         <h3>Utviklet av</h3>
-                        <select>
-                            {developer.map((d)=>(
-                                <option value={d._id}>{d.name}</option>
-                            ))}
-                        </select>
+                        <img src={developer.logo} alt={"logo"} />
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default EditPackage;
+export default SuperuserEditPackage;
