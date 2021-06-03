@@ -57,22 +57,22 @@ const CustomerInformation = () => {
                 </label>
 
                 <Input
-                    label={"KONTAKTPERSON"}
-                    type={"text"}
-                    name={"contactPerson"}
-                    handleChange={handleChange}
+                  label={"KONTAKTPERSON"}
+                  type={"text"}
+                  name={"contactPerson"}
+                  handleChange={handleChange}
                 />
                 <Input
-                    label={"E-POST"}
-                    type={"email"}
-                    name={"email"}
-                    handleChange={handleChange}
+                  label={"E-POST"}
+                  type={"email"}
+                  name={"email"}
+                  handleChange={handleChange}
                 />
                 <Input
-                    label={"TELEFON"}
-                    type={"text"}
-                    name={"phoneNumber"}
-                    handleChange={handleChange}
+                  label={"TELEFON"}
+                  type={"text"}
+                  name={"phoneNumber"}
+                  handleChange={handleChange}
                 />
                 <button type="submit" id={"confirm-btn"}>
                   Bekreft
@@ -83,7 +83,9 @@ const CustomerInformation = () => {
           </div>
         </div>
       ) : (
-        <div>Du nå være innlogget for å bestille</div>
+        <div style={{ padding: "5rem 1rem" }}>
+          Du må være innlogget for å bestille
+        </div>
       )}
     </>
   );
