@@ -5,6 +5,7 @@ import { fetchData, postData } from "../../api/apiHandler";
 import Loading from "../../components/Loading";
 import Photo from "../../images/placeholder-image.png";
 import { GrAdd, TiDelete } from "react-icons/all";
+import FileBase from "react-file-base64";
 
 const AdminEditPackage = () => {
   const location = useLocation();
@@ -69,7 +70,16 @@ const AdminEditPackage = () => {
           <div className="img-add-delete-wrapper">
             <div className={"package-add-img-btn button"}>
               <GrAdd />
-              <p>Legg til bilder</p>
+              <FileBase
+                type="file"
+                multiple={false}
+                onDone={({ base64 }) =>
+                  setExhibition({
+                    ...exhibition,
+                    media: [...exhibition.media, base64],
+                  })
+                }
+              />
             </div>
             <div className={"package-delete-img-btn button"}>
               <TiDelete />
