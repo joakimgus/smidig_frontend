@@ -12,7 +12,7 @@ import {
 import { fetchData } from "../../api/apiHandler";
 import Loading from "../../components/Loading";
 import { Link } from "react-router-dom";
-import {useHistory} from "react-router";
+import { useHistory } from "react-router";
 
 const SuperuserPackages = () => {
   const [packages, setPackages] = useState();
@@ -21,11 +21,10 @@ const SuperuserPackages = () => {
   useEffect(() => {
     fetchData("/exhibitions/ourExhibitions").then((res) => {
       setPackages(res);
+      console.log(res);
     });
     window.scrollTo(0, 0);
   }, []);
-
-  console.log(packages);
 
   const deletePackage = async (id) => {
     console.log("Deleting package " + id + ", but not really");
@@ -76,16 +75,21 @@ const SuperuserPackages = () => {
               </div>
             </div>
             <p
-                className={"su-packages-preview-btn button"}
-                onClick={() => history.push("/superbruker/forhandsvis-pakke", { params: p })}
+              className={"su-packages-preview-btn button"}
+              onClick={() =>
+                history.push("/superbruker/forhandsvis-pakke", { params: p })
+              }
             >
               <RiSearchEyeLine />
             </p>
             <p className={"su-packages-active-btn button"}>
               {p.isActive ? <BiShow /> : <BiLowVision />}
             </p>
-            <p className={"su-packages-edit-btn button"}
-               onClick={() => history.push("/superbruker/rediger-pakke", { params: p })}
+            <p
+              className={"su-packages-edit-btn button"}
+              onClick={() =>
+                history.push("/superbruker/rediger-pakke", { params: p })
+              }
             >
               <GrFormEdit />
             </p>
