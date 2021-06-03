@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../style/Admin/EditPackage.css";
-import { useLocation } from "react-router";
+import { useHistory, useLocation } from "react-router";
 import { fetchData, postData } from "../../api/apiHandler";
 import Loading from "../../components/Loading";
 import Photo from "../../images/placeholder-image.png";
@@ -11,12 +11,17 @@ const AdminEditPackage = () => {
   const location = useLocation();
   const data = location.state.params;
   const [developer, setDeveloper] = useState();
-  const [exhibition, setExhibition] = useState({
-    ...data,
-  });
+  const [exhibition, setExhibition] = useState({});
+
+  const history = useHistory();
 
   useEffect(() => {
+    // Should handle if anyone tries to load this page without clicking from the previous page
+    if (!data) {
+      setExhibition(null);
+    }
     fetchDeveloper();
+    fetchData("/exhibitions/" + data).then((res) => setExhibition(res));
     window.scrollTo(0, 0);
   }, []);
 
@@ -26,9 +31,10 @@ const AdminEditPackage = () => {
   };
 
   const updatePackage = async () => {
-    console.log(exhibition);
+    // Should handle possible error message here
     const res = await postData("/exhibitions/admin/update", exhibition);
-    console.log(res);
+
+    history.push("/admin/pakker");
   };
 
   const handleChange = (e) => {
@@ -46,7 +52,7 @@ const AdminEditPackage = () => {
     products[i] = e.target.outerText;*/
   };
 
-  if (!developer) {
+  if (!developer || !exhibition) {
     return <Loading />;
   }
 
@@ -94,10 +100,10 @@ const AdminEditPackage = () => {
               accessKey={"name"}
               onInput={handleChange}
             >
-              {data.name}
+              {exhibition.name}
             </h3>
             <p contenteditable="true" className={"tags-p-container"}>
-              {data.tags.map((t, i) => (
+              {exhibition.tags.map((t, i) => (
                 <p
                   className={"tags-p"}
                   style={{ display: "inline-block" }}
@@ -116,10 +122,10 @@ const AdminEditPackage = () => {
               className={"short-desc-p"}
               accessKey={"shortDescription"}
             >
-              {data.shortDescription}
+              {exhibition.shortDescription}
             </p>
             <h4>Du trenger:</h4>
-            {data.requiredEquipment.map((e, i) => (
+            {exhibition.requiredEquipment.map((e, i) => (
               <p contenteditable="true" className={"equipment-p"} key={i}>
                 <span>&#8212;</span> {e}
               </p>
@@ -135,13 +141,13 @@ const AdminEditPackage = () => {
             onInput={handleChange}
             accessKey={"description"}
           >
-            {data.description}
+            {exhibition.description}
           </div>
         </div>
         <div className={"package-bottom-right-wrapper"}>
           <div className={"package-list-container"}>
             <h3>Produkter i pakken</h3>
-            {data.products.map((p, i) => (
+            {exhibition.products.map((p, i) => (
               <p
                 contenteditable="true"
                 key={i}

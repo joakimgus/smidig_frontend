@@ -13,7 +13,7 @@ import {
   BiLowVision,
 } from "react-icons/all";
 import { Link } from "react-router-dom";
-import {useHistory} from "react-router";
+import { useHistory } from "react-router";
 
 const AdminPackages = () => {
   const [packages, setPackages] = useState();
@@ -84,8 +84,11 @@ const AdminPackages = () => {
                 <p>Artikkelnr: {p._id}</p>
               </div>
             </div>
-            <p className={"admin-packages-preview-btn button"}
-               onClick={() => history.push("/admin/forhandsvis-pakke", {params: p})}
+            <p
+              className={"admin-packages-preview-btn button"}
+              onClick={() =>
+                history.push("/admin/forhandsvis-pakke", { params: p })
+              }
             >
               <RiSearchEyeLine />
             </p>
@@ -93,8 +96,10 @@ const AdminPackages = () => {
               {p.isActive ? <BiShow /> : <BiLowVision />}
             </p>
             <p
-                className={"admin-packages-edit-btn button"}
-                onClick={() => history.push("/admin/rediger-pakke", { params: p })}
+              className={"admin-packages-edit-btn button"}
+              onClick={() =>
+                history.push("/admin/rediger-pakke", { params: p._id })
+              }
             >
               <GrFormEdit />
             </p>
