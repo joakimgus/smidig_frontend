@@ -65,7 +65,7 @@ const Navigationbar = () => {
                 <Link to={"/superbruker"}>
                   <button className={"nav-btn"} id={"login-btn"}>
                     <img src={UserIcon} alt={"Bruker ikon"} />
-                    <p>Superside</p>
+                    <p>Superbruker</p>
                   </button>
                 </Link>
               ) : (
