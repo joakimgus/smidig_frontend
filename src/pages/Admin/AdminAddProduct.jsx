@@ -42,6 +42,14 @@ const AdminAddProduct = () => {
                 className={"add-product-sidebar add-product-right"}
                 onClick={() => history.push("/admin/produkter")}
             />
+            <div
+                className={"add-product-top-bot-bar add-product-top"}
+                onClick={() => history.push("/admin/produkter")}
+            />
+            <div
+                className={"add-product-top-bot-bar add-product-bot"}
+                onClick={() => history.push("/admin/produkter")}
+            />
             <form
                 className={"admin-add-product-text-container"}
                 onSubmit={saveProduct}
@@ -62,6 +70,16 @@ const AdminAddProduct = () => {
                     <textarea
                         id={"admin-add-product-description-ta"}
                         name={"productDescription"}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label id={"admin-add-product-stock-label"}>
+                    Antall:
+                    <br />
+                    <input
+                        id={"admin-add-product-stock-input"}
+                        type={"text"}
+                        name={"productStock"}
                         onChange={handleChange}
                     />
                 </label>
