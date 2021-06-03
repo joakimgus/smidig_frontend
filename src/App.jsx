@@ -38,6 +38,7 @@ import AdminEditPackage from "./pages/Admin/AdminEditPackage";
 import SuperuserAddPackageInfo from "./pages/AddPackageInfo";
 import PreviewPackage from "./pages/Admin/PreviewPackage";
 import AddProduct from "./pages/AddProduct";
+import AddPackagePreview from "./pages/AddPackagePreview";
 
 const App = () => {
   // User context
