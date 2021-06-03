@@ -1,20 +1,30 @@
 import React, { useEffect, useState } from "react";
 import "../style/Admin/AdminPackagesForApproval.css";
 import moment from "moment";
-import {RiSearchEyeLine, GrFormEdit, AiOutlineStop, AiOutlineCheckCircle} from "react-icons/all";
-import { fetchData } from "../../api/apiHandler";
+import {
+  RiSearchEyeLine,
+  GrFormEdit,
+  AiOutlineStop,
+  AiOutlineCheckCircle,
+} from "react-icons/all";
+import { fetchData, postData } from "../../api/apiHandler";
 import Loading from "../../components/Loading";
 
 const AdminPackagesForApproval = () => {
-  const [products, setProducts] = useState();
+  const [exhibitions, setExhibitions] = useState();
+
+  const approvePackage = async (id, isActive) => {
+    const res = await postData("/exhibitions/approve", { id, isActive });
+    console.log(res);
+  };
 
   useEffect(() => {
-    fetchData("/products").then((res) => {
-      setProducts(res);
+    fetchData("/exhibitions").then((res) => {
+      setExhibitions(res);
     });
-  }, []);
+  }, [approvePackage]);
 
-  if (!products) {
+  if (!exhibitions) {
     return <Loading />;
   }
 
@@ -37,47 +47,59 @@ const AdminPackagesForApproval = () => {
         </h5>
         <h5 className={"preview-title-section package-section"}>Forhåndsvis</h5>
         <h5 className={"edit-title-section package-section"}>Rediger</h5>
-        <h5 className={'approve-decline-title-section'}>Y/N</h5>
+        <h5 className={"approve-decline-title-section"}>Y/N</h5>
         <hr />
       </div>
-      {products.map((o) => (
+      {exhibitions.length > 0 ? (
         <>
-          <div className="admin-packages-approval-wrap">
-            <div className="admin-packages-approval-date-column">
-              <p className="package-date-added">
-                {moment(o.orderDate).format("YYYY-MM-DD HH:mm")}
-              </p>
-            </div>
-            <div className="admin-package-approval-order-nr-column">
-              <p className={"order-nr"}>{o._id}</p>
-            </div>
-            <div className="admin-package-approval-name-column">
-              <p className={"product-item-name"}>{o.name}</p>
-            </div>
-            <div className="admin-package-approval-owner-column">
-              <p className={"product-owner-museum"}>{o.developer}</p>
-            </div>
-            <div className="admin-package-approval-preview-column">
-              <p className={"package-approve-show-btn button"}>
-                <RiSearchEyeLine />
-              </p>
-            </div>
-            <div className="admin-package-approval-edit-column">
-              <p className={"package-approve-edit-btn button"}>
-                <GrFormEdit />
-              </p>
-            </div>
-            <div className={'admin-package-approve-decline-column'}>
-              <p className={"package-approve-btn button"}>
-                <AiOutlineCheckCircle />
-              </p>
-              <p className={"package-decline-btn button"}>
-                <AiOutlineStop />
-              </p>
-            </div>
-          </div>
+          {exhibitions.map((o) => (
+            <>
+              {!o.isActive && (
+                <div className="admin-packages-approval-wrap">
+                  <div className="admin-packages-approval-date-column">
+                    <p className="package-date-added">
+                      {moment(o.orderDate).format("YYYY-MM-DD HH:mm")}
+                    </p>
+                  </div>
+                  <div className="admin-package-approval-order-nr-column">
+                    <p className={"order-nr"}>{o._id}</p>
+                  </div>
+                  <div className="admin-package-approval-name-column">
+                    <p className={"product-item-name"}>{o.name}</p>
+                  </div>
+                  <div className="admin-package-approval-owner-column">
+                    <p className={"product-owner-museum"}>{o.developer}</p>
+                  </div>
+                  <div className="admin-package-approval-preview-column">
+                    <p className={"package-approve-show-btn button"}>
+                      <RiSearchEyeLine />
+                    </p>
+                  </div>
+                  <div className="admin-package-approval-edit-column">
+                    <p className={"package-approve-edit-btn button"}>
+                      <GrFormEdit />
+                    </p>
+                  </div>
+                  <div className={"admin-package-approve-decline-column"}>
+                    <p className={"package-approve-btn button"}>
+                      <AiOutlineCheckCircle
+                        onClick={() => approvePackage(o._id, true)}
+                      />
+                    </p>
+                    <p className={"package-decline-btn button"}>
+                      <AiOutlineStop
+                        onClick={() => approvePackage(o._id, false)}
+                      />
+                    </p>
+                  </div>
+                </div>
+              )}
+            </>
+          ))}
         </>
-      ))}
+      ) : (
+        <div>Ingen pakker å godkjenne</div>
+      )}
     </div>
   );
 };
