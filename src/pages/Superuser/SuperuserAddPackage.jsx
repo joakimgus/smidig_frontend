@@ -20,11 +20,11 @@ const SuperuserAddPackage = () => {
     if (products) {
       setColumns({
         ["yourProducts"]: {
-          name: "Dine produkter",
+          name: "Lagerbeholdning",
           items: products,
         },
         ["productsAdded"]: {
-          name: "Produkter i pakken",
+          name: "Ny pakkeløsning",
           items: [],
         },
       });
@@ -49,15 +49,13 @@ const SuperuserAddPackage = () => {
   return (
     <div className={"su-new-package-page-container"}>
       <div className={"su-new-package-top-text-container"}>
-        <h3>Legg til pakke</h3>
+          <h3>Lag ny pakkeløsning</h3>
+          <p>På denne siden kan du sette sammen enkeltprodukter for å lage en pakkeløsning som kan bestilles av kunder.<br/>Dra produktene du vil ha med i pakkeløsningen fra "Lagerbeholdning" til "Ny pakkeløsning" (fra venstre til høyre).</p>
+          <div className={"su-new-package-img-container"}>
+              <img src={require("../../images/add-package-process-1.png").default} />
+          </div>
       </div>
-      <div className={"su-new-package-img-container"}>
-        <img src={require("../../images/addpackageprocess1.png").default} />
-      </div>
-      <div className={"su-new-package-middle-text-container"}>
-        <p>Dra produktene du vil ha med i pakken fra venstre til høyre side.</p>
-      </div>
-      <div id={"su-new-package-drag-drop-container"}>
+      <div className={"su-new-package-drag-drop-container"}>
         <DragDropContext
           onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
         >
@@ -82,7 +80,7 @@ const SuperuserAddPackage = () => {
                           ref={provided.innerRef}
                           style={{
                             background: snapshot.isDraggingOver
-                              ? "lightblue"
+                              ? "lightgreen"
                               : "lightgrey",
                             padding: 4,
                             width: 250,
@@ -108,8 +106,8 @@ const SuperuserAddPackage = () => {
                                         margin: "0 0 4px 0",
                                         minHeight: "50px",
                                         backgroundColor: snapshot.isDragging
-                                          ? "#263B4A"
-                                          : "#456C86",
+                                          ? "#747474"
+                                          : "#2f2f2f",
                                         color: "white",
                                         ...provided.draggableProps.style,
                                       }}
@@ -132,8 +130,8 @@ const SuperuserAddPackage = () => {
           })}
         </DragDropContext>
       </div>
-      <div>
-        <button onClick={handleClick}>Legg til i pakken</button>
+      <div className={'su-create-package-btn-container'}>
+        <button onClick={handleClick}>Lagre pakke</button>
       </div>
     </div>
   );
