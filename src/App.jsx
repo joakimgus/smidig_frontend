@@ -37,6 +37,7 @@ import SuperuserAddPackageInfo from "./pages/AddPackageInfo";
 import PreviewPackage from "./pages/Admin/PreviewPackage";
 import AddProduct from "./pages/AddProduct";
 import AddPackagePreview from "./pages/AddPackagePreview";
+import AddPackageInfo from "./pages/AddPackageInfo";
 
 const App = () => {
   // User context
@@ -106,8 +107,11 @@ const App = () => {
           <Route path="/admin/pakker">
             <AdminPackages />
           </Route>
-          <Route path={"/admin/lag-ny-pakke"}>
-            <AdminAddPackage />
+          <Route exact path={"/admin/lag-ny-pakke"}>
+            <AddPackage />
+          </Route>
+          <Route exact path={"/admin/lag-ny-pakke/info"}>
+            <AddPackageInfo />
           </Route>
           <Route path={"/admin/forhandsvis-pakke"}>
             <PreviewPackage />

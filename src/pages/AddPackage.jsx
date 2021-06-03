@@ -1,19 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./style/AddPackage.css";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { fetchData } from "../api/apiHandler";
 import Loading from "../components/Loading";
 import { useHistory } from "react-router";
 import { onDragEnd } from "../util/onDragEnd";
+import { UserContext } from "../context/context";
 
 const AddPackage = () => {
   const [columns, setColumns] = useState({});
   const [products, setProducts] = useState();
 
+  const { user } = useContext(UserContext);
+
+  let redirect;
+  let productsUrl;
+  if (user.type === "SUPER") {
+    redirect = "/superbruker/lag-ny-pakke/info";
+    productsUrl = "/products/ourProducts";
+  } else if (user.type === "ADMIN") {
+    redirect = "/admin/lag-ny-pakke/info";
+    productsUrl = "/products";
+  }
+
   const history = useHistory();
 
   useEffect(() => {
-    fetchData("/products/ourProducts").then((res) => setProducts(res));
+    fetchData(productsUrl).then((res) => setProducts(res));
   }, []);
 
   useEffect(() => {
@@ -39,7 +52,7 @@ const AddPackage = () => {
       JSON.stringify(columns.productsAdded)
     );
 
-    history.push("/superbruker/lag-ny-pakke/info");
+    history.push(redirect);
   };
 
   if (!products) {
@@ -49,11 +62,17 @@ const AddPackage = () => {
   return (
     <div className={"su-new-package-page-container"}>
       <div className={"su-new-package-top-text-container"}>
-          <h3>Lag ny pakkeløsning</h3>
-          <p>På denne siden kan du sette sammen enkeltprodukter for å lage en pakkeløsning som kan bestilles av kunder.<br/>Dra produktene du vil ha med i pakkeløsningen fra "Lagerbeholdning" til "Ny pakkeløsning" (fra venstre til høyre).</p>
-          <div className={"su-new-package-img-container"}>
-              <img src={require("../images/add-package-process-1.png").default} />
-          </div>
+        <h3>Lag ny pakkeløsning</h3>
+        <p>
+          På denne siden kan du sette sammen enkeltprodukter for å lage en
+          pakkeløsning som kan bestilles av kunder.
+          <br />
+          Dra produktene du vil ha med i pakkeløsningen fra "Lagerbeholdning"
+          til "Ny pakkeløsning" (fra venstre til høyre).
+        </p>
+        <div className={"su-new-package-img-container"}>
+          <img src={require("../images/add-package-process-1.png").default} />
+        </div>
       </div>
       <div className={"su-new-package-drag-drop-container r3"}>
         <DragDropContext
@@ -130,7 +149,7 @@ const AddPackage = () => {
           })}
         </DragDropContext>
       </div>
-      <div className={'su-create-package-btn-container'}>
+      <div className={"su-create-package-btn-container"}>
         <button onClick={handleClick}>Gå videre</button>
       </div>
     </div>
