@@ -147,6 +147,7 @@ const AddPackageInfo = () => {
                 onChange={(e) => setDeveloper(e.target.value)}
                 value={developer}
               >
+                <option id="Select a user">Select a museum</option>
                 {museums.map((m) => (
                   <option value={m._id}>{m.name}</option>
                 ))}

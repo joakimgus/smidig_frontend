@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import "./style/Admin/AdminAddProduct.css";
+import "./style/Superuser/SuperuserAddProduct.css";
 import { useHistory } from "react-router";
 import { IoArrowBackCircle } from "react-icons/all";
 import { fetchData, postData } from "../api/apiHandler";
@@ -131,6 +131,7 @@ const AddProduct = () => {
               onChange={(e) => setDeveloper(e.target.value)}
               value={developer}
             >
+              <option id="Select a user">Select a museum</option>
               {museums.map((m) => (
                 <option value={m._id}>{m.name}</option>
               ))}
