@@ -14,6 +14,7 @@ import SwiperCore, {
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import "swiper/swiper-bundle.css";
+import { postData } from "../api/apiHandler";
 
 const AddPackagePreview = () => {
   const [previewPackage, setPreviewPackage] = useState([]);
@@ -26,8 +27,14 @@ const AddPackagePreview = () => {
     setPreviewPackage(JSON.parse(localStorage.getItem("newExhibition")));
   }, []);
 
-  const savePackage = () => {
+  const savePackage = async () => {
     console.log(previewPackage);
+
+    const res = await postData("/exhibitions/add", previewPackage);
+
+    if (res === "success") {
+      history.push("/superbruker/pakker");
+    }
   };
 
   if (previewPackage.length === 0) {
@@ -42,7 +49,10 @@ const AddPackagePreview = () => {
           Dette er en forhåndsvisning av hvordan pakken vil se ut i
           nettbutikken.
         </p>
-        <button onClick={savePackage} className={"save-add-package-preview-mode button"}>
+        <button
+          onClick={savePackage}
+          className={"save-add-package-preview-mode button"}
+        >
           Lagre
         </button>
       </div>
@@ -62,15 +72,15 @@ const AddPackagePreview = () => {
           onSlideChange={() => console.log("slide change")}
         >
           {previewPackage.media.map((p, i) => (
-              <SwiperSlide>
-                <img
-                  key={i}
-                  className={"product-image"}
-                  src={p}
-                  alt={"Produkt bilde"}
-                />
-              </SwiperSlide>
-            ))}
+            <SwiperSlide>
+              <img
+                key={i}
+                className={"product-image"}
+                src={p}
+                alt={"Produkt bilde"}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
         <div className="add-package-preview-product-top-right-container">
           <div className="add-package-preview-row-one-container">
@@ -90,15 +100,20 @@ const AddPackagePreview = () => {
           </div>
           <div className="add-package-preview-row-two-container">
             <h4>Inneholder</h4>
-            <p className={"add-package-preview-short-desc-p"}>{previewPackage.shortDescription}</p>
+            <p className={"add-package-preview-short-desc-p"}>
+              {previewPackage.shortDescription}
+            </p>
             <h4>Du trenger:</h4>
             {previewPackage.requiredEquipment.map((e, i) => (
-                <p className={"add-package-preview-equipment-p"} key={i}>
-                  <span>&#8212;</span> {e}
-                </p>
-              ))}
+              <p className={"add-package-preview-equipment-p"} key={i}>
+                <span>&#8212;</span> {e}
+              </p>
+            ))}
           </div>
-          <button className={"add-package-preview-add-product-to-cart-btn button"} disabled={true}>
+          <button
+            className={"add-package-preview-add-product-to-cart-btn button"}
+            disabled={true}
+          >
             Legg til i handlekurv
           </button>
         </div>
