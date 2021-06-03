@@ -40,6 +40,8 @@ const AddPackageInfo = () => {
       products: pIds,
     };
 
+    console.log(exhibition);
+
     localStorage.setItem("newExhibition", JSON.stringify(exhibition));
 
     history.push("/superbruker/lag-ny-pakke/forhandsvisning");
@@ -52,7 +54,7 @@ const AddPackageInfo = () => {
     const res = await postData("/exhibitions/add", exhibition);
 
     if (res === "success") {
-      history.push("/");
+      history.push("/superbruker/lag-ny-pakke/forhandsvisning");
     } else {
       setError(res);
     }*/

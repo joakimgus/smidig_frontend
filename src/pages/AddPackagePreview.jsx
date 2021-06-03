@@ -36,13 +36,13 @@ const AddPackagePreview = () => {
   console.log(previewPackage);
 
   return (
-    <div className={"admin-edit-package-page"}>
-      <div className={"admin-edit-mode-box"}>
+    <div className={"add-package-preview-page"}>
+      <div className={"add-package-preview-mode-box"}>
         <p>
           Dette er en forhåndsvisning av hvordan pakken vil se ut i
           nettbutikken.
         </p>
-        <button onClick={savePackage} className={"save-admin-edit-mode button"}>
+        <button onClick={savePackage} className={"save-add-package-preview-mode button"}>
           Lagre
         </button>
       </div>
@@ -52,7 +52,7 @@ const AddPackagePreview = () => {
       >
         <IoArrowBackCircle />
       </div>
-      <div className={"product-top-container"}>
+      <div className={"add-package-preview-product-top-container"}>
         <Swiper
           className={"product-swiper"}
           speed={500}
@@ -61,8 +61,7 @@ const AddPackagePreview = () => {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
-          {previewPackage.media &&
-            previewPackage.media.map((p, i) => (
+          {previewPackage.media.map((p, i) => (
               <SwiperSlide>
                 <img
                   key={i}
@@ -73,14 +72,14 @@ const AddPackagePreview = () => {
               </SwiperSlide>
             ))}
         </Swiper>
-        <div className="product-top-right-container">
-          <div className="row-one-container">
+        <div className="add-package-preview-product-top-right-container">
+          <div className="add-package-preview-row-one-container">
             <h3>{previewPackage.name}</h3>
-            <p className={"tags-p-container"}>
+            <p className={"add-package-preview-tags-p-container"}>
               {previewPackage.tags.length > 0 &&
                 previewPackage.tags.map((t, i) => (
                   <p
-                    className={"tags-p"}
+                    className={"add-package-preview-tags-p"}
                     style={{ display: "inline-block" }}
                     key={i}
                   >
@@ -89,29 +88,28 @@ const AddPackagePreview = () => {
                 ))}
             </p>
           </div>
-          <div className="row-two-container">
+          <div className="add-package-preview-row-two-container">
             <h4>Inneholder</h4>
-            <p className={"short-desc-p"}>{previewPackage.shortDescription}</p>
+            <p className={"add-package-preview-short-desc-p"}>{previewPackage.shortDescription}</p>
             <h4>Du trenger:</h4>
-            {previewPackage.requiredEquipment.length > 0 &&
-              previewPackage.requiredEquipment.map((e, i) => (
-                <p className={"equipment-p"} key={i}>
+            {previewPackage.requiredEquipment.map((e, i) => (
+                <p className={"add-package-preview-equipment-p"} key={i}>
                   <span>&#8212;</span> {e}
                 </p>
               ))}
           </div>
-          <button className={"add-product-to-cart-btn button"} disabled={true}>
+          <button className={"add-package-preview-add-product-to-cart-btn button"} disabled={true}>
             Legg til i handlekurv
           </button>
         </div>
       </div>
-      <div className={"product-bottom-wrapper"}>
-        <div className={"product-info-container"}>
+      <div className={"add-package-preview-product-bottom-wrapper"}>
+        <div className={"add-package-preview-product-info-container"}>
           <h3>Mer informasjon</h3>
           <p>{previewPackage.description}</p>
         </div>
-        <div className={"product-bottom-right-wrapper"}>
-          <div className={"product-list-container"}>
+        <div className={"add-package-preview-product-bottom-right-wrapper"}>
+          <div className={"add-package-preview-product-list-container"}>
             <h3>Produkter i pakken</h3>
             {previewPackage.products.map((e, i) => (
               <p key={i}>
@@ -120,7 +118,7 @@ const AddPackagePreview = () => {
               </p>
             ))}
           </div>
-          <div className={"owner-container"}>
+          <div className={"add-package-preview-owner-container"}>
             <h3>Utviklet av</h3>
             {/*  <img src={developer.logo} alt={"logo"} /> */}
           </div>
