@@ -46,3 +46,72 @@
   grid-column: 1;
   grid-row: 1;
 }
+
+@media screen and (max-width: 768px) {
+
+  .about-us-page-container {
+    grid-template-columns: 1em auto 1em;
+  }
+
+  .company-wrapper:nth-of-type(odd){
+    grid-template-columns: 60% 40%;
+  }
+
+  .company-wrapper:nth-of-type(even){
+    grid-template-columns: 40% 60%;
+  }
+
+  .company-wrapper>.box{
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+
+  .about-us-page-container {
+    display: grid;
+    grid-template-columns: 1em auto 1em;
+  }
+
+  .company-wrapper:nth-of-type(odd){
+    grid-template-columns: 1fr;
+  }
+
+  .company-wrapper:nth-of-type(even){
+    grid-template-columns: 1fr;
+  }
+
+  .company-wrapper:nth-child(odd)>.box {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .company-wrapper:nth-child(odd)>.card-box {
+    grid-column: 1;
+  }
+
+  .company-wrapper:nth-child(even)>.card-box {
+    grid-column: 1;
+  }
+
+  .company-wrapper:nth-child(even)>.box {
+    grid-column: 1;
+    grid-row: 1;
+    height: fit-content;
+  }
+
+  .box{
+    width: fit-content;
+    height: fit-content;
+    justify-self: center;
+  }
+
+  .card-box{
+    margin: 0;
+    padding: 15px;
+  }
+
+}
