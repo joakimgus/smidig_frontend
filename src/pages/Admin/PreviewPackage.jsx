@@ -14,6 +14,7 @@ import SwiperCore, {
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import "swiper/swiper-bundle.css";
+import {IoArrowBackCircle} from "react-icons/all";
 
 const PreviewPackage = () => {
     const location = useLocation();
@@ -38,6 +39,9 @@ const PreviewPackage = () => {
 
     return (
         <div className={"productpage-container"}>
+            <div className="back-container">
+                <IoArrowBackCircle />
+            </div>
             <div className={"product-top-container"}>
                 <Swiper
                     className={"product-swiper"}

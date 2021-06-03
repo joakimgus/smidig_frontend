@@ -4,7 +4,6 @@
 }
 
 .admin-packages-top-text-container {
-  /*TODO endre høyden her for media query?*/
   height: 20vh;
   display: grid;
   grid-template-columns: 2em repeat(2, 1fr) 2em;
