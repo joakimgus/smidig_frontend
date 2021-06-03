@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "../style/Admin/EditPackage.css";
 import { useLocation } from "react-router";
-import { fetchData } from "../../api/apiHandler";
+import { fetchData, postData } from "../../api/apiHandler";
 import Loading from "../../components/Loading";
 import Photo from "../../images/placeholder-image.png";
 import { GrAdd, TiDelete } from "react-icons/all";
+import FileBase from "react-file-base64";
 
-const EditPackage = () => {
+const AdminEditPackage = () => {
   const location = useLocation();
   const data = location.state.params;
   const [developer, setDeveloper] = useState();
@@ -24,15 +25,25 @@ const EditPackage = () => {
     setDeveloper(res);
   };
 
-  const updatePackage = () => {};
+  const updatePackage = async () => {
+    console.log(exhibition);
+    const res = await postData("/exhibitions/admin/update", exhibition);
+    console.log(res);
+  };
 
   const handleChange = (e) => {
-    console.log(e);
     setExhibition({
       ...exhibition,
-      [e.target.attributes[e.target.attributes.length - 1].nodeValue]:
-        e.target.outerText,
+      [e.target.accessKey]: e.target.outerText,
     });
+  };
+
+  // Have to have ID for each product to be able to update it
+  // Can be able to add new products to package instead?
+  const handleArrChange = (e, i) => {
+    /*console.log(e.target.outerText);
+    const products = [...exhibition.products];
+    products[i] = e.target.outerText;*/
   };
 
   if (!developer) {
@@ -59,7 +70,16 @@ const EditPackage = () => {
           <div className="img-add-delete-wrapper">
             <div className={"package-add-img-btn button"}>
               <GrAdd />
-              <p>Legg til bilder</p>
+              <FileBase
+                type="file"
+                multiple={false}
+                onDone={({ base64 }) =>
+                  setExhibition({
+                    ...exhibition,
+                    media: [...exhibition.media, base64],
+                  })
+                }
+              />
             </div>
             <div className={"package-delete-img-btn button"}>
               <TiDelete />
@@ -71,7 +91,7 @@ const EditPackage = () => {
           <div className="row-one-container">
             <h3
               contenteditable="true"
-              identifier={"name"}
+              accessKey={"name"}
               onInput={handleChange}
             >
               {data.name}
@@ -94,7 +114,7 @@ const EditPackage = () => {
               contenteditable="true"
               onInput={handleChange}
               className={"short-desc-p"}
-              identifier={"shortDescription"}
+              accessKey={"shortDescription"}
             >
               {data.shortDescription}
             </p>
@@ -113,7 +133,7 @@ const EditPackage = () => {
           <div
             contenteditable="true"
             onInput={handleChange}
-            identifier={"description"}
+            accessKey={"description"}
           >
             {data.description}
           </div>
@@ -121,10 +141,15 @@ const EditPackage = () => {
         <div className={"package-bottom-right-wrapper"}>
           <div className={"package-list-container"}>
             <h3>Produkter i pakken</h3>
-            {data.products.map((e, i) => (
-              <p contenteditable="true" key={i}>
+            {data.products.map((p, i) => (
+              <p
+                contenteditable="true"
+                key={i}
+                accessKey={"products"}
+                onInput={(e) => handleArrChange(e, i)}
+              >
                 <span>&#8212;</span>
-                {e}
+                {p}
               </p>
             ))}
           </div>
@@ -147,4 +172,4 @@ const EditPackage = () => {
   );
 };
 
-export default EditPackage;
+export default AdminEditPackage;
