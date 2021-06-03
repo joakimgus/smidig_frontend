@@ -1,10 +1,14 @@
 import React, {useState} from "react";
+import { Link } from "react-router-dom";
 import "../style/Admin/AdminAddProduct.css";
+import {useHistory} from "react-router";
 
 const AdminAddProduct = () => {
     const [formData, setFormData] = useState({
         product: "",
     });
+
+    const history = useHistory();
 
     const [errorMessage, setErrorMessage] = useState(null);
 
@@ -30,8 +34,14 @@ const AdminAddProduct = () => {
             <div className={"admin-add-product-top-text-container"}>
                 <h3>Legg til produkt</h3>
             </div>
-            <div className={"add-product-sidebar add-product-left"} />
-            <div className={"add-product-sidebar add-product-right"} />
+            <div
+                className={"add-product-sidebar add-product-left"}
+                onClick={() => history.push("/admin/produkter")}
+            />
+            <div
+                className={"add-product-sidebar add-product-right"}
+                onClick={() => history.push("/admin/produkter")}
+            />
             <form
                 className={"admin-add-product-text-container"}
                 onSubmit={saveProduct}
