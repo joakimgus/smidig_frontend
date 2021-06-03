@@ -16,7 +16,8 @@ const AboutUsPage = () => {
     },
     {
       name: "Vårt formål",
-      description: "Formålet med mobiltminimuseum ===",
+      description:
+          'Mobilt minimuseum er utviklet for å kunne gjennskape fullverdige museumsopplevelser skreddersydd for aldershjem og institusjoner, som de kan få levert til seg.  Utstillingene er utviklet med fundament i Møte Med Minner-håndboken, hvor personer med demens og lettere hukommelsestap skal kunne få opplevelser som er givende og spesielt tilpasset med tanke på deres utfordringer. Vi ønsker å utforske hvordan ny teknologi kan brukes til å bringe museenes gjennstander inn, og til de som kanskje trenger det mest.',
       logo: LogoMiniMuseum,
     },
   ];
