@@ -37,7 +37,7 @@ const AdminPackagesForApproval = () => {
         </h5>
         <h5 className={"preview-title-section package-section"}>Forhåndsvis</h5>
         <h5 className={"edit-title-section package-section"}>Rediger</h5>
-        <h5 className={'approve-decline-title-section'}>Godkjenn</h5>
+        <h5 className={'approve-decline-title-section'}>Y/N</h5>
         <hr />
       </div>
       {products.map((o) => (
