@@ -17,7 +17,7 @@ const EditPackage = () => {
     }, []);
 
     const fetchDeveloper = async () => {
-        const res = await fetchData("/museums/" + data.developer);
+        const res = await fetchData("/museums/names");
         setDeveloper(res);
     };
 
@@ -26,9 +26,13 @@ const EditPackage = () => {
     }
 
     return(
-        <div className={'productpage-container'}>
-            <div className={"product-top-container"}>
-                <div className={'product-top-left-container'}>
+        <div className={'admin-edit-package-page'}>
+            <div className={'admin-edit-mode-box'}>
+                <p>Du er i redigeringsmodus. Trykk på det du ønsker å endre, deretter lagre.</p>
+                <button className={'save-admin-edit-mode button'}>Lagre</button>
+            </div>
+            <div className={"package-top-container"}>
+                <div className={'package-top-left-container'}>
                     <img src={Photo} width={'250px'} alt={''} />
                     <div className="img-add-delete-wrapper">
                         <div className={'package-add-img-btn button'}>
@@ -41,7 +45,7 @@ const EditPackage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="product-top-right-container">
+                <div className="package-top-right-container">
                     <div className="row-one-container">
                         <h3 contenteditable="true">{data.name}</h3>
                         <p contenteditable="true" className={"tags-p-container"}>
@@ -68,13 +72,13 @@ const EditPackage = () => {
                     </div>
                 </div>
             </div>
-            <div className={"product-bottom-wrapper"}>
-                <div className={"product-info-container"}>
+            <div className={"package-bottom-wrapper"}>
+                <div className={"package-info-container"}>
                     <h3>Mer informasjon</h3>
                     <p contenteditable="true">{data.description}</p>
                 </div>
-                <div className={"product-bottom-right-wrapper"}>
-                    <div className={"product-list-container"}>
+                <div className={"package-bottom-right-wrapper"}>
+                    <div className={"package-list-container"}>
                         <h3>Produkter i pakken</h3>
                         {data.products.map((e, i) => (
                             <p contenteditable="true" key={i}>
@@ -83,10 +87,13 @@ const EditPackage = () => {
                             </p>
                         ))}
                     </div>
-                    <div className={"owner-container"}>
+                    <div className={"package-owner-container"}>
                         <h3>Utviklet av</h3>
-                        {/*Todo fiks dropdown med utviklere?*/}
-                        <p contenteditable="true">{developer.name}</p>
+                        <select>
+                            {developer.map((d)=>(
+                                <option value={d._id}>{d.name}</option>
+                            ))}
+                        </select>
                     </div>
                 </div>
             </div>

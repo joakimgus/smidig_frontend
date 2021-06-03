@@ -1,22 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { fetchData } from "../api/apiHandler";
+import React from "react";
 import Loading from "./Loading";
 import SearchBar from "./SearchBar";
 import "./style/FilterSidebar.css";
 
 const FilterSidebar = ({ filter, setFilter, setSearchFilter, museums }) => {
-  /*const [museums, setMuseums] = useState();
-
-  useEffect(() => {
-    fetchMuseums();
-  }, []);
-
-  const fetchMuseums = async () => {
-    const res = await fetchData("/museums/names");
-    setMuseums(res);
-    console.log(res);
-  };*/
-
   const handleChange = (e, f) => {
     const name = e.target.name;
     if (filter[f.name].includes(name)) {
