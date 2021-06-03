@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import Loading from "../components/Loading";
 import "./style/AddPackagePreview.css";
@@ -15,9 +15,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import "swiper/swiper-bundle.css";
 import { postData } from "../api/apiHandler";
+import { UserContext } from "../context/context";
 
 const AddPackagePreview = () => {
   const [previewPackage, setPreviewPackage] = useState([]);
+
+  const { user } = useContext(UserContext);
+
+  let redirect;
+  if (user.type === "SUPER") {
+    redirect = "/superbruker";
+  } else if (user.type === "ADMIN") {
+    redirect = "/admin";
+  }
 
   const history = useHistory();
 
@@ -33,14 +43,13 @@ const AddPackagePreview = () => {
     const res = await postData("/exhibitions/add", previewPackage);
 
     if (res === "success") {
-      history.push("/superbruker/pakker");
+      history.push(redirect + "/pakker");
     }
   };
 
   if (previewPackage.length === 0) {
     return <Loading />;
   }
-  console.log(previewPackage);
 
   return (
     <div className={"add-package-preview-page"}>
@@ -58,7 +67,7 @@ const AddPackagePreview = () => {
       </div>
       <div
         className="back-container"
-        onClick={() => history.push("/superbruker/lag-ny-pakke/info")}
+        onClick={() => history.push(redirect + "/lag-ny-pakke/info")}
       >
         <IoArrowBackCircle />
       </div>

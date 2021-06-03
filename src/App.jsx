@@ -113,6 +113,9 @@ const App = () => {
           <Route exact path={"/admin/lag-ny-pakke/info"}>
             <AddPackageInfo />
           </Route>
+          <Route exact path={"/admin/lag-ny-pakke/forhandsvisning"}>
+            <AddPackagePreview />
+          </Route>
           <Route path={"/admin/forhandsvis-pakke"}>
             <PreviewPackage />
           </Route>
