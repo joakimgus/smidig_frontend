@@ -30,12 +30,12 @@ import AdminPackagesForApproval from "./pages/Admin/AdminPackagesForApproval";
 import SuperuserProducts from "./pages/Superuser/SuperuserProducts";
 import SuperuserPackages from "./pages/Superuser/SuperuserPackages";
 import SuperuserAddProduct from "./pages/Superuser/SuperuserAddProduct";
-import SuperuserAddPackage from "./pages/Superuser/SuperuserAddPackage";
+import AddPackage from "./pages/AddPackage";
 import SuperuserEditPackage from "./pages/Superuser/SuperuserEditPackage";
 import AdminAddPackage from "./pages/Admin/AdminAddPackage";
 import AdminAddProduct from "./pages/Admin/AdminAddProduct";
 import AdminEditPackage from "./pages/Admin/AdminEditPackage";
-import SuperuserAddPackageInfo from "./pages/Superuser/SuperuserAddPackageInfo";
+import SuperuserAddPackageInfo from "./pages/AddPackageInfo";
 import PreviewPackage from "./pages/Admin/PreviewPackage";
 
 const App = () => {
@@ -134,7 +134,7 @@ const App = () => {
             <SuperuserAddProduct />
           </Route>
           <Route exact path={"/superbruker/lag-ny-pakke"}>
-            <SuperuserAddPackage />
+            <AddPackage />
           </Route>
           <Route path={"/superbruker/lag-ny-pakke/info"}>
             <SuperuserAddPackageInfo />

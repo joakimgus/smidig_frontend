@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "../style/Superuser/SuperuserAddPackage.css";
+import "./style/AddPackage.css";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import { fetchData } from "../../api/apiHandler";
-import Loading from "../../components/Loading";
+import { fetchData } from "../api/apiHandler";
+import Loading from "../components/Loading";
 import { useHistory } from "react-router";
-import { onDragEnd } from "../../util/onDragEnd";
+import { onDragEnd } from "../util/onDragEnd";
 
-const SuperuserAddPackage = () => {
+const AddPackage = () => {
   const [columns, setColumns] = useState({});
   const [products, setProducts] = useState();
 
@@ -52,10 +52,10 @@ const SuperuserAddPackage = () => {
           <h3>Lag ny pakkeløsning</h3>
           <p>På denne siden kan du sette sammen enkeltprodukter for å lage en pakkeløsning som kan bestilles av kunder.<br/>Dra produktene du vil ha med i pakkeløsningen fra "Lagerbeholdning" til "Ny pakkeløsning" (fra venstre til høyre).</p>
           <div className={"su-new-package-img-container"}>
-              <img src={require("../../images/add-package-process-1.png").default} />
+              <img src={require("../images/add-package-process-1.png").default} />
           </div>
       </div>
-      <div className={"su-new-package-drag-drop-container"}>
+      <div className={"su-new-package-drag-drop-container r3"}>
         <DragDropContext
           onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
         >
@@ -131,10 +131,10 @@ const SuperuserAddPackage = () => {
         </DragDropContext>
       </div>
       <div className={'su-create-package-btn-container'}>
-        <button onClick={handleClick}>Lagre pakke</button>
+        <button onClick={handleClick}>Gå videre</button>
       </div>
     </div>
   );
 };
 
-export default SuperuserAddPackage;
+export default AddPackage;
