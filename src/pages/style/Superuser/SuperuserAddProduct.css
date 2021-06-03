@@ -15,10 +15,26 @@
   align-self: end;
   justify-self: start;
   text-align: center;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 50%);
 }
 
 .su-add-product-top-text-container > h3 {
+  justify-self: center;
+  align-self: center;
+  grid-row: 1;
+  grid-column: 1 / span 2;
   font-size: large;
+}
+
+.su-add-product-top-text-container > .back-container {
+  margin-top: 0;
+  padding: 10px;
+  grid-row: 1;
+  grid-column: 1;
+  justify-self: start;
+  align-self: center;
 }
 
 .add-product-sidebar {

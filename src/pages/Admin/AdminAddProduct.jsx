@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import "../style/Admin/AdminAddProduct.css";
 import {useHistory} from "react-router";
+import {IoArrowBackCircle} from "react-icons/all";
 
 const AdminAddProduct = () => {
     const [formData, setFormData] = useState({
@@ -32,6 +33,9 @@ const AdminAddProduct = () => {
     return (
         <div className={"admin-add-product-page-container"}>
             <div className={"admin-add-product-top-text-container"}>
+                <div className="back-container" onClick={() => history.push("/admin/produkter")}>
+                    <IoArrowBackCircle />
+                </div>
                 <h3>Legg til produkt</h3>
             </div>
             <div
