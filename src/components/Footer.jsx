@@ -1,6 +1,7 @@
 import "./style/Footer.css";
 import { Link } from "react-router-dom";
 import { Link as SmoothScroll } from "react-scroll";
+import React from "react";
 
 const Footer = () => {
   return (
@@ -30,10 +31,10 @@ const Footer = () => {
       <div className={"contact-information-container"}>
         <h2 className={"contact-information-item"}>KONTAKT OSS</h2>
         <p>mobiltminimuseum.no</p>
-        <p>Adresse</p>
-        <p>0123 Fire</p>
-        <p>Tlf 11 22 33 44</p>
-        <p>info@mobiltminimuseum.no</p>
+        <p>Rådhusgata 7</p>
+        <p>0151 Oslo</p>
+        <p>Tlf 93 42 32 07</p>
+        <p>post@tidvis.no</p>
       </div>
       <div className={"about-us-container"}>
         <h2 id={"about-us-title"}>mobiltminumuseum.no</h2>
