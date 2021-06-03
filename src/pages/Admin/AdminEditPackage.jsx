@@ -11,7 +11,9 @@ const AdminEditPackage = () => {
   const location = useLocation();
   const data = location.state.params;
   const [developer, setDeveloper] = useState();
-  const [exhibition, setExhibition] = useState({});
+  const [exhibition, setExhibition] = useState({
+    ...data,
+  });
 
   const history = useHistory();
 
@@ -21,7 +23,6 @@ const AdminEditPackage = () => {
       setExhibition(null);
     }
     fetchDeveloper();
-    fetchData("/exhibitions/" + data).then((res) => setExhibition(res));
     window.scrollTo(0, 0);
   }, []);
 
@@ -100,10 +101,10 @@ const AdminEditPackage = () => {
               accessKey={"name"}
               onInput={handleChange}
             >
-              {exhibition.name}
+              {data.name}
             </h3>
             <p contenteditable="true" className={"tags-p-container"}>
-              {exhibition.tags.map((t, i) => (
+              {data.tags.map((t, i) => (
                 <p
                   className={"tags-p"}
                   style={{ display: "inline-block" }}
@@ -122,10 +123,10 @@ const AdminEditPackage = () => {
               className={"short-desc-p"}
               accessKey={"shortDescription"}
             >
-              {exhibition.shortDescription}
+              {data.shortDescription}
             </p>
             <h4>Du trenger:</h4>
-            {exhibition.requiredEquipment.map((e, i) => (
+            {data.requiredEquipment.map((e, i) => (
               <p contenteditable="true" className={"equipment-p"} key={i}>
                 <span>&#8212;</span> {e}
               </p>
@@ -141,13 +142,13 @@ const AdminEditPackage = () => {
             onInput={handleChange}
             accessKey={"description"}
           >
-            {exhibition.description}
+            {data.description}
           </div>
         </div>
         <div className={"package-bottom-right-wrapper"}>
           <div className={"package-list-container"}>
             <h3>Produkter i pakken</h3>
-            {exhibition.products.map((p, i) => (
+            {data.products.map((p, i) => (
               <p
                 contenteditable="true"
                 key={i}

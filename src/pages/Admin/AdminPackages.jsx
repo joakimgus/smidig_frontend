@@ -98,7 +98,7 @@ const AdminPackages = () => {
             <p
               className={"admin-packages-edit-btn button"}
               onClick={() =>
-                history.push("/admin/rediger-pakke", { params: p._id })
+                history.push("/admin/rediger-pakke", { params: p })
               }
             >
               <GrFormEdit />
