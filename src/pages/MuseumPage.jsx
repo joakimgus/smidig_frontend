@@ -11,7 +11,7 @@ const MuseumPage = () => {
   const headerText = {
     title: "Museum",
     description:
-      "Her finner du en oversikt over alle museenne som er med på prosjektet, og alle utstillingene de tilbyr skreddersydde pakkeløsninger fra.",
+      "Her finner du en oversikt over alle museene som deltar på prosjektet Mobilt Minimuseum, og de ulike utstillingene som tilbys. H",
   };
 
   useEffect(() => {

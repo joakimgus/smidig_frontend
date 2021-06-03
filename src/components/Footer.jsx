@@ -39,9 +39,9 @@ const Footer = () => {
       <div className={"about-us-container"}>
         <h2 id={"about-us-title"}>mobiltminumuseum.no</h2>
         <p>
-          Mobiltminimuseum.no distribuerer materiell fra museum og lignende
-          kulturorganisasjoner til barnehager, eldrehjem og lignende
-          institusjoner i Norge. Tjenesten er gratis å benytte for lærere og
+          Vi i Mobiltminimuseum.no distribuerer materiell og opplevelser fra
+          museer og kulturorganisasjoner til barnehager, aldershjem og
+          institusjoner i Norge. Tjenesten er i prinsippet gratis for
           helsepersonell ved godkjente institusjoner.
         </p>
       </div>
