@@ -42,6 +42,8 @@ const AddPackageInfo = () => {
 
     localStorage.setItem("newExhibition", JSON.stringify(exhibition));
 
+    history.push("/superbruker/lag-ny-pakke/forhandsvisning");
+
     /*// SEND TO SERVER
     console.log(exhibition);
 
