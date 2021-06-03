@@ -48,15 +48,23 @@ const SuperuserAddPackage = () => {
 
   return (
     <div className={"su-new-package-page-container"}>
-      <div
-        style={{ display: "flex", justifyContent: "center", height: "100%" }}
-      >
+      <div className={"su-new-package-top-text-container"}>
+        <h3>Legg til pakke</h3>
+      </div>
+      <div className={"su-new-package-img-container"}>
+        <img src={require("../../images/addpackageprocess1.png").default} />
+      </div>
+      <div className={"su-new-package-middle-text-container"}>
+        <p>Dra produktene du vil ha med i pakken fra venstre til høyre side.</p>
+      </div>
+      <div id={"su-new-package-drag-drop-container"}>
         <DragDropContext
           onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
         >
           {Object.entries(columns).map(([columnId, column], index) => {
             return (
               <div
+                id={columnId}
                 style={{
                   display: "flex",
                   flexDirection: "column",

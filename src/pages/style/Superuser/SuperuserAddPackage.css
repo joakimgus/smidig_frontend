@@ -1,4 +1,51 @@
 .su-new-package-page-container {
   min-height: 93vh;
+  width: 100%;
   margin: 2.9em 0 5px 0;
+  display: grid;
+  grid-template-rows: 1em 8vh 12vh 10vh auto 1em;
+  grid-template-columns: 2em repeat(2, 1fr) 2em;
 }
+
+.su-new-package-top-text-container {
+  grid-row: 2;
+  grid-column: 2 / span 2;
+  align-self: center;
+  justify-self: center;
+}
+
+.su-new-package-img-container {
+  width: 60%;
+  grid-row: 3;
+  grid-column: 1 / span 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.su-new-package-img-container > img {
+  height: 100%;
+  width: 100%;
+}
+
+.su-new-package-middle-text-container {
+  grid-row: 4;
+  grid-column: 2 / span 2;
+  align-self: center;
+  justify-self: center;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#su-new-package-drag-drop-container {
+  padding-top: 5em;
+  height: 100%;
+  grid-row: 5;
+  grid-column: 2 / span 2;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#yourProducts {
+
+}
+
