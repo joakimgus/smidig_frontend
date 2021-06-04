@@ -14,7 +14,6 @@
   grid-column: 2;
   display: flex;
   justify-content: center;
-
 }
 
 #customer-information-img-container > img {
@@ -53,7 +52,6 @@
   padding-top: 5vh;
   align-self: start;
   justify-self: center;
-  margin-left: 9%;
 }
 
 .form-wrap-customer-cart{
@@ -87,7 +85,6 @@
 }
 
 #customer-information-orgnr {
-  width: 30vw;
   padding: 4px;
   margin: 4px;
 }

@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./style/Admin/AdminAddProduct.css";
+import "./style/Superuser/SuperuserAddProduct.css";
 import { useHistory } from "react-router";
 import { IoArrowBackCircle } from "react-icons/all";
 import { fetchData, postData } from "../api/apiHandler";
@@ -92,31 +93,31 @@ const AddProduct = () => {
         className={"add-product-top-bot-bar add-product-bot"}
         onClick={() => history.push(redirect)}
       />
-      <form className={"su-add-product-text-container"} onSubmit={saveProduct}>
+      <form className={"admin-add-product-text-container"} onSubmit={saveProduct}>
         <label id={"su-add-product-name-label"}>
           Navn:
           <br />
           <input
-            id={"su-add-product-name-input"}
+            id={"admin-add-product-name-input"}
             type={"text"}
             name={"name"}
             onChange={handleChange}
           />
         </label>
-        <label id={"su-add-product-description-label"}>
+        <label id={"admin-add-product-description-label"}>
           Beskrivelse:
           <br />
           <textarea
-            id={"su-add-product-description-ta"}
+            id={"admin-add-product-description-ta"}
             name={"description"}
             onChange={handleChange}
           />
         </label>
-        <label id={"su-add-product-stock-label"}>
+        <label id={"admin-add-product-stock-label"}>
           Antall:
           <br />
           <input
-            id={"su-add-product-stock-input"}
+            id={"admin-add-product-stock-input"}
             type={"text"}
             name={"stock"}
             onChange={handleChange}
@@ -137,7 +138,7 @@ const AddProduct = () => {
             </select>
           </label>
         )}
-        <button id={"su-add-product-add-btn"} type={"submit"}>
+        <button id={"admin-add-product-add-btn"} type={"submit"}>
           Legg til produkt
         </button>
       </form>
