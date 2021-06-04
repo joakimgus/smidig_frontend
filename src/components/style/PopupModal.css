@@ -39,7 +39,7 @@
   padding: 10px 24px;
   background: #141414;
   color: #fff;
-  border: none;
+  font-variant-caps: all-small-caps;
 }
 
 .popup-close-button {
