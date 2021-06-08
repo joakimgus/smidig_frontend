@@ -102,36 +102,40 @@ const ProductSelectionPage = () => {
         />
         <div className={"utvalg-products-container"}>
           {exhibitions.map((e, a) => (
-            <div
-              className={"utvalg-product-container button"}
-              onClick={() => history.push("/utvalg/pakke", { params: e })}
-              key={a}
-            >
-              <img
-                className={"utvalg-product-img"}
-                src={e.media[0]}
-                alt="img"
-              />
-              <h3>{e.name}</h3>
-              <div className={"utvalg-tags-container"}>
-                {e.tags.map((t, c) => (
-                  <p
-                    className={"utvalg-tags"}
-                    style={{ display: "inline-block" }}
-                    key={c}
-                  >
-                    {c === e.tags.length - 1 ? t : t + ","}
+            <>
+              {e.isActive && (
+                <div
+                  className={"utvalg-product-container button"}
+                  onClick={() => history.push("/utvalg/pakke", { params: e })}
+                  key={a}
+                >
+                  <img
+                    className={"utvalg-product-img"}
+                    src={e.media[0]}
+                    alt="img"
+                  />
+                  <h3>{e.name}</h3>
+                  <div className={"utvalg-tags-container"}>
+                    {e.tags.map((t, c) => (
+                      <p
+                        className={"utvalg-tags"}
+                        style={{ display: "inline-block" }}
+                        key={c}
+                      >
+                        {c === e.tags.length - 1 ? t : t + ","}
+                      </p>
+                    ))}
+                  </div>
+                  <p className={"utvalg-description"}>
+                    {e.description.length > 250
+                      ? `${e.description.substring(0, 250)}...`
+                      : e.description}
                   </p>
-                ))}
-              </div>
-              <p className={"utvalg-description"}>
-                {e.description.length > 250
-                  ? `${e.description.substring(0, 250)}...`
-                  : e.description}
-              </p>
-              <p className={"product-price"}>NOK 0</p>
-              <button className={"utvalg-add-cart-btn"}>Les mer</button>
-            </div>
+                  <p className={"product-price"}>NOK 0</p>
+                  <button className={"utvalg-add-cart-btn"}>Les mer</button>
+                </div>
+              )}
+            </>
           ))}
         </div>
       </div>
