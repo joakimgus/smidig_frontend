@@ -1,7 +1,7 @@
 import axios from "axios";
 axios.defaults.withCredentials = true;
 
-const API_URL = "https://smidig-tidvis-backend.herokuapp.com/api";
+const API_URL = "http://localhost:4000/api";
 
 export const fetchData = async (url) => {
   const res = await axios.get(API_URL + url);
